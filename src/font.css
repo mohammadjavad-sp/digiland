@@ -1,0 +1,21 @@
+@font-face {
+    font-family: yekan;
+    src: url(../media/font/iranyekan.woff);
+}
+@font-face {
+    font-family: bold;
+    src: url(../media/font/iranyekan-bold.woff);
+}
+@font-face {
+    font-family: extra;
+    src: url(../media/font/iranyekan-extrabold.woff);
+}
+@font-face {
+    font-family: iranSansExtra;
+    src: url(../media/font/number/iranyekanwebextraboldfanum.woff);
+}
+@font-face {
+    font-family: iranSansBold;
+    src: url(../media/font/number/iranyekanwebextraboldfanum.woff);
+}
+

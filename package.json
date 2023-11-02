@@ -1,0 +1,21 @@
+{
+  "name": "digiland",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sp": "npx tailwindcss -i ./src/tailwind.css -o ./css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "jquery": "^3.7.1",
+    "live-server": "^1.2.2",
+    "swiper": "^11.0.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.5"
+  }
+}

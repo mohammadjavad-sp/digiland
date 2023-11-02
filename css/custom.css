@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+/*scroll*/
+/* html {
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
+}
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: #f5f4f4;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #b8b8b8;
+  border-radius: 6px;
+}
+
+html {
+
+  overflow: hidden;
+}
+body {
+  height: 100vh;
+ 
+  overflow-y: auto;
+  direction: ltr !important;
+
+
+
+} */
+
+.rotateIn {
+  transform: rotate(360deg);
+  transition: all 400ms linear;
+}
+.rotateOut {
+  transform: rotate(-360deg);
+  transition: all 600ms linear;
+}
+.width {
+  width: 260px;
+  transition: all 400ms linear;
+}
+/*end scroll*/
+
+/*slider*/
+
+.swiper {
+  width: 100%;
+  height: 400px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*end slider*/
+.dasteh-bandi::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3.5px;
+  background-color: #e10a0a;
+  position: absolute;
+  top: 40px;
+}
+
+/*swiper1*/
+.swiper1 .swiper {
+  width: 97%;
+  height: 100%;
+}
+
+.swiper1 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper1 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*end swiper1*/
+
+/*swiper2 offer*/
+.swiper2 .swiper {
+  width: 100%;
+  height: 363px;
+}
+
+.swiper2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.swiper2 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*end swiper2 offer*/
+
+/*swiper3&5 phone & soti*/
+.swiper3 .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper3 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper3 .swiper-slide img {
+  display: block;
+
+  height: 100%;
+}
+
+.gooshi::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3.5px;
+  background-color: #e10a0a;
+  position: absolute;
+  top: 120%;
+}
+/*end swiper3$5 phone$soti*/
+
+/*swiper4 mahboob*/
+
+div.first > p::before {
+  width: 32px;
+  height: 2px;
+  display: block;
+  content: "";
+  background-color: #f18d8d;
+  position: absolute;
+  top: 50%;
+  right: -45px;
+}
+div.first > p::after {
+  width: 32px;
+  height: 2px;
+  display: block;
+  content: "";
+  background-color: #f18d8d;
+  position: absolute;
+  top: 50%;
+  left: -45px;
+}
+
+.swiper4 .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper4 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  border-radius: 20px;
+}
+
+.swiper4 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.top {
+  transform: translateY(-30px);
+  transition: all 600ms linear;
+}
+.return {
+  transform: translateY(0);
+  transition: all 600ms linear;
+}
+
+.block {
+  display: block !important;
+  transition: all 500ms linear;
+}
+
+/*end swiper4 mahboob*/
+
+/*jaryan*/
+h1.jaryan::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3.5px;
+  background-color: #e10a0a;
+  position: absolute;
+  top: 130%;
+}
+
+/*end jaryan*/
+
+/*swiper5 soti*/
+
+h1.soti::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3.5px;
+  background-color: #e10a0a;
+  position: absolute;
+  top: 130%;
+}
+h1.laptop::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3.5px;
+  background-color: #e10a0a;
+  position: absolute;
+  top: 130%;
+}
+
+/*end swiper5 soti*/
