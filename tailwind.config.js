@@ -2,18 +2,20 @@
 module.exports = {
   content: ["./**/*.html"],
   theme: {
-    extend: {},
-    fontFamily:{
-      yekan:"yekan",
-      yekBold:"bold",
-      yekExtra:"extra",
-      iranSansBold:"iranSansBold",
-      
+    extend: {
+      backgroundImage: {
+        komod: "url('/media/komod/619387 (1).jpg')",
+      },
     },
-    container:{
-      center: true
-    }
+    fontFamily: {
+      yekan: "yekan",
+      yekBold: "bold",
+      yekExtra: "extra",
+      iranSansBold: "iranSansBold",
+    },
+    container: {
+      center: true,
+    },
   },
   plugins: [],
-}
-
+};

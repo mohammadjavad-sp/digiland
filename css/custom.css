@@ -37,7 +37,14 @@ body {
 
 
 } */
-
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .rotateIn {
   transform: rotate(360deg);
   transition: all 400ms linear;
@@ -220,11 +227,6 @@ div.first > p::after {
   transition: all 600ms linear;
 }
 
-.block {
-  display: block !important;
-  transition: all 500ms linear;
-}
-
 /*end swiper4 mahboob*/
 
 /*jaryan*/
@@ -262,3 +264,59 @@ h1.laptop::before {
 }
 
 /*end swiper5 soti*/
+
+/*swiper8*/
+.swiper8 .swiper {
+  width: 100%;
+  height: 470px;
+}
+
+.swiper8 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms linear;
+  transform-origin: top;
+}
+
+.swiper8 .swiper-slide img {
+  display: block;
+
+  object-fit: cover;
+}
+.swiper8 .swiper-slide:hover {
+  transform: rotate(7deg);
+}
+.btm {
+  direction: ltr;
+}
+
+/* .test {
+  transition: all 400ms linear;
+}
+.test:hover {
+  transform: rotate(5deg) !important;
+  transform-origin: top;
+  transition: all 400ms linear;
+} */
+/*end swiper8*/
+img#pic {
+  transition: all 500ms linear !important;
+}
+img#corel {
+  transition: all 500ms linear !important;
+}
+.jvt:hover img#pic {
+  transform: translateY(-35px) !important;
+  transition: all 500ms linear;
+}
+.jvt:hover img#corel {
+  transform: scale(1);
+  transition: all 500ms linear !important;
+  animation-name: zoomIn;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+}

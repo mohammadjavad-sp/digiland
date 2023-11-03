@@ -2,42 +2,22 @@ $(document).ready(function () {
   $("img#hamber").click(function () {
     $("div#side").addClass("active");
   });
-  $("div#shadow").mouseenter(function () {
-    $("img#pic").removeClass("return");
-    $("img#pic").addClass("top");
-  });
-  $("div#shadow").mouseleave(function () {
-    $("img#pic").removeClass("top");
-    $("img#pic").addClass("return");
-  });
-  $("div#shadow").mouseenter(function () {
-    $("img#corel")
-      .removeClass("animate__animated animate__zoomOut")
-      .fadeOut(300);
-    $("img#corel")
-      .addClass("animate__animated animate__zoomIn block")
-      .fadeIn(300);
-  });
-  $("div#shadow").mouseleave(function () {
-    $("img#corel")
-      .removeClass("animate__animated animate__zoomIn block")
-      .fadeOut(500);
-    $("img#corel")
-      .addClass("animate__animated animate__zoomOut block")
-      .fadeIn(500);
-  });
+
   $("input#input").focus(function () {
     $("img#search").removeClass("rotateOut");
     $("img#search").addClass("rotateIn");
     $("div#width").addClass("width");
   });
-  $(document).click(function(){
+  $(document).click(function () {
     $("img#search").removeClass("rotateIn");
-   
-
+  });
+  /* $(".test").mouseenter(function(){
+    $(this).addClass("sp")
   })
+  $(".test").mouseleave(function(){
+    $(this).removeClass("sp")
+  }) */
 });
-
 
 //slider
 
@@ -58,13 +38,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-
-
 //slider
-
-
-
-
 
 //swiper1
 
@@ -134,7 +108,6 @@ var swiper = new Swiper(".mySwiper3", {
       slidesPerView: 3,
       spaceBetween: 30,
       centeredSlides: false,
-      
     },
     1024: {
       slidesPerView: 3,
@@ -180,3 +153,23 @@ var swiper = new Swiper(".mySwiper4", {
 });
 
 //end swiper4&7
+
+//swiper8
+
+var swiper = new Swiper(".mySwiper8", {
+  slidesPerView: "auto",
+  spaceBetween: 8,
+  breakpoints: {
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+  },
+  freeMode: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+//end swiper8
