@@ -129,7 +129,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
 }
 
 .swiper2 .swiper-slide img {
@@ -137,6 +136,39 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .low-height:hover .child {
+    height: 275px !important;
+  }
+  .low-height:hover h3 {
+    color: white;
+    transition: all 400ms linear;
+  }
+  .low-height:hover h4 {
+    color: white;
+    transition: all 400ms linear;
+  }
+  .low-height:hover span.second {
+    color: #e10a0a;
+    transition: all 400ms linear;
+    background-color: white;
+  }
+  .low-height:hover img.off {
+    transform: translateY(-25px);
+    transition: all 400ms linear;
+  }
+  img.sayeh {
+    position: absolute;
+    height: 35px !important;
+    top: 180px;
+    transform: scale(0);
+    transition: all 400ms linear !important;
+    transform-origin: center;
+  }
+  .low-height:hover img.sayeh {
+    transform: scale(1);
+  }
 }
 
 /*end swiper2 offer*/
@@ -226,7 +258,32 @@ div.first > p::after {
   transform: translateY(0);
   transition: all 600ms linear;
 }
+@media (min-width: 1024px) {
+  
+  
+  
+  .active:hover img.off {
+    transform: translateY(-35px);
+    transition: all 400ms linear !important;
+  }
+  .active img.sayeh {
+    position: absolute;
+    height: 35px !important;
+    top: 220px;
+    transform: scale(0);
+    transition: all 400ms linear !important;
+    transform-origin: center;
+  }
+  .active:hover img.sayeh {
+    transform: scale(1);
+  }
+}
+@media (max-width: 1024px) {
+  img.sayeh{
+    display: none !important;
+  }
 
+}
 /*end swiper4 mahboob*/
 
 /*jaryan*/

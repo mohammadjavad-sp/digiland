@@ -269,17 +269,27 @@
     <!--banner-->
 
     <div
-      class="banner xl:w-[94%] lg:w-[97%] w-[95%] mx-auto flex flex-wrap gap-y-3 justify-between mt-14"
+      class="banner xl:w-[94%] lg:h-auto lg:w-[97%] w-[95%] mx-auto flex flex-wrap gap-y-3 justify-between lg:mt-10 mt-5"
     >
       <img
         src="./media/banner/1.webp"
         alt=""
-        class="lg:w-[49.3%] w-full rounded-[10px] cursor-pointer"
+        class="lg:w-[49.3%] hidden lg:block rounded-[10px] cursor-pointer"
       />
       <img
         src="./media/banner/2.webp"
         alt=""
-        class="lg:w-[49.3%] w-full rounded-[10px] cursor-pointer"
+        class="w-[49.3%] hidden lg:block rounded-[10px] cursor-pointer"
+      />
+      <img
+        src="./media/banner/4.webp"
+        alt=""
+        class="lg:w-full lg:hidden rounded-[10px] cursor-pointer"
+      />
+      <img
+        src="./media/banner/4.jpg"
+        alt=""
+        class="w-full lg:hidden rounded-[10px] cursor-pointer"
       />
     </div>
 
@@ -288,31 +298,492 @@
     <!--offer-->
 
     <section
-      class="swiper2 offer w-full h-[490px] bg-gradient-to-r from-[#AF0202] to-[#E10A0A] mt-8 pr-[50px] pl-[50px] pt-5 pb-5"
+      class="swiper2 offer w-full !h-[365px] md:!h-[75vh] sm:!h-[78vh] lg:!h-auto bg-gradient-to-r from-[#AF0202] to-[#E10A0A] mt-8 lg:pr-[45px] lg:pl-[45px] pr-2 pl-2 lg:pt-5 lg:pb-5 pt-3 pb-2"
     >
-      <div class="titr flex justify-center items-center mb-10 gap-2">
-        <img src="./media/offer/darsad.svg" alt="" />
-        <p class="text-white font-yekan text-[27px]">پیشنهاد طلایی</p>
+      <div class="titr flex justify-center items-center lg:mb-10 mb-3 gap-2">
+        <img
+          src="./media/offer/darsad.svg"
+          alt=""
+          class="!w-[30px] lg:!w-[50px]"
+        />
+        <p class="text-white font-yekan lg:text-[27px] text-[18px]">
+          پیشنهاد طلایی
+        </p>
       </div>
-      <div class="swiper mySwiper2">
+      <div class="swiper mySwiper2 lg:container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" id="mmd">
+          <div
+            class="swiper-slide lg:!w-[240px] lg:!h-[362px] !w-[185px] !h-[288px] low-height !transition-all !duration-300 !ease-linear !bg-black !pr-2 !pl-2 lg:rounded-[25px] rounded-[10px]"
+          >
             <div
-              class="child w-full h-full bg-black rounded-[25px] !top-0 absolute"
-            ></div>
+              class="child w-full h-full !transition-all !duration-[400ms] !ease-linear bg-white rounded-[10px] lg:rounded-[25px] !top-0 absolute"
+            >
+              <div
+                class="content items-center justify-around absolute flex flex-col lg:!gap-6 !gap-7 transition-all duration-300 ease-linear lg:pt-5 pt:4"
+              >
+                <div
+                  class="pix !transition-all !duration-300 !ease-linear relative"
+                >
+                  <img
+                    src="./media/offer/1.png"
+                    alt=""
+                    class="off lg:!w-[180px] !w-[136px] transition-all duration-300 ease-linear"
+                  />
+                </div>
+
+                <img
+                  src="./media/mahboob/mmd.png"
+                  alt=""
+                  class="sayeh !hidden lg:!block"
+                />
+
+                <div class="txt">
+                  <p
+                    class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
+                  >
+                    هدست سونی مدل PULSE 3D مخصوص پلی استیشن 4 و 5
+                  </p>
+                </div>
+                <div
+                  class="btm w-[93%] flex justify-between pr-2 pl-2 items-center font-iranSansBold"
+                >
+                  <div
+                    class="price text-left transition-all duration-300 ease-linear"
+                  >
+                    <h4
+                      class="line-through lg:text-[14px] text-[12px] text-[#A9A9A9]"
+                    >
+                      4.970.000تومان
+                    </h4>
+                    <h3
+                      class="text-[#E10A0A] lg:text-[17px] text-[15px] transition-all duration-300 ease-linear"
+                    >
+                      4.497.000<span class="font-yekExtra text-[13px]"
+                        >تومان</span
+                      >
+                    </h3>
+                  </div>
+                  <span
+                    class="second bg-[#E10A0A] transition-all duration-300 ease-linear flex justify-center items-center text-white rounded-full lg:p-[7px] p-[5px] text-sm"
+                    >%10</span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="swiper-slide" id="mmd">
+          <div
+            class="swiper-slide lg:!w-[240px] lg:!h-[362px] !w-[185px] !h-[288px] low-height !transition-all !duration-300 !ease-linear !bg-black !pr-2 !pl-2 lg:rounded-[25px] rounded-[10px]"
+          >
             <div
-              class="child w-full h-full bg-black rounded-[25px] !top-0 absolute"
-            ></div>
+              class="child w-full h-full !transition-all !duration-[400ms] !ease-linear bg-white rounded-[10px] lg:rounded-[25px] !top-0 absolute"
+            >
+              <div
+                class="content items-center justify-around absolute flex flex-col lg:!gap-6 !gap-7 transition-all duration-300 ease-linear lg:pt-5 pt:4"
+              >
+                <div
+                  class="pix !transition-all !duration-300 !ease-linear relative"
+                >
+                  <img
+                    src="./media/offer/2-removebg-preview.png"
+                    alt=""
+                    class="off lg:!w-[180px] !w-[136px] transition-all duration-300 ease-linear"
+                  />
+                </div>
+
+                <img
+                  src="./media/mahboob/mmd.png"
+                  alt=""
+                  class="sayeh !hidden lg:!block"
+                />
+
+                <div class="txt">
+                  <p
+                    class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
+                  >
+                  شارژر  وایرلس سامسونگ مدل EP-P2400 با 2سال گارانتی
+                  </p>
+                </div>
+                <div
+                  class="btm w-[93%] flex justify-between pr-2 pl-2 items-center font-iranSansBold"
+                >
+                  <div
+                    class="price text-left transition-all duration-300 ease-linear"
+                  >
+                    <h4
+                      class="line-through lg:text-[14px] text-[12px] text-[#A9A9A9]"
+                    >
+                      2.250.000تومان
+                    </h4>
+                    <h3
+                      class="text-[#E10A0A] lg:text-[17px] text-[15px] transition-all duration-300 ease-linear"
+                    >
+                      1.988.000<span class="font-yekExtra text-[13px]"
+                        >تومان</span
+                      >
+                    </h3>
+                  </div>
+                  <span
+                    class="second bg-[#E10A0A] transition-all duration-300 ease-linear flex justify-center items-center text-white rounded-full lg:p-[7px] p-[5px] text-sm"
+                    >%12</span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
-          <div class="swiper-slide"></div>
+          <div
+            class="swiper-slide lg:!w-[240px] lg:!h-[362px] !w-[185px] !h-[288px] low-height !transition-all !duration-300 !ease-linear !bg-black !pr-2 !pl-2 lg:rounded-[25px] rounded-[10px]"
+          >
+            <div
+              class="child w-full h-full !transition-all !duration-[400ms] !ease-linear bg-white rounded-[10px] lg:rounded-[25px] !top-0 absolute"
+            >
+              <div
+                class="content items-center justify-around absolute flex flex-col lg:!gap-6 !gap-7 transition-all duration-300 ease-linear lg:pt-5 pt:4"
+              >
+                <div
+                  class="pix !transition-all !duration-300 !ease-linear relative"
+                >
+                  <img
+                    src="./media/offer/3-removebg-preview.png"
+                    alt=""
+                    class="off lg:!w-[180px] !w-[136px] transition-all duration-300 ease-linear"
+                  />
+                </div>
+
+                <img
+                  src="./media/mahboob/mmd.png"
+                  alt=""
+                  class="sayeh !hidden lg:!block"
+                />
+
+                <div class="txt">
+                  <p
+                    class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
+                  >
+                  کاور سیلیکونی محافظ لنز دار سامسونگ مدل EF-PS918 مناسب برای گوشی موبایل Galaxy S23 Ultra
+                  </p>
+                </div>
+                <div
+                  class="btm w-[93%] flex justify-between pr-2 pl-2 items-center font-iranSansBold"
+                >
+                  <div
+                    class="price text-left transition-all duration-300 ease-linear"
+                  >
+                    <h4
+                      class="line-through lg:text-[14px] text-[12px] text-[#A9A9A9]"
+                    >
+                      2.170.000تومان
+                    </h4>
+                    <h3
+                      class="text-[#E10A0A] lg:text-[17px] text-[15px] transition-all duration-300 ease-linear"
+                    >
+                      1.857.000<span class="font-yekExtra text-[13px]"
+                        >تومان</span
+                      >
+                    </h3>
+                  </div>
+                  <span
+                    class="second bg-[#E10A0A] transition-all duration-300 ease-linear flex justify-center items-center text-white rounded-full lg:p-[7px] p-[5px] text-sm"
+                    >%14</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide lg:!w-[240px] lg:!h-[362px] !w-[185px] !h-[288px] low-height !transition-all !duration-300 !ease-linear !bg-black !pr-2 !pl-2 lg:rounded-[25px] rounded-[10px]"
+          >
+            <div
+              class="child w-full h-full !transition-all !duration-[400ms] !ease-linear bg-white rounded-[10px] lg:rounded-[25px] !top-0 absolute"
+            >
+              <div
+                class="content items-center justify-around absolute flex flex-col lg:!gap-6 !gap-7 transition-all duration-300 ease-linear lg:pt-5 pt:4"
+              >
+                <div
+                  class="pix !transition-all !duration-300 !ease-linear relative"
+                >
+                  <img
+                    src="./media/offer/4-removebg-preview.png"
+                    alt=""
+                    class="off lg:!w-[180px] !w-[136px] transition-all duration-300 ease-linear"
+                  />
+                </div>
+
+                <img
+                  src="./media/mahboob/mmd.png"
+                  alt=""
+                  class="sayeh !hidden lg:!block"
+                />
+
+                <div class="txt">
+                  <p
+                    class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
+                  >
+                  شارژر همراه سیلیکون پاور مدل QL59 ظرفیت 50000 میلی آمپر ساعت
+                  </p>
+                </div>
+                <div
+                  class="btm w-[93%] flex justify-between pr-2 pl-2 items-center font-iranSansBold"
+                >
+                  <div
+                    class="price text-left transition-all duration-300 ease-linear"
+                  >
+                    <h4
+                      class="line-through lg:text-[14px] text-[12px] text-[#A9A9A9]"
+                    >
+                      3.330.000تومان
+                    </h4>
+                    <h3
+                      class="text-[#E10A0A] lg:text-[17px] text-[15px] transition-all duration-300 ease-linear"
+                    >
+                      3.213.000<span class="font-yekExtra text-[13px]"
+                        >تومان</span
+                      >
+                    </h3>
+                  </div>
+                  <span
+                    class="second bg-[#E10A0A] transition-all duration-300 ease-linear flex justify-center items-center text-white rounded-full lg:p-[7px] p-[5px] text-sm"
+                    >%4</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide lg:!w-[240px] lg:!h-[362px] !w-[185px] !h-[288px] low-height !transition-all !duration-300 !ease-linear !bg-black !pr-2 !pl-2 lg:rounded-[25px] rounded-[10px]"
+          >
+            <div
+              class="child w-full h-full !transition-all !duration-[400ms] !ease-linear bg-white rounded-[10px] lg:rounded-[25px] !top-0 absolute"
+            >
+              <div
+                class="content items-center justify-around absolute flex flex-col lg:!gap-6 !gap-7 transition-all duration-300 ease-linear lg:pt-5 pt:4"
+              >
+                <div
+                  class="pix !transition-all !duration-300 !ease-linear relative"
+                >
+                  <img
+                    src="./media/offer/5-removebg-preview.png"
+                    alt=""
+                    class="off lg:!w-[180px] !w-[136px] transition-all duration-300 ease-linear"
+                  />
+                </div>
+
+                <img
+                  src="./media/mahboob/mmd.png"
+                  alt=""
+                  class="sayeh !hidden lg:!block"
+                />
+
+                <div class="txt">
+                  <p
+                    class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
+                  >
+                  هندزفری بی‌ سیم هوآوی مدل FreeBuds SE
+                  </p>
+                </div>
+                <div
+                  class="btm w-[93%] flex justify-between pr-2 pl-2 items-center font-iranSansBold"
+                >
+                  <div
+                    class="price text-left transition-all duration-300 ease-linear"
+                  >
+                    <h4
+                      class="line-through lg:text-[14px] text-[12px] text-[#A9A9A9]"
+                    >
+                      1.980.000تومان
+                    </h4>
+                    <h3
+                      class="text-[#E10A0A] lg:text-[17px] text-[15px] transition-all duration-300 ease-linear"
+                    >
+                      1.702.000<span class="font-yekExtra text-[13px]"
+                        >تومان</span
+                      >
+                    </h3>
+                  </div>
+                  <span
+                    class="second bg-[#E10A0A] transition-all duration-300 ease-linear flex justify-center items-center text-white rounded-full lg:p-[7px] p-[5px] text-sm"
+                    >%14</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide lg:!w-[240px] lg:!h-[362px] !w-[185px] !h-[288px] low-height !transition-all !duration-300 !ease-linear !bg-black !pr-2 !pl-2 lg:rounded-[25px] rounded-[10px]"
+          >
+            <div
+              class="child w-full h-full !transition-all !duration-[400ms] !ease-linear bg-white rounded-[10px] lg:rounded-[25px] !top-0 absolute"
+            >
+              <div
+                class="content items-center justify-around absolute flex flex-col lg:!gap-6 !gap-7 transition-all duration-300 ease-linear lg:pt-5 pt:4"
+              >
+                <div
+                  class="pix !transition-all !duration-300 !ease-linear relative"
+                >
+                  <img
+                    src="./media/offer/6-removebg-preview.png"
+                    alt=""
+                    class="off lg:!w-[180px] !w-[136px] transition-all duration-300 ease-linear"
+                  />
+                </div>
+
+                <img
+                  src="./media/mahboob/mmd.png"
+                  alt=""
+                  class="sayeh !hidden lg:!block"
+                />
+
+                <div class="txt">
+                  <p
+                    class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
+                  >
+                  گوشی موبایل سامسونگ مدل Galaxy A24 ظرفیت 128 گیگابایت و رم 6 گیگابایت
+                  </p>
+                </div>
+                <div
+                  class="btm w-[93%] flex justify-between pr-2 pl-2 items-center font-iranSansBold"
+                >
+                  <div
+                    class="price text-left transition-all duration-300 ease-linear"
+                  >
+                    <h4
+                      class="line-through lg:text-[14px] text-[12px] text-[#A9A9A9]"
+                    >
+                      7.249.000تومان
+                    </h4>
+                    <h3
+                      class="text-[#E10A0A] lg:text-[17px] text-[15px] transition-all duration-300 ease-linear"
+                    >
+                      7.049.000<span class="font-yekExtra text-[13px]"
+                        >تومان</span
+                      >
+                    </h3>
+                  </div>
+                  <span
+                    class="second bg-[#E10A0A] transition-all duration-300 ease-linear flex justify-center items-center text-white rounded-full lg:p-[7px] p-[5px] text-sm"
+                    >%3</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide lg:!w-[240px] lg:!h-[362px] !w-[185px] !h-[288px] low-height !transition-all !duration-300 !ease-linear !bg-black !pr-2 !pl-2 lg:rounded-[25px] rounded-[10px]"
+          >
+            <div
+              class="child w-full h-full !transition-all !duration-[400ms] !ease-linear bg-white rounded-[10px] lg:rounded-[25px] !top-0 absolute"
+            >
+              <div
+                class="content items-center justify-around absolute flex flex-col lg:!gap-6 !gap-7 transition-all duration-300 ease-linear lg:pt-5 pt:4"
+              >
+                <div
+                  class="pix !transition-all !duration-300 !ease-linear relative"
+                >
+                  <img
+                    src="./media/offer/7-removebg-preview.png"
+                    alt=""
+                    class="off lg:!w-[180px] !w-[136px] transition-all duration-300 ease-linear"
+                  />
+                </div>
+
+                <img
+                  src="./media/mahboob/mmd.png"
+                  alt=""
+                  class="sayeh !hidden lg:!block"
+                />
+
+                <div class="txt">
+                  <p
+                    class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
+                  >
+                  گوشی موبایل سامسونگ مدل Galaxy S23 FE 5G ظرفیت 128 گیگابایت و رم 8 گیگابایت- ویتنام
+                  </p>
+                </div>
+                <div
+                  class="btm w-[93%] flex justify-between pr-2 pl-2 items-center font-iranSansBold"
+                >
+                  <div
+                    class="price text-left transition-all duration-300 ease-linear"
+                  >
+                    <h4
+                      class="line-through lg:text-[14px] text-[12px] text-[#A9A9A9]"
+                    >
+                      23.299.000تومان
+                    </h4>
+                    <h3
+                      class="text-[#E10A0A] lg:text-[17px] text-[15px] transition-all duration-300 ease-linear"
+                    >
+                      22.799.000<span class="font-yekExtra text-[13px]"
+                        >تومان</span
+                      >
+                    </h3>
+                  </div>
+                  <span
+                    class="second bg-[#E10A0A] transition-all duration-300 ease-linear flex justify-center items-center text-white rounded-full lg:p-[7px] p-[5px] text-sm"
+                    >%2</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide lg:!w-[240px] lg:!h-[362px] !w-[185px] !h-[288px] low-height !transition-all !duration-300 !ease-linear !bg-black !pr-2 !pl-2 lg:rounded-[25px] rounded-[10px]"
+          >
+            <div
+              class="child w-full h-full !transition-all !duration-[400ms] !ease-linear bg-white rounded-[10px] lg:rounded-[25px] !top-0 absolute"
+            >
+              <div
+                class="content items-center justify-around absolute flex flex-col lg:!gap-6 !gap-7 transition-all duration-300 ease-linear lg:pt-5 pt:4"
+              >
+                <div
+                  class="pix !transition-all !duration-300 !ease-linear relative"
+                >
+                  <img
+                    src="./media/offer/8-removebg-preview.png"
+                    alt=""
+                    class="off lg:!w-[180px] !w-[136px] transition-all duration-300 ease-linear"
+                  />
+                </div>
+
+                <img
+                  src="./media/mahboob/mmd.png"
+                  alt=""
+                  class="sayeh !hidden lg:!block"
+                />
+
+                <div class="txt">
+                  <p
+                    class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
+                  >
+                  گوشی موبایل سامسونگ مدل Galaxy A24 ظرفیت 128 گیگابایت و رم 8 گیگابایت- ویتنام
+                  </p>
+                </div>
+                <div
+                  class="btm w-[93%] flex justify-between pr-2 pl-2 items-center font-iranSansBold"
+                >
+                  <div
+                    class="price text-left transition-all duration-300 ease-linear"
+                  >
+                    <h4
+                      class="line-through lg:text-[14px] text-[12px] text-[#A9A9A9]"
+                    >
+                      8.399.000تومان
+                    </h4>
+                    <h3
+                      class="text-[#E10A0A] lg:text-[17px] text-[15px] transition-all duration-300 ease-linear"
+                    >
+                      8.199.000<span class="font-yekExtra text-[13px]"
+                        >تومان</span
+                      >
+                    </h3>
+                  </div>
+                  <span
+                    class="second bg-[#E10A0A] transition-all duration-300 ease-linear flex justify-center items-center text-white rounded-full lg:p-[7px] p-[5px] text-sm"
+                    >%2</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -387,22 +858,17 @@
       <div class="swiper mySwiper4">
         <div class="swiper-wrapper">
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="active !transition-all !duration-500 !ease-linear swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
+            <div class="img flex flex-col items-center">
               <img
                 src="./media/mahboob/1-removebg-preview.png"
                 alt=""
-                id="pic"
+                class="off !transition-all !duration-500 !ease-linear"
               />
 
-              <img
-                src="./media/mahboob/mmd.png"
-                alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
-              />
+              <img src="./media/mahboob/mmd.png" alt="" class="sayeh" />
             </div>
 
             <p class="line-clamp-2 text-[13px] font-yekan text-right">
@@ -430,17 +896,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
-            id="shadow"
+            class="swiper-slide active !transition-all !duration-500 !ease-linear flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/mahboob/2.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/mahboob/2.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
+                id=""
               />
             </div>
 
@@ -469,17 +938,22 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col !transition-all !duration-500 !ease-linear pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/mahboob/3.webp" alt="" id="pic" />
+            <div
+              class="img flex flex-col items-center !transition-all !duration-500 !ease-linear"
+            >
+              <img
+                src="./media/mahboob/3.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -508,17 +982,21 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/mahboob/4.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/mahboob/4.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
+                id=""
               />
             </div>
 
@@ -547,17 +1025,21 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/mahboob/5.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/mahboob/5.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
+                id=""
               />
             </div>
 
@@ -586,17 +1068,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/mahboob/6.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/mahboob/6.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -625,17 +1110,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/mahboob/7.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/mahboob/7.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -664,17 +1152,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/mahboob/8.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/mahboob/8.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -703,18 +1194,17 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide flex active flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/mahboob/9.webp" alt="" id="pic" />
-
+            <div class="img flex flex-col items-center">
               <img
-                src="./media/mahboob/mmd.png"
+                src="./media/mahboob/9.webp"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="off !transition-all !duration-500 !ease-linear"
               />
+
+              <img src="./media/mahboob/mmd.png" alt="" class="sayeh" />
             </div>
 
             <p class="line-clamp-2 text-[13px] font-yekan text-right">
@@ -742,17 +1232,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/mahboob/10.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/mahboob/10.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -788,7 +1281,7 @@
 
     <!--video-->
     <h1
-      class="jaryan relative text-center flex justify-center font-yekBold lg:font-yekan text-[16px] md:text-[22px] lg:mt-6 mt-[10px] mb-[35px]"
+      class="jaryan relative text-center flex justify-center font-yekBold lg:font-yekan text-[16px] md:text-[22px] lg:mt-6 mt-[20px] mb-[35px]"
     >
       در جریان باش
     </h1>
@@ -905,7 +1398,7 @@
     <!--swiper6 laptop-->
 
     <h1
-      class="laptop relative text-center flex justify-center font-yekBold lg:font-yekan text-[16px] md:text-[22px] lg:mt-6 mb-[35px]"
+      class="laptop relative text-center flex justify-center font-yekBold lg:font-yekan text-[16px] md:text-[22px] lg:mt-6 mt-5 mb-[35px]"
     >
       کامپیوتر و لپتاپ
     </h1>
@@ -958,7 +1451,7 @@
 
     <!--swiper7 janebi-->
 
-    <div class="first relative mt-[75px] lg:mt-[95px] w-fit mx-auto">
+    <div class="first relative mt-[25px] lg:mt-[40px] w-fit mx-auto">
       <p
         class="text-center font-yekBold lg:font-yekan lg:text-[21px] text-[15px]"
       >
@@ -971,17 +1464,20 @@
       <div class="swiper mySwiper4">
         <div class="swiper-wrapper">
           <div
-            class="swiper-slide jvt flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/janebi/1.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/janebi/1.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] scale-0 absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -1009,17 +1505,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide jvt flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/janebi/2.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/janebi/2.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -1047,17 +1546,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide jvt flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/janebi/3.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/janebi/3.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -1085,17 +1587,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/janebi/4.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/janebi/4.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -1123,17 +1628,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col items-center pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/janebi/5.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/janebi/5.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -1162,17 +1670,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/janebi/6.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/janebi/6.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -1200,17 +1711,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/janebi/7.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/janebi/7.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
@@ -1238,17 +1752,20 @@
             </div>
           </div>
           <div
-            class="swiper-slide flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
+            class="swiper-slide active flex flex-col pr-3 pl-3 pt-8 pb-2 gap-7 !w-[181px] lg:!w-[240px]"
             id="shadow"
           >
-            <div class="img flex flex-col items-center relative">
-              <img src="./media/janebi/8.webp" alt="" id="pic" />
+            <div class="img flex flex-col items-center">
+              <img
+                src="./media/janebi/8.webp"
+                alt=""
+                class="off !transition-all !duration-500 !ease-linear"
+              />
 
               <img
                 src="./media/mahboob/mmd.png"
                 alt=""
-                class="object-contain !h-[30px] !hidden absolute top-[95%]"
-                id="corel"
+                class="sayeh !transition-all !duration-500 !ease-linear"
               />
             </div>
 
