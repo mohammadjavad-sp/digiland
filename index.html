@@ -39,21 +39,356 @@
         id="side"
       ></div>
       <div
-        class="menu-desktop lg:flex items-center justify-between w-full hidden"
+        class="menu-desktop lg:flex items-center justify-between w-full h-full hidden"
       >
-        <div class="menu-desktop-right flex">
+        <div class="menu-desktop-right h-full flex">
           <img
             src="./media/menu/logo.svg"
             class="w-[145px] lg:w-[143px] hidden lg:block mr-16 lg:mr-14 cursor-pointer"
             alt=""
           />
           <ul
-            class="flex items-center mr-6 gap-5 text-[#767676] cursor-pointer font-yekan"
+            class="flex items-center h-full mr-6 gap-5 text-[#767676] cursor-pointer font-yekan"
           >
-            <li class="flex relative gap-1" id="hamber">
-              <img src="./media/menu/hamber.svg" alt="" />
+            <li id="li" class="sub h-full flex gap-1 items-center" id="hamber">
+              <img src="./media/menu/hamber.svg" class="!w-[24px]" alt="" />
 
               <p class="hover:text-[#E41F1F]">دسته‌بندی کالاها</p>
+
+              <div
+                class="submenu z-50 absolute top-[72px] cursor-auto border-t-[1px] pt-8 overflow-auto pr-5 w-[870px] h-[300px] hidden rounded-b-md bg-white"
+              >
+                <div
+                  class="megamenu flex flex-wrap overflow-auto gap-y-2 gap-x-12"
+                >
+                  <div class="item w-[45%]">
+                    <div class="sort flex items-center gap-3 cursor-pointer">
+                      <img src="./media/submenu/1.webp" alt="" />
+                      <p class="font-yekBold text-black hover:text-[#E41F1F]">
+                        گوشی موبایل
+                      </p>
+                      <img src="./media/submenu/svgexport-2 (1).svg" alt="" />
+                    </div>
+                    <div class="brands w-full flex flex-wrap gap-2 my-3">
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        اپل
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        سامسونگ
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        ناتینگ فون
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        شیائومی
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        هوآوی
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        نوکیا
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        همه برندها
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item w-[45%]">
+                    <div class="sort flex items-center gap-3 cursor-pointer">
+                      <img src="./media/submenu/1.webp" alt="" />
+                      <p class="font-yekBold text-black hover:text-[#E41F1F]">
+                        لپتاپ و کامپیوتر
+                      </p>
+                      <img src="./media/submenu/svgexport-2 (1).svg" alt="" />
+                    </div>
+                    <div class="brands w-full flex flex-wrap gap-2 my-3">
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        لپتاپ
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        مانیتور
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        کامپیوتر همه کاره(all in one)
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        کیبورد
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        ماوس
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        لوازم جانبی کامپیوتر
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item w-[45%]">
+                    <div class="sort flex items-center gap-3 cursor-pointer">
+                      <img src="./media/submenu/1.webp" alt="" />
+                      <p class="font-yekBold text-black hover:text-[#E41F1F]">
+                        تبلت
+                      </p>
+                      <img src="./media/submenu/svgexport-2 (1).svg" alt="" />
+                    </div>
+                    <div class="brands w-full flex flex-wrap gap-2 my-3">
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        اپل
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        سامسونگ
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        مایکروسافت
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        لنوو
+                      </p>
+
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        همه برندها
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item w-[45%]">
+                    <div class="sort flex items-center gap-3 cursor-pointer">
+                      <img src="./media/submenu/1.webp" alt="" />
+                      <p class="font-yekBold text-black hover:text-[#E41F1F]">
+                        هدفون و هندزفری
+                      </p>
+                      <img src="./media/submenu/svgexport-2 (1).svg" alt="" />
+                    </div>
+                    <div class="brands w-full flex flex-wrap gap-2 my-3">
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        اپل
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        سامسونگ
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        جی بی ال
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        ریزر
+                      </p>
+
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        همه برندها
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item w-[45%]">
+                    <div class="sort flex items-center gap-3 cursor-pointer">
+                      <img src="./media/submenu/1.webp" alt="" />
+                      <p class="font-yekBold text-black hover:text-[#E41F1F]">
+                        ساعت هوشمند
+                      </p>
+                      <img src="./media/submenu/svgexport-2 (1).svg" alt="" />
+                    </div>
+                    <div class="brands w-full flex flex-wrap gap-2 my-3">
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        اپل
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        سامسونگ
+                      </p>
+
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        شیائومی
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        امیزفیت
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        هایلو
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        همه برندها
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        لوازم جانبی ساعت هوشمند
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item w-[45%]">
+                    <div class="sort flex items-center gap-3 cursor-pointer">
+                      <img src="./media/submenu/1.webp" alt="" />
+                      <p class="font-yekBold text-black hover:text-[#E41F1F]">
+                        صوتی و تصویری
+                      </p>
+                      <img src="./media/submenu/svgexport-2 (1).svg" alt="" />
+                    </div>
+                    <div class="brands w-full flex flex-wrap gap-2 my-3">
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        اپل
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        تلویزیون
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        ساندبار
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        اسپیکر
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        کنسول بازی
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        لوازم جانبی صوتی و تصویری
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item w-[45%]">
+                    <div class="sort flex items-center gap-3 cursor-pointer">
+                      <img src="./media/submenu/1.webp" alt="" />
+                      <p class="font-yekBold text-black hover:text-[#E41F1F]">
+                        لوازم جانبی گوشی موبایل
+                      </p>
+                      <img src="./media/submenu/svgexport-2 (1).svg" alt="" />
+                    </div>
+                    <div class="brands w-full flex flex-wrap gap-2 my-3">
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        کابل و مبدل
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        شارژر
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        پاوربانک
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        محافظ صفحه نمایش
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        هوآوی
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        کیف و کاور
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        پایه نگهدارنده
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item w-[45%]">
+                    <div class="sort flex items-center gap-3 cursor-pointer">
+                      <img src="./media/submenu/1.webp" alt="" />
+                      <p class="font-yekBold text-black hover:text-[#E41F1F]">
+                        تجهیزات ذخیره سازی
+                      </p>
+                      <img src="./media/submenu/svgexport-2 (1).svg" alt="" />
+                    </div>
+                    <div class="brands w-full flex flex-wrap gap-2 my-3">
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        فلش
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        کارت حافظه
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        هارد اینترنال
+                      </p>
+                      <p
+                        class="bg-[#f5f4f4] text-sm cursor-pointer !text-black pt-1.5 pb-1.5 pr-2 !pl-2 rounded-lg"
+                      >
+                        هارد اکسترنال
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="flex cursor-pointer gap-1" id="daftar">
               <img src="./media/menu/daftar.svg" alt="" />
@@ -65,7 +400,10 @@
             </li>
           </ul>
         </div>
-
+        <div
+          id="bg"
+          class="bg-submenu z-0 pr-[220px] w-[100%] h-[100vh] absolute right-0 left-0 top-[72px] bg-[#0000005b] hidden"
+        ></div>
         <div class="menu-desktop-left pl-14 lg:pl-12 flex gap-7">
           <div
             class="search w-[148px] h-[45px] bg-[#F6F5F5] rounded-full flex items-center pr-2"
@@ -173,12 +511,14 @@
     >
       دسته‌بندی‌های پربازدید
     </h1>
-    <section class="swiper1 w-[97%] h-[200px] mt-7 font-yekBold mx-auto">
+    <section class="swiper1 w-[97%] h-[200px] mt-14 font-yekBold mx-auto">
       <div class="swiper mySwiper1">
         <div class="swiper-wrapper">
-          <div class="swiper-slide flex flex-col items-center cursor-pointer">
+          <div
+            class="swiper-slide !relative !h-[300px] flex flex-col items-center cursor-pointer !transition-all !duration-500 !ease-linear"
+          >
             <div
-              class="ax lg:w-[130px] lg:h-[130px] w-[100px] h-[100px] rounded-full bg-[#E2DBF1] mx-auto overflow-hidden"
+              class="ax !transition-all !duration-500 !ease-linear overflow-hidden lg:w-[130px] lg:h-[130px] w-[100px] h-[100px] rounded-full bg-[#E2DBF1] mx-auto"
             >
               <img
                 src="./media/dasteh bandi/1_1-removebg-preview.png"
@@ -400,7 +740,7 @@
                   <p
                     class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
                   >
-                  شارژر  وایرلس سامسونگ مدل EP-P2400 با 2سال گارانتی
+                    شارژر وایرلس سامسونگ مدل EP-P2400 با 2سال گارانتی
                   </p>
                 </div>
                 <div
@@ -459,7 +799,8 @@
                   <p
                     class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
                   >
-                  کاور سیلیکونی محافظ لنز دار سامسونگ مدل EF-PS918 مناسب برای گوشی موبایل Galaxy S23 Ultra
+                    کاور سیلیکونی محافظ لنز دار سامسونگ مدل EF-PS918 مناسب برای
+                    گوشی موبایل Galaxy S23 Ultra
                   </p>
                 </div>
                 <div
@@ -518,7 +859,7 @@
                   <p
                     class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
                   >
-                  شارژر همراه سیلیکون پاور مدل QL59 ظرفیت 50000 میلی آمپر ساعت
+                    شارژر همراه سیلیکون پاور مدل QL59 ظرفیت 50000 میلی آمپر ساعت
                   </p>
                 </div>
                 <div
@@ -577,7 +918,7 @@
                   <p
                     class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
                   >
-                  هندزفری بی‌ سیم هوآوی مدل FreeBuds SE
+                    هندزفری بی‌ سیم هوآوی مدل FreeBuds SE
                   </p>
                 </div>
                 <div
@@ -636,7 +977,8 @@
                   <p
                     class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
                   >
-                  گوشی موبایل سامسونگ مدل Galaxy A24 ظرفیت 128 گیگابایت و رم 6 گیگابایت
+                    گوشی موبایل سامسونگ مدل Galaxy A24 ظرفیت 128 گیگابایت و رم 6
+                    گیگابایت
                   </p>
                 </div>
                 <div
@@ -695,7 +1037,8 @@
                   <p
                     class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
                   >
-                  گوشی موبایل سامسونگ مدل Galaxy S23 FE 5G ظرفیت 128 گیگابایت و رم 8 گیگابایت- ویتنام
+                    گوشی موبایل سامسونگ مدل Galaxy S23 FE 5G ظرفیت 128 گیگابایت
+                    و رم 8 گیگابایت- ویتنام
                   </p>
                 </div>
                 <div
@@ -754,7 +1097,8 @@
                   <p
                     class="line-clamp-2 font-yekan text-right text-[12px] leading-5 pr-3 pl-3"
                   >
-                  گوشی موبایل سامسونگ مدل Galaxy A24 ظرفیت 128 گیگابایت و رم 8 گیگابایت- ویتنام
+                    گوشی موبایل سامسونگ مدل Galaxy A24 ظرفیت 128 گیگابایت و رم 8
+                    گیگابایت- ویتنام
                   </p>
                 </div>
                 <div
@@ -1801,7 +2145,7 @@
     <!--swiper8 komod-->
 
     <section
-      class="swiper8 komod bg-komod !pb-8 mt-9 bg-contain w-full z-0 pt-5 !pr-3 !pl-3"
+      class="swiper8 komod bg-komod bg-black !pb-8 mt-9 bg-contain w-full z-0 pt-5 !pr-3 !pl-3"
     >
       <div class="bala w-full">
         <img src="./media/komod/bestSellsDesktop.webp" alt="" class="mx-auto" />
@@ -1979,6 +2323,99 @@
     </section>
 
     <!--end swiper8 komod-->
+
+    <!--majale-->
+    <h1
+      class="majale relative text-center flex justify-center font-yekBold lg:font-yekan text-[16px] md:text-[22px] lg:mt-6 mt-5 mb-[35px]"
+    >
+      مجله دی‌جی‌لند
+    </h1>
+    <section class="majaleh lg:container lg:w-full w-[95%] flex lg:flex-row flex-col mx-auto justify-between">
+      <div class="rast lg:w-[39.6%] w-[100%] flex flex-col lg:!h-[530px] justify-between gap-2">
+        <div
+          class="zoom rounded-2xl w-full cursor-pointer relative overflow-hidden"
+        >
+          <img
+            src="./media/majale/2.jpeg"
+            alt=""
+            class="object-cover rounded-2xl !w-full lg:!h-[260px] transition-all duration-300 ease-linear"
+          />
+          <div
+            class="bg-gradient-to-t from-black to-[#00000000] w-full h-full absolute top-0 rounded-2xl"
+          ></div>
+          <div
+            class="share rounded-full bg-[#A4A4A4] absolute top-4 right-4 w-[37px] h-[37px] flex items-center justify-center"
+          >
+            <img src="./media/majale/share.svg" alt="" />
+          </div>
+          <div
+            class="titrs text-white absolute bottom-5 right-4 font-yekBold lg:font-yekExtra flex flex-col gap-3"
+          >
+            <span
+              class="bg-[#E10A0A] rounded-full !h-[30px] pr-4 pl-4 flex items-center w-fit"
+              >سرگرمی</span
+            >
+            <p class="lg:text-[19px]">
+              بهترین بازی های پلی استیشن ۴ که نباید از دست بدهید
+            </p>
+          </div>
+        </div>
+        <div class="zoom rounded-2xl w-full cursor-pointer relative overflow-hidden">
+          <img
+            src="./media/majale/4.webp"
+            alt=""
+            class=" object-cover rounded-2xl !w-full lg:!h-[260px] transition-all duration-300 ease-linear"
+          />
+          <div
+            class="bg-gradient-to-t from-black to-[#00000000] w-full h-full absolute top-0 rounded-2xl"
+          ></div>
+          <div
+            class="share rounded-full bg-[#A4A4A4] absolute top-4 right-4 w-[37px] h-[37px] flex items-center justify-center"
+          >
+            <img src="./media/majale/share.svg" alt="" />
+          </div>
+          <div
+            class="titrs text-white absolute bottom-5 right-4 font-yekBold lg:font-yekExtra flex flex-col gap-3"
+          >
+            <span
+              class="bg-[#E10A0A] rounded-full !h-[30px] pr-4 pl-4 flex items-center w-fit"
+              >آموزش و ترفند</span
+            >
+            <p class="lg:text-[19px]">
+              آموزش جامع طراحی لوگو با هوش مصنوعی
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="chap lg:w-[59.6%] w-full mt-2 lg:mt-0 lg:!h-[530px] cursor-pointer relative overflow-hidden rounded-2xl"
+      >
+        <img
+          src="./media/majale/1 (2).jpeg"
+          alt=""
+          class="rounded-2xl !w-full lg:!h-[530px] object-cover transition-all duration-300 ease-linear"
+        />
+        <div
+          class="bg-gradient-to-t from-black to-[#00000000] w-[100%] h-full absolute top-0 rounded-2xl"
+        ></div>
+        <div
+          class="share rounded-full bg-[#A4A4A4] absolute top-4 right-4 w-[37px] h-[37px] flex items-center justify-center"
+        >
+          <img src="./media/majale/share.svg" alt="" />
+        </div>
+        <div
+          class="titrs text-white absolute bottom-5 right-4 font-yekBold lg:font-yekExtra flex flex-col gap-3"
+        >
+          <span
+            class="bg-[#E10A0A] rounded-full !h-[30px] pr-4 pl-4 flex items-center w-fit"
+            >منتخب سردبیر</span
+          >
+          <p class="lg:text-[19px]">مقایسه صفحه نمایش گوشی ها</p>
+        </div>
+      </div>
+    </section>
+
+    <!--end majale-->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./jquery/dist/jquery.min.js"></script>

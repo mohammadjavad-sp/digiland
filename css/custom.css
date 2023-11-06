@@ -37,6 +37,26 @@ body {
 
 
 } */
+
+.submenu::-webkit-scrollbar {
+  width: 6px;
+  
+}
+.submenu {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  
+}
+.submenu::-webkit-scrollbar-track {
+  background: #f5f4f4;
+}
+.submenu::-webkit-scrollbar-thumb {
+  background-color: #b8b8b8;
+  border-radius: 6px;
+  border: 0.5px solid white;
+}
+
+
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -113,6 +133,14 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+li.sub:hover > div.submenu{
+  display: block;
+}
+.jvti{
+  display: block;
 }
 /*end swiper1*/
 
@@ -259,9 +287,6 @@ div.first > p::after {
   transition: all 600ms linear;
 }
 @media (min-width: 1024px) {
-  
-  
-  
   .active:hover img.off {
     transform: translateY(-35px);
     transition: all 400ms linear !important;
@@ -279,10 +304,9 @@ div.first > p::after {
   }
 }
 @media (max-width: 1024px) {
-  img.sayeh{
+  img.sayeh {
     display: none !important;
   }
-
 }
 /*end swiper4 mahboob*/
 
@@ -351,29 +375,24 @@ h1.laptop::before {
   direction: ltr;
 }
 
-/* .test {
-  transition: all 400ms linear;
-}
-.test:hover {
-  transform: rotate(5deg) !important;
-  transform-origin: top;
-  transition: all 400ms linear;
-} */
 /*end swiper8*/
-img#pic {
-  transition: all 500ms linear !important;
+
+/*majale*/
+h1.majale::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 4.5px;
+  background-color: #e10a0a;
+  position: absolute;
+  top: 130%;
 }
-img#corel {
-  transition: all 500ms linear !important;
+div.chap:hover > img{
+  transform: scale(1.1) !important;
 }
-.jvt:hover img#pic {
-  transform: translateY(-35px) !important;
-  transition: all 500ms linear;
+.zoom:hover > img{
+  transform: scale(1.1) !important;
+
 }
-.jvt:hover img#corel {
-  transform: scale(1);
-  transition: all 500ms linear !important;
-  animation-name: zoomIn;
-  animation-duration: 500ms;
-  animation-timing-function: linear;
-}
+/*end majale*/
+

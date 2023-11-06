@@ -1,23 +1,11 @@
 $(document).ready(function () {
-  $("img#hamber").click(function () {
-    $("div#side").addClass("active");
-  });
-  
-
-  /* $("input#input").focus(function () {
-    $("img#search").removeClass("rotateOut");
-    $("img#search").addClass("rotateIn");
-    $("div#width").addClass("width");
-  });
-  $(document).click(function () {
-    $("img#search").removeClass("rotateIn");
-  }); */
-
-  
+  $("li#li").mouseenter(function(){
+    $("div#bg").addClass("jvti")
+  })
+  $("li#li").mouseleave(function(){
+    $("div#bg").removeClass("jvti")
+  })
 });
-
-
-
 
 //slider
 
@@ -71,7 +59,7 @@ var swiper = new Swiper(".mySwiper1", {
 //swiper2
 
 var swiper = new Swiper(".mySwiper2", {
-  slidesPerView: 'auto',
+  slidesPerView: "auto",
   spaceBetween: 8,
   breakpoints: {
     1280: {
@@ -171,4 +159,3 @@ var swiper = new Swiper(".mySwiper8", {
     clickable: true,
   },
 });
-
