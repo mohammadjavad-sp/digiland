@@ -1,10 +1,27 @@
 $(document).ready(function () {
-  $("li#li").mouseenter(function(){
-    $("div#bg").addClass("jvti")
-  })
-  $("li#li").mouseleave(function(){
-    $("div#bg").removeClass("jvti")
-  })
+  $("input").focus(function () {
+    $("i.test").addClass("focus");
+    $(this).addClass("tool");
+  });
+  $("body")
+    .not("input")
+    .click(function () {
+      $("i.test").removeClass("focus");
+      $("input").removeClass("tool");
+    });
+
+  $("li#li").mouseenter(function () {
+    $("div#bg").addClass("jvti");
+  });
+  $("li#li").mouseleave(function () {
+    $("div#bg").removeClass("jvti");
+  });
+  $(".seen-more").click(function () {
+    $(".awesome").toggleClass("transform");
+    $(".penhan").toggleClass("block");
+    $(".seen").toggleClass("none");
+    $(".close").toggleClass("block");
+  });
 });
 
 //slider
@@ -159,3 +176,70 @@ var swiper = new Swiper(".mySwiper8", {
     clickable: true,
   },
 });
+/* var swiper10 = new Swiper(".mySwiper10", {
+  spaceBetween: 1,
+  effect: "slide",
+  loop: true,
+  freeMode: false,
+  slidesPerView: 7,
+  speed: 10000,
+  allowTouchMove: false,
+  pauseOnMouseEnter: true,
+  longSwipes: true,
+  autoplay: {
+    delay: 0,
+    autoplayDisableOnInteraction: true,
+    disableOnInteraction: false,
+    waitForTransition: true,
+    stopOnLastSlide: false,
+  },
+  
+}); */
+
+//best-brands
+var scrollc = new Swiper(".mySwiper10", {
+  spaceBetween: 0,
+  breakpoints: {
+    1280: {
+      slidesPerView: 7,
+      spaceBetween: 30,
+      speed: 7000,
+    },
+    1024: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+      speed: 7000,
+    },
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 5,
+      speed: 7000,
+    },
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 1,
+      speed: 7000,
+    },
+  },
+  effect: "slide",
+  loop: true,
+  freeMode: false,
+  slidesPerView: 3,
+  speed: 5000,
+  allowTouchMove: false,
+  autoplay: {
+    pauseOnMouseEnter: true,
+
+    delay: 0,
+    autoplayDisableOnInteraction: true,
+    disableOnInteraction: false,
+    waitForTransition: true,
+    stopOnLastSlide: false,
+  },
+});
+
+//end best-brands
+
+//accordion
+
+//end accordion

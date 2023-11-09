@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         komod: "url('/media/komod/619387 (1).jpg')",
+        test: "url('/media/1.avif')",
       },
     },
     fontFamily: {

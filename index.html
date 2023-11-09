@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="./css/custom.css" />
     <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./animate.css/animate.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
   </head>
   <body>
     <div class="preheader w-[100%] bg-[#3AB54A]">
@@ -25,7 +30,7 @@
       <img
         src="./media/menu/4.jpg"
         alt=""
-        class="lg:hidden xl:hidden w-full cursor-pointer"
+        class="lg:hidden xl:hidden w-full cursor-pointer !h-[45px] object-contain"
       />
     </div>
 
@@ -406,25 +411,30 @@
         ></div>
         <div class="menu-desktop-left pl-14 lg:pl-12 flex gap-7">
           <div
-            class="search w-[148px] h-[45px] bg-[#F6F5F5] rounded-full flex items-center pr-2"
+            class="search h-[45px] bg-[#F6F5F5] rounded-full flex items-center pr-2"
             id="width"
           >
             <div
               class="circle w-[35px] h-[35px] bg-white rounded-full flex items-center justify-center"
             >
-              <img src="./media/menu/search.svg" id="search" class="w-[25px]
-              alt="" />
+              <i
+                class="fa-solid fa-magnifying-glass test transition-all duration-300 ease-linear"
+              ></i>
             </div>
             <input
               type="text"
-              class="w-[90px] h-[40px] font-yekan pr-2 text-[#9CA3AF] bg-[#F6F5F5] outline-none"
+              class="transition-all duration-300 ease-linear rounded-full w-[90px] h-full font-yekan pr-2 text-[#9CA3AF] bg-[#F6F5F5] outline-none"
               placeholder="جستجو..."
               id="input"
             />
           </div>
           <div class="login flex items-center">
             <img src="./media/menu/login.svg" class="cursor-pointer" alt="" />
-            <p class="text-[#E41F1F] font-yekExtra hidden xl:block">واردشوید</p>
+            <p
+              class="text-[#E41F1F] font-yekExtra hidden xl:block cursor-pointer"
+            >
+              واردشوید
+            </p>
           </div>
           <img src="./media/menu/sabad.svg" alt="" class="cursor-pointer" />
           <img src="./media/menu/loc.svg" alt="" class="cursor-pointer" />
@@ -511,14 +521,16 @@
     >
       دسته‌بندی‌های پربازدید
     </h1>
-    <section class="swiper1 w-[97%] h-[200px] mt-14 font-yekBold mx-auto">
+    <section
+      class="swiper1 w-[97%] h-[200px] lg:mt-14 mt-5 font-yekBold mx-auto"
+    >
       <div class="swiper mySwiper1">
         <div class="swiper-wrapper">
           <div
-            class="swiper-slide !relative !h-[300px] flex flex-col items-center cursor-pointer !transition-all !duration-500 !ease-linear"
+            class="swiper-slide flex flex-col items-center cursor-pointer !transition-all !duration-500 !ease-linear"
           >
             <div
-              class="ax !transition-all !duration-500 !ease-linear overflow-hidden lg:w-[130px] lg:h-[130px] w-[100px] h-[100px] rounded-full bg-[#E2DBF1] mx-auto"
+              class="ax overflow-hidden lg:w-[130px] lg:h-[130px] w-[100px] h-[100px] rounded-full bg-[#E2DBF1] mx-auto"
             >
               <img
                 src="./media/dasteh bandi/1_1-removebg-preview.png"
@@ -624,7 +636,7 @@
       <img
         src="./media/banner/4.webp"
         alt=""
-        class="lg:w-full lg:hidden rounded-[10px] cursor-pointer"
+        class="w-full lg:hidden rounded-[10px] cursor-pointer"
       />
       <img
         src="./media/banner/4.jpg"
@@ -638,7 +650,7 @@
     <!--offer-->
 
     <section
-      class="swiper2 offer w-full !h-[365px] md:!h-[75vh] sm:!h-[78vh] lg:!h-auto bg-gradient-to-r from-[#AF0202] to-[#E10A0A] mt-8 lg:pr-[45px] lg:pl-[45px] pr-2 pl-2 lg:pt-5 lg:pb-5 pt-3 pb-2"
+      class="swiper2 offer w-full lg:!h-auto !h-[23rem] bg-gradient-to-r from-[#AF0202] to-[#E10A0A] mt-8 lg:pr-[45px] lg:pl-[45px] pr-2 pl-2 lg:pt-5 lg:pb-5 pt-3 pb-2"
     >
       <div class="titr flex justify-center items-center lg:mb-10 mb-3 gap-2">
         <img
@@ -2145,7 +2157,7 @@
     <!--swiper8 komod-->
 
     <section
-      class="swiper8 komod bg-komod bg-black !pb-8 mt-9 bg-contain w-full z-0 pt-5 !pr-3 !pl-3"
+      class="swiper8 komod bg-test bg-black !pb-8 mt-9 bg-contain w-full z-0 pt-5 !pr-3 !pl-3"
     >
       <div class="bala w-full">
         <img src="./media/komod/bestSellsDesktop.webp" alt="" class="mx-auto" />
@@ -2330,8 +2342,12 @@
     >
       مجله دی‌جی‌لند
     </h1>
-    <section class="majaleh lg:container lg:w-full w-[95%] flex lg:flex-row flex-col mx-auto justify-between">
-      <div class="rast lg:w-[39.6%] w-[100%] flex flex-col lg:!h-[530px] justify-between gap-2">
+    <section
+      class="majaleh lg:container lg:w-full w-[95%] flex lg:flex-row flex-col mx-auto justify-between"
+    >
+      <div
+        class="rast lg:w-[39.6%] w-[100%] flex flex-col lg:!h-[530px] justify-between gap-2"
+      >
         <div
           class="zoom rounded-2xl w-full cursor-pointer relative overflow-hidden"
         >
@@ -2360,11 +2376,13 @@
             </p>
           </div>
         </div>
-        <div class="zoom rounded-2xl w-full cursor-pointer relative overflow-hidden">
+        <div
+          class="zoom rounded-2xl w-full cursor-pointer relative overflow-hidden"
+        >
           <img
             src="./media/majale/4.webp"
             alt=""
-            class=" object-cover rounded-2xl !w-full lg:!h-[260px] transition-all duration-300 ease-linear"
+            class="object-cover rounded-2xl !w-full lg:!h-[260px] transition-all duration-300 ease-linear"
           />
           <div
             class="bg-gradient-to-t from-black to-[#00000000] w-full h-full absolute top-0 rounded-2xl"
@@ -2381,9 +2399,7 @@
               class="bg-[#E10A0A] rounded-full !h-[30px] pr-4 pl-4 flex items-center w-fit"
               >آموزش و ترفند</span
             >
-            <p class="lg:text-[19px]">
-              آموزش جامع طراحی لوگو با هوش مصنوعی
-            </p>
+            <p class="lg:text-[19px]">آموزش جامع طراحی لوگو با هوش مصنوعی</p>
           </div>
         </div>
       </div>
@@ -2414,8 +2430,510 @@
         </div>
       </div>
     </section>
+    <button
+      class="mx-auto py-2.5 font-yekan text-[14px] px-5 flex border-[1px] border-[#CDCDCD] rounded-xl mt-3 lg:mt-8 text-[#E10A0A]"
+    >
+      مشاهده همه
+    </button>
 
     <!--end majale-->
+
+    <!--moving-slider-->
+
+    <div class="best-brands relative mt-[25px] lg:mt-[40px] w-fit mx-auto">
+      <p
+        class="text-center text-[#757675] font-yekBold lg:font-yekan lg:text-[21px] text-[15px]"
+      >
+        برندهای برتر
+      </p>
+    </div>
+    <section class="best w-[94%] mx-auto lg:mt-10 mt-5 mb-5">
+      <div class="swiper mySwiper10">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/anker.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/apple.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/harman.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/jbl.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/nokia.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/promote.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/razer.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/samsung.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/sandisk.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/sony.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+          <div class="swiper-slide !px-8">
+            <img
+              src="./media/best/xiaomi.webp"
+              alt=""
+              class="!w-[120px] !h-[40px] !object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--end moving-slider-->
+
+    <!--accordion-->
+
+    <section
+      class="accordion container w-[94%] border-[1px] mx-auto mb-5 rounded-2xl"
+    >
+      <div
+        class="subject gap-3 border-b-[1px] md:py-5 md:pt-5 pb-2 md:my-auto my-2 flex justify-between w-[92%] mx-auto font-yekBold text-[#505060]"
+      >
+        <p class="lg:text-[16px] text-[13px]">
+          خرید انواع محصولات دیجیتال از فروشگاه اینترنتی دی‌جی‌لند
+        </p>
+        <div
+          class="seen-more justify-end flex w-[140px] cursor-pointer items-center gap-2"
+        >
+          <div class="seen">
+            <p class="lg:text-[14px] text-[12px] line-clamp-1">مشاهده بیشتر</p>
+          </div>
+          <div class="close hidden text-left">
+            <p class="text-[#E10A0A]">بستن</p>
+          </div>
+          <i
+            class="fa-solid fa-angle-down text-[13px] awesome !transition-all !duration-300 !ease-linear"
+          ></i>
+        </div>
+      </div>
+      <div class="text w-[92%] text-[#746B6B] mx-auto mt-8">
+        <h1 class="font-yekBold mb-2 text-[14px]">
+          فروشگاه اینترنتی دی‌جی‌لند، ضمانت یک خرید مطمئن
+        </h1>
+        <p class="font-yekan text-[14px] mb-5 text-justify">
+          دی‌جی‌لند فروشگاهی با سابقه ۲۰ ساله در امر فروش انواع کالاهای دیجیتال
+          است که در راستای تسهیل امر خرید اینترنتی، فروشگاه اینترنتی خود را در
+          سال ۱۳۹۸ افتتاح کرد و در حال حاضر ۷ شعبه فعال در سراسر کشور دارد. تنوع
+          گسترده محصولات و کالاهای موجود در دی‌جی‌لند باعث شده تا کاربران برای
+          خرید گوشی موبایل، ساعت هوشمند، تبلت، لپ تاپ، لوازم جانبی یا تلویزیون و
+          سایر لوازم خانگی، فروشگاه ما را به عنوان انتخاب اول خود در نظر بگیرند.
+        </p>
+      </div>
+      <div class="penhan hidden text w-[92%] text-[#746B6B] mx-auto">
+        <h1 class="font-yekBold mb-2 text-[14px]">گوشی موبایل</h1>
+        <p class="font-yekan text-[14px] mb-5 text-justify">
+          علاقه‌مندان به جدیدترین گجت‌های هوشمند می‌توانند با مراجعه به فروشگاه
+          دی‌جی‌لند به محبوب‌ترین و آخرین نسخه از گوشی موبایل برندهای مطرح
+          دسترسی داشته باشند و نسبت به خرید گوشی دلخواهشان در رنگ‌بندی‌های متنوع
+          و صد البته به همراه گارانتی معتبر و ضمانت نامه خدمات پس از فروش اقدام
+          کنند. در دی‌جی‌لند علاوه بر اینکه انواع گوشی هوشمند با بهترین قیمت در
+          دسترس قرار دارند، بلکه نسبت به خرید لوازم جانبی آن‌ها نیز می‌توانید
+          اقدام کنید. در حال حاضر به فهرستی بلند بالا از گوشی سامسونگ، آیفون اپل
+          و محصولاتی از برندهای دیگر مانند گوشی شیائومی، آنر، هواوی و موتورولا
+          دسترسی دارید تا با توجه به بودجه و نیازتان، بهترین مدل را انتخاب کنید.
+        </p>
+        <h1 class="font-yekBold mb-2 text-[14px]">
+          لپ تاپ از دانشجویی تا گیمینگ
+        </h1>
+        <p class="font-yekan text-[14px] mb-5 text-justify">
+          بسته به نوع کاربری، لپ تاپ به یکی از ضروری‌ترین وسایل مورد نیاز
+          کاربران تبدیل شده است؛ دستگاهی کوچک و قابل حمل که می‌تواند ما را از
+          کامپیوترهای رومیزی بی‌نیاز سازد و با توجه به اینکه قابل حمل است،
+          دسترسی به اطلاعات مورد نیازمان را ساده‌تر و راحت‌تر سازد. در دی‌جی‌لند
+          می‌توانید نسبت به خرید لپ تاپ دانشجویی، گیمینگ، مناسب طراحی و کارهای
+          گرافیکی تا حتی مدل‌های مناسب برنامه‌نویسی با بهترین قیمت اقدام کنید.
+          از لپ تاپ گیمینگ ایسوس تا مدل‌های مناسب طراحی مانند لپ تاپ دل و HP در
+          فروشگاه موجود شده‌اند تا با توجه به نیازتان، مدل مناسب را برگزینید.
+          اگر هم به لپ تاپی چند منظوره نیاز دارید که از پس وظایف مختلف برآید، مک
+          بوک اپل و سرفیس مایکروسافت همیشه بهترین انتخاب‌ها هستند..
+        </p>
+        <h1 class="font-yekBold mb-2 text-[14px]">تلویزیون و سیستم صوتی</h1>
+        <p class="font-yekan text-[14px] mb-5 text-justify">
+          علاقه‌مندان به تماشای فیلم و سریال یا برنامه‌های ورزشی طبیعتا تمایل
+          بسیاری به داشتن تلویزیونی بزرگ و باکیفیت دارند که بتواند لذت تجربه
+          تماشای محتوا را به حداکثر برساند. در دی‌جی‌لند می‌توانید دسترسی به
+          انواع و اقسام تلویزیون‌ها از برندهای مطرح را داشته باشید و آن‌ها را با
+          یکدیگر مقایسه کنید. فرقی نمی‌کند به دنبال تلویزیون ال جی یا تلویزیون
+          سامسونگ و سونی هستید یا می‌خواهید از مدل‌های ارزان قیمت داخلی استفاده
+          کنید، همیشه در دی‌جی‌لند گزینه‌ای مناسب در برابرتان قرار داده می‌شود..
+        </p>
+        <h1 class="font-yekBold mb-2 text-[14px]">
+          ساعت هوشمند و دستبند سلامت
+        </h1>
+        <p class="font-yekan text-[14px] mb-5 text-justify">
+          برای ورزشکاران یا علاقه‌مندان به اکسسوری‌های شیک و جذاب، خرید ساعت
+          هوشمند همیشه یک انتخاب ایده آل است. درواقع ساعت هوشمند و دستبند سلامت
+          علاوه بر اینکه اکسسوری شیک و زیبایی محسوب می‌شوند؛ بلکه قابلیت‌های
+          متعددشان در زمینه ثبت میزان تحرک و کالری سوزانده شده باعث شده تا همراه
+          مناسبی برای ورزشکاران باشند. دی‌جی‌لند به شما اجازه می‌دهد با انتخاب
+          ساعت هوشمند از برندهای مطرح مانند اپل،‌ سامسونگ، شیائومی و... استایل
+          خود را تکمیل کنید و محصولی ایده‌آل با قابلیت‌های متنوع داشته باشید..
+        </p>
+        <h1 class="font-yekBold mb-2 text-[14px]">هدفون و هندزفری</h1>
+        <p class="font-yekan text-[14px] mb-5 text-justify">
+          این روزها هر کاربری به یک هندزفری توانمند در پخش موسیقی و مکالمه نیاز
+          دارد. همین امر نیز باعث می‌شود انتخاب هدفون و هدست مناسب برای کاربران
+          کمی دشوار شود. البته این موضوع شامل حال مشتریان دی‌جی‌لند نخواهد شد؛
+          زیرا تنوع گسترده هدفون و هدست در فروشگاه دی‌جی‌لند باعث شده تا حتی
+          سخت‌پسند‌ترین کاربران نیز محصولی درخور نیازهایشان بیابند. از ایرپاد
+          اپل تا گلکسی بادز سامسونگ را می‌توانید با بهترین قیمت از فروشگاه
+          دی‌جی‌لند خریداری کنید. اگر هم به دنبال هدست و هدفون گیمینگ هستید تا
+          انتخاب گزینه مناسب از برندهای مطرح مانند لاجیتک و ریزر تنها چند کلیک
+          فاصله خواهید داشت..
+        </p>
+        <h1 class="font-yekBold mb-2 text-[14px]">
+          انواع لوازم جانبی موبایل و کامپیوتر
+        </h1>
+        <p class="font-yekan text-[14px] mb-5 text-justify">
+          برای استفاده مناسب و همچنین نگهداری از هر دستگاهی طبیعتا به لوازم
+          جانبی نیاز است و دی‌جی‌لند نیز نیازهای کاربران را درک و برطرف می‌سازد.
+          در فروشگاه دی‌جی‌لند نه تنها انواع محصولات و کالاهای دیجیتال موجود شده
+          است، بلکه می‌توانید نسبت به خرید لوازم جانبی این محصولات نیز اقدام
+          کنید که شامل محافظ، تجهیزات نگهداری، لوازم ذخیره سازی اطلاعات، انواع
+          کابل و شارژر می‌شود...
+        </p>
+      </div>
+    </section>
+
+    <!--end accordion-->
+
+    <!--footer-->
+
+    <section class="footer w-full border-t-[1px] border-b-[1px] mt-14 lg:mt-0">
+      <div class="desktop-footer hidden lg:block pt-4">
+        <img
+          src="./media/footer/dgland_footer_logo.svg"
+          class="w-[148px] mr-14"
+          alt=""
+        />
+        <div class="info mx-auto flex justify-between w-[92%]">
+          <div class="mavared">
+            <h1 class="font-yekExtra text-[#888888] text-[14px] my-4">
+              درباره‌ی دی‌جی‌لند
+            </h1>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">تماس با ما</p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              درباره‌ی ما
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              مجله‌ی دیجی‌لند
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">شعب</p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              شرایط و قوانین
+            </p>
+          </div>
+          <div class="mavared">
+            <h1 class="font-yekExtra text-[#888888] text-[14px] my-4">
+              خدمات مشتریان
+            </h1>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              پرسش‌های متداول
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              راهنمای خرید
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              شرایط بازگشت کالا
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">ثبت شکایات</p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">حریم خصوصی</p>
+          </div>
+          <div class="mavared">
+            <h1 class="font-yekExtra text-[#888888] text-[14px] my-4">
+              دسته‌بندی‌های پربازدید
+            </h1>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              گوشی موبایل
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              اسپیکر و بلندگو
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              ساعت هوشمند
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              هدفون و هندزفری
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              محافظ صفحه‌ نمایش
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              شارژر و پاور بانک
+            </p>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">کابل شارژ</p>
+          </div>
+          <div class="mavared">
+            <h1 class="font-yekExtra text-[#888888] text-[14px] my-4">
+              ساعت پاسخگویی
+            </h1>
+            <p class="font-yekan text-[12px] text-[#525252] mb-2">
+              ۷ روز هفته از ساعت ۹ الی ۲۰
+            </p>
+            <div class="content flex gap-1 cursor-pointer">
+              <img src="./media/footer/hedfon.svg" alt="" />
+              <div class="call flex flex-col">
+                <p class="font-yekExtra text-[12px] text-[#525252]">
+                  تلفن امور مشتریان
+                </p>
+                <p class="font-yekExtra text-[12px] text-[#525252]">
+                  021-41016
+                </p>
+              </div>
+            </div>
+            <div class="content flex gap-1 cursor-pointer">
+              <img src="./media/footer/@.svg" alt="" />
+              <div class="call flex flex-col">
+                <p class="font-yekExtra text-[12px] text-[#525252]">
+                  روابط عمومی
+                </p>
+                <p class="font-yekExtra text-[12px] text-[#525252]">
+                  Info@dgland.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mavared flex flex-col">
+            <h1 class="font-yekExtra text-[#888888] text-[14px] my-4">
+              ما را دنبال کنید
+            </h1>
+            <div class="pic flex gap-5 cursor-pointer">
+              <img src="./media/footer/insta.svg" alt="" />
+              <img src="./media/footer/tel.svg" alt="" />
+              <img src="./media/footer/linkedin.svg" alt="" />
+              <img src="./media/footer/aparat.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="about-dg w-[92%] mx-auto mt-2 flex">
+          <div class="rast w-[50%]">
+            <h1 class="font-yekan mb-2 text-[#5a5959]">
+              فروشگاه اینترنتی <span class="text-[#E10A0A]">دی‌جی‌لند</span>
+            </h1>
+            <p class="text-[11px] text-justify font-yekan text-[#717171]">
+              فروشگاه اینترنتی دی‌جی‌لند به طور رسمی در فروردین ماه ۹۹ با توجه
+              به رشد روزافزون خدمات اینترنتی و دنیای تکنولوژی در جهان امروز و
+              نیاز به کالاهای دیجیتال تاسیس شد. هدف این فروشگاه اینترنتی
+              خدمت‌رسانی و تامین جدیدترین مدل‌ها از معتبرترین برند‌های کالای
+              دیجیتال ، لوازم خانگی و سرگرمی است.
+            </p>
+          </div>
+          <div class="chapp w-[50%] flex justify-center gap-4">
+            <img
+              src="./media/footer/enamad-removebg-preview.png"
+              alt=""
+              class="!w-[80px] !object-contain"
+            />
+            <img
+              src="./media/footer/neshan_sabt-removebg-preview.png"
+              alt=""
+              class="!w-[80px] !object-contain"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-footer mx-auto lg:hidden pb-6 w-[92%] pt-2">
+        <div class="titr w-full container mx-auto text-center">
+          <p class="font-yekBold text-[16px] text-[#878787]">
+            <span class="text-[#E10A0A]">همراه شما هستیم.</span> با ما در ارتباط
+            باشید...
+          </p>
+          <p class="font-yekan font-thin mt-3 text-[16px] text-[#797979] mb-2">
+            ۷ روز هفته از ساعت ۹ الی ۲۰
+          </p>
+        </div>
+        <div class="items mx-auto flex justify-center gap-2 mt-7">
+          <div class="content flex gap-1 cursor-pointer">
+            <img src="./media/footer/hedfon.svg" alt="" />
+            <div class="call flex flex-col">
+              <p class="font-yekExtra text-[12px] text-[#878787]">
+                تلفن امور مشتریان
+              </p>
+              <p class="font-yekExtra text-[12px] text-[#878787]">021-41016</p>
+            </div>
+          </div>
+          <div class="content flex gap-1 cursor-pointer">
+            <img src="./media/footer/@.svg" alt="" />
+            <div class="call flex flex-col">
+              <p class="font-yekExtra text-[12px] text-[#878787]">
+                روابط عمومی
+              </p>
+              <p class="font-yekExtra text-[12px] text-[#878787]">
+                Info@dgland.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="khdmat flex justify-around container mt-12">
+          <img
+            src="./media/footer/1-removebg-preview.png"
+            class="!h-[61.39px]"
+            alt=""
+          />
+          <img
+            src="./media/footer/2-removebg-preview.png"
+            class="!h-[61.39px]"
+            alt=""
+          />
+          <img
+            src="./media/footer/3-removebg-preview.png"
+            class="!h-[61.39px]"
+            alt=""
+          />
+          <img
+            src="./media/footer/4-removebg-preview.png"
+            class="!h-[61.39px]"
+            alt=""
+          />
+        </div>
+        <div class="about w-[85%] mx-auto font-yekan mt-10">
+          <h1 class="text-[#525252]">
+            فروشگاه اینترنتی <span class="text-[#E10A0A]">دی‌جی‌لند</span>
+          </h1>
+          <p class="text-justify text-[11px] text-[#646464]">
+            فروشگاه اینترنتی دی‌جی‌لند به طور رسمی در فروردین ماه ۹۹ با توجه به
+            رشد روزافزون خدمات اینترنتی و دنیای تکنولوژی در جهان امروز و نیاز به
+            کالاهای دیجیتال تاسیس شد. هدف این فروشگاه اینترنتی خدمت‌رسانی و
+            تامین جدیدترین مدل‌ها از معتبرترین برند‌های کالای دیجیتال ، لوازم
+            خانگی و سرگرمی است.
+          </p>
+        </div>
+        <div class="etebar flex w-[95%] mx-auto justify-center mt-2 gap-5">
+          <img
+            src="./media/footer/enamad-removebg-preview.png"
+            class="!w-[80px] !object-contain"
+            alt=""
+          />
+          <img
+            src="./media/footer/neshan_sabt-removebg-preview.png"
+            class="!w-[80px] !object-contain"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--end footer-->
+
+    <!--copyRight-->
+    <div class="akhar-desktop my-2 w-[92%] mx-auto hidden lg:block">
+      <div class="yek flex justify-between">
+        <p class="font-yekan text-[12px] text-[#575757]">
+          © کلیه حقوق این وب سایت متعلق به دی‌جی‌لند است.
+        </p>
+        <p class="font-mono text-[12px] text-[#575757]">
+          Copyright 2022 Dgland.com ©
+        </p>
+      </div>
+    </div>
+    <div
+      class="akhar-mobile w-[90%] container lg:hidden mx-auto my-2 flex justify-between"
+    >
+      <div class="yek flex flex-col">
+        <p class="font-yekan text-[12px] text-[#575757]">
+          © کلیه حقوق این وب سایت متعلق به دی‌جی‌لند است.
+        </p>
+        <p class="font-mono text-[12px] text-[#575757]">
+          Copyright 2022 Dgland.com ©
+        </p>
+      </div>
+      <div class="social flex gap-4">
+        <img src="./media/footer/insta.svg" alt="" class="!w-[15px]" />
+        <img src="./media/footer/linkedin.svg" alt="" class="!w-[15px]" />
+      </div>
+    </div>
+    <!--end copyRight-->
+    <!--btm menu-->
+
+    <section
+      class="btm-menu w-full h-[70px] bg-white lg:hidden sticky bottom-0 z-40 items-center flex flex-row-reverse justify-around"
+    >
+      <div
+        class="items cursor-pointer flex flex-col items-center text-[10px] gap-2 text-[#888888] font-yekan"
+      >
+        <img src="./media/btm-menu/dasteh.svg" alt="" class="!w-[24px]" />
+        <p>دسته‌بندی</p>
+      </div>
+      <div
+        class="items cursor-pointer flex flex-col items-center text-[10px] gap-2 text-[#888888] font-yekan"
+      >
+        <img src="./media/btm-menu/search.svg" alt="" class="!w-[24px]" />
+        <p>جستجو</p>
+      </div>
+      <div
+        class="items cursor-pointer flex flex-col items-center text-[10px] gap-2 text-[#E10A0A] font-yekan"
+      >
+        <img src="./media/btm-menu/logo.svg" alt="" class="!w-[24px]" />
+        <p>خانه</p>
+      </div>
+      <div
+        class="items cursor-pointer flex flex-col items-center text-[10px] gap-2 text-[#888888] font-yekan"
+      >
+        <img src="./media/btm-menu/sabad.svg" alt="" class="!w-[24px]" />
+        <p>سبد‌خرید</p>
+      </div>
+      <div
+        class="items cursor-pointer flex flex-col items-center text-[10px] gap-2 text-[#888888] font-yekan"
+      >
+        <img src="./media/btm-menu/login.svg" alt="" class="!w-[24px]" />
+        <p>ورود</p>
+      </div>
+    </section>
+
+    <!--end btm menu-->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./jquery/dist/jquery.min.js"></script>

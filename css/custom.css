@@ -40,12 +40,10 @@ body {
 
 .submenu::-webkit-scrollbar {
   width: 6px;
-  
 }
 .submenu {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-  
 }
 .submenu::-webkit-scrollbar-track {
   background: #f5f4f4;
@@ -55,7 +53,6 @@ body {
   border-radius: 6px;
   border: 0.5px solid white;
 }
-
 
 @keyframes zoomIn {
   from {
@@ -135,11 +132,10 @@ body {
   object-fit: cover;
 }
 
-
-li.sub:hover > div.submenu{
+li.sub:hover > div.submenu {
   display: block;
 }
-.jvti{
+.jvti {
   display: block;
 }
 /*end swiper1*/
@@ -387,12 +383,99 @@ h1.majale::before {
   position: absolute;
   top: 130%;
 }
-div.chap:hover > img{
+div.chap:hover > img {
   transform: scale(1.1) !important;
 }
-.zoom:hover > img{
+.zoom:hover > img {
   transform: scale(1.1) !important;
-
 }
 /*end majale*/
 
+/*best brands*/
+div.best-brands > p::before {
+  width: 32px;
+  height: 1px;
+  display: block;
+  content: "";
+  background-color: #a4a4a4;
+  position: absolute;
+  top: 50%;
+  right: -45px;
+}
+div.best-brands > p::after {
+  width: 32px;
+  height: 1px;
+  display: block;
+  content: "";
+  background-color: #a4a4a4;
+  position: absolute;
+  top: 50%;
+  left: -45px;
+}
+
+.best .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.best .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.best .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 660px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.best .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.best .swiper-slide:hover {
+  border-color: #888888;
+}
+/*end best brands*/
+/*accordion*/
+
+.transform {
+  transform: rotate(180deg) !important;
+  color: #E10A0A !important;
+  
+}
+.block{
+  display: block;
+}
+.none{
+  display: none;
+ 
+}
+/*end accordion*/
+.focus{
+  transform: rotate(360deg);
+  color: #E10A0A;
+}
+.tool{
+  width: 200px;
+}
+.mavared p{
+  cursor: pointer;
+}
+.khdmat > img{
+  filter: opacity(70%)
+}
+.btm-menu{
+  box-shadow: 5px -0.3px 5px lightgrey;
+}
+.brands > p:hover{
+  color: #E10A0A !important;
+}
