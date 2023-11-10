@@ -1,15 +1,46 @@
 $(document).ready(function () {
+  $("img#hamber").click(function () {
+    $("div.side-bar").removeClass(
+      "animate__animated animate__fadeOutRight none"
+    );
+
+    $("div.payeh").addClass("block2 animate__animated animate__fadeIn");
+    $("div.side-bar").addClass("block2 animate__animated animate__fadeInRight");
+    $("html,body").css({
+      overflow: "hidden",
+    });
+  });
+  $("div#payeh").click(function () {
+    $(this).removeClass("block2");
+    $("div.side-bar").addClass("animate__animated animate__fadeOutRight none");
+    $("html,body").css({
+      overflow: "auto",
+    });
+  });
+  $("div.asli").click(function () {
+    $("div.zir").slideToggle(500);
+    $("i.bandi").toggleClass("transform");
+    $("p.bandi").toggleClass("redd");
+  });
+  $("div.one").click(function () {
+    $("div.one>span").removeClass("transform");
+    $("div.one>p").removeClass("redd");
+    $(this).children("div.one>span").toggleClass("transform");
+    $(this).children("p").toggleClass("redd");
+  });
+  $("div.one").on("click", function () {
+    $("div.two").removeClass("block");
+    $(this).next("div.two").addClass("block");
+  });
+
   $("input").focus(function () {
-    $("i.test").addClass("focus");
+    $("i.round").addClass("focus");
     $(this).addClass("tool");
   });
-  $("body")
-    .not("input")
-    .click(function () {
-      $("i.test").removeClass("focus");
-      $("input").removeClass("tool");
-    });
-
+  $("input").blur(function () {
+    $("i.round").removeClass("focus");
+    $(this).removeClass("tool");
+  });
   $("li#li").mouseenter(function () {
     $("div#bg").addClass("jvti");
   });
@@ -60,8 +91,13 @@ var swiper = new Swiper(".mySwiper1", {
       spaceBetween: 0,
     },
     768: {
-      slidesPerView: 5,
-      spaceBetween: 10,
+      slidesPerView: 5.7,
+      spaceBetween: 0,
+    },
+
+    640: {
+      slidesPerView: 4.5,
+      spaceBetween: 0,
     },
   },
   freeMode: true,
@@ -176,25 +212,6 @@ var swiper = new Swiper(".mySwiper8", {
     clickable: true,
   },
 });
-/* var swiper10 = new Swiper(".mySwiper10", {
-  spaceBetween: 1,
-  effect: "slide",
-  loop: true,
-  freeMode: false,
-  slidesPerView: 7,
-  speed: 10000,
-  allowTouchMove: false,
-  pauseOnMouseEnter: true,
-  longSwipes: true,
-  autoplay: {
-    delay: 0,
-    autoplayDisableOnInteraction: true,
-    disableOnInteraction: false,
-    waitForTransition: true,
-    stopOnLastSlide: false,
-  },
-  
-}); */
 
 //best-brands
 var scrollc = new Swiper(".mySwiper10", {
@@ -239,7 +256,3 @@ var scrollc = new Swiper(".mySwiper10", {
 });
 
 //end best-brands
-
-//accordion
-
-//end accordion
