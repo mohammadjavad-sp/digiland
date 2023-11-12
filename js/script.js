@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //page1
   $("img#hamber").click(function () {
     $("div.side-bar").removeClass(
       "animate__animated animate__fadeOutRight none"
@@ -30,7 +31,7 @@ $(document).ready(function () {
   });
   $("div.one").on("click", function () {
     $("div.two").removeClass("block");
-    $(this).next("div.two").addClass("block");
+    $(this).next("div.two").slideToggle("block");
   });
 
   $("input").focus(function () {
@@ -52,6 +53,30 @@ $(document).ready(function () {
     $(".penhan").toggleClass("block");
     $(".seen").toggleClass("none");
     $(".close").toggleClass("block");
+  });
+  //end page1
+
+  //page2
+
+  $("div.anasor").click(function () {
+    $(this).find("div.tick").toggleClass("back-redd");
+    var activeTick = document.querySelectorAll(".back-redd");
+    console.log(activeTick);
+    if (activeTick.length > 0) {
+      $("div.alaki").show("slow");
+    } else {
+      $("div.alaki").hide(300);
+    }
+  });
+
+  $("div.alaki").click(function () {
+    $(this).hide(200);
+    $("div.tick").removeClass("back-redd");
+  });
+  $("div.nahan").hide();
+  $("div.ashkar").click(function () {
+    $(this).next("div.nahan").slideToggle();
+    $(this).children("i").toggleClass("transform");
   });
 });
 

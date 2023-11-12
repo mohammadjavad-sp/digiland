@@ -53,7 +53,21 @@ body {
   border-radius: 6px;
   border: 0.5px solid white;
 }
-
+.nahan::-webkit-scrollbar {
+  width: 6px;
+}
+.nahan {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.nahan::-webkit-scrollbar-track {
+  background: #f5f4f4;
+}
+.nahan::-webkit-scrollbar-thumb {
+  background-color: #b8b8b8;
+  border-radius: 6px;
+  border: 0.5px solid white;
+}
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -449,56 +463,61 @@ div.best-brands > p::after {
 
 .transform {
   transform: rotate(180deg) !important;
-  color: #E10A0A !important;
+  color: #e10a0a !important;
   transition: all 300ms linear !important;
 }
-.block{
+.block {
   display: block !important;
 }
-.block2{
+.block2 {
   display: block !important;
   transition: all 300ms linear !important;
-  
 }
-.none{
+.none {
   display: none;
-
 }
 
 /*end accordion*/
-.focus{
+.focus {
   transform: rotate(360deg);
-  color: #E10A0A;
+  color: #e10a0a;
   transition: all 400ms linear;
 }
-.tool{
+.tool {
   width: 200px;
   transition: all 400ms linear;
 }
-.mavared p{
+.mavared p {
   cursor: pointer;
 }
-.khdmat > img{
-  filter: opacity(70%)
+.khdmat > img {
+  filter: opacity(70%);
 }
-.btm-menu{
+.btm-menu {
   box-shadow: 5px -0.3px 5px lightgrey;
 }
-.brands > p:hover{
-  color: #E10A0A !important;
+.brands > p:hover {
+  color: #e10a0a !important;
 }
-.redd{
-  color: #E10A0A !important;
-  
-
+.redd {
+  color: #e10a0a !important;
 }
-div.one > span{
+.back-redd {
+  background-color: #e10a0a !important;
+}
+div.one > span {
   transition: all 500ms linear;
 }
 
-.two > p{
+.two > p {
   margin-bottom: 10px;
 }
-.two > p:last-child{
+.two > p:last-child {
   margin-bottom: 0;
+}
+.transparent{
+  background-color: white;
+}
+div.ashkar{
+  padding-top: 8px;
 }
