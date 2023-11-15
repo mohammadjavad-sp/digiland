@@ -78,6 +78,18 @@ $(document).ready(function () {
     $(this).next("div.nahan").slideToggle();
     $(this).children("i").toggleClass("transform");
   });
+  $(".seen-low-page2").hide();
+  $(".seen-more-page2").click(function () {
+    $("div.na-peyda").addClass("block");
+    $(this).hide();
+    $(".seen-low-page2").show();
+  });
+  $(".seen-low-page2").click(function () {
+    $(this).hide();
+    $("div.na-peyda").removeClass("block");
+    $(".seen-more-page2").show();
+  });
+  
 });
 
 //slider
