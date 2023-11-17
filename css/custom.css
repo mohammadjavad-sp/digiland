@@ -80,6 +80,10 @@ body {
   transform: rotate(360deg);
   transition: all 400ms linear;
 }
+.rotate {
+  transform: rotate(180deg);
+  transition: all 400ms linear;
+}
 .rotateOut {
   transform: rotate(-360deg);
   transition: all 600ms linear;
@@ -474,7 +478,7 @@ div.best-brands > p::after {
   transition: all 300ms linear !important;
 }
 .none {
-  display: none;
+  display: none !important;
 }
 
 /*end accordion*/
@@ -524,6 +528,10 @@ div.ashkar {
 
 div.phone-items {
   transition: all 300ms linear;
+  margin-bottom: 5px;
+}
+div.prices > h4 {
+  height: 18px;
 }
 div.phone-items:hover {
   box-shadow: 0px 0.9px 2.2px rgba(0, 0, 0, 0.02),
@@ -531,11 +539,46 @@ div.phone-items:hover {
     0.2px 7.1px 17.9px rgba(0, 0, 0, 0.042),
     0.4px 13.4px 33.4px rgba(0, 0, 0, 0.05), 1px 32px 80px rgba(0, 0, 0, 0.07);
 }
-.selected{
+.selected {
+  background-color: #e10a0a !important;
+  color: white;
+}
+.selected2 {
+  color: #e10a0a;
+  cursor: default;
+}
+.selected:hover {
   background-color: #e10a0a;
   color: white;
 }
-.selected:hover{
+.prev-footer p {
+  text-align: justify;
+}
+.scale {
+  transform-origin: bottom;
+  transform: scale(1) !important;
+  transition: all 500ms linear;
+}
+div.in-left-brands * {
+  font-size: 16px !important;
+}
+div.in-left-brands > div.rasti {
+  gap: 10px !important;
+}
+div.in-left-brands > p {
+  font-weight: 500;
+}
+div.in-left-brands {
+  margin-bottom: 10px;
+}
+div.in-left-brands div.tick i {
+  font-size: 10px !important;
+}
+.nav-color {
+  background-color: #e10a0a;
+  color: white;
+}
+.nav-color:hover {
   background-color: #e10a0a;
   color: white;
 }

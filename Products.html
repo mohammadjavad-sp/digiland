@@ -17,7 +17,7 @@
   </head>
   <body>
     <div
-      class="preheader w-[100%] bg-[#3AB54A] transition-all duration-700 ease-linear"
+      class="preheader hidden lg:block w-[100%] bg-[#3AB54A] transition-all duration-700 ease-linear"
     >
       <img
         src="./media/menu/d1.jpg"
@@ -445,21 +445,15 @@
       </div>
 
       <img
-        src="./media/menu/hamburger icon.svg"
-        class="mr-5 transition-all duration-500 ease-linear w-7 lg:hidden"
-        alt=""
-        id="hamber"
-      />
-      <img
         src="./media/menu/logo.svg"
-        class="mx-auto w-[180px] lg:hidden"
+        class="mx-auto w-[148px] lg:hidden"
         alt=""
       />
-      <img
-        src="./media/menu/darsadd.svg"
-        alt=""
-        class="ml-4 w-[25px] lg:hidden"
-      />
+      <a href="./index.html">
+        <i
+          class="fa-solid fa-angle-left fa-lg text-gray-400 cursor-pointer lg:!hidden translate-x-7"
+        ></i>
+      </a>
     </div>
 
     <div
@@ -695,8 +689,8 @@
 
     <!--filters-->
 
-    <section class="page2 flex justify-between container gap-9">
-      <section class="part-1">
+    <section class="page2 flex justify-between lg:container gap-9">
+      <section class="part-1 hidden lg:block">
         <div class="onvan my-9 font-yekBold text-[18px] text-[#414153]">
           <p>گوشی موبایل</p>
         </div>
@@ -1157,7 +1151,7 @@
               ></i>
             </div>
             <div
-              class="qeymat cursor-pointer pl-[5px] h-fit flex flex-col gap-3 py-4"
+              class="qeymat cursor-pointer pl-[5px] h-fit flex flex-col gap-3 py-4 hidden"
             ></div>
             <div
               class="ashkar flex cursor-pointer mb-2 justify-between items-center border-b-[1px] pb-4"
@@ -2068,26 +2062,136 @@
           </div>
         </section>
       </section>
-      <section class="part-2 w-full pt-1 mt-[100px] !ml-7">
-        <div class="sorts flex justify-between">
-          <div class="srt flex font-yekan gap-3">
-            <img src="./media/page2/items/svgexport-15.svg" alt="" />
-            <h1 class="text-[14px]">مرتب سازی بر اساس:</h1>
-            <p class="text-[#E10A0A] text-[12px]">بیشترین قیمت</p>
-            <p class="text-[12px] text-[#5D5D5D]">کمترین قیمت</p>
-            <p class="text-[12px] text-[#5D5D5D]">جدیدترین ها</p>
-          </div>
-          <div class="tedadd font-iranSansBold text-[14px] text-[#727272]">
-            648 کالا
+      <section class="part-2 w-full lg:pt-1 lg:mt-[100px] lg:!ml-6">
+        <div class="hidden lg:block">
+          <div class="sorts flex justify-between">
+            <div class="srt flex font-yekan gap-3 items-center">
+              <img src="./media/page2/items/svgexport-15.svg" alt="" />
+              <h1 class="text-[14px] cursor-default">مرتب سازی بر اساس:</h1>
+              <p
+                class="text-[#5D5D5D] text-[12px] cursor-pointer hidden xl:block"
+                id="selected"
+              >
+                بیشترین قیمت
+              </p>
+              <p
+                class="text-[12px] text-[#5D5D5D] cursor-pointer hidden xl:block"
+                id="selected"
+              >
+                کمترین قیمت
+              </p>
+              <p
+                class="text-[12px] text-[#5D5D5D] cursor-pointer hidden xl:block"
+                id="selected"
+              >
+                جدیدترین ها
+              </p>
+              <div class="dropdown xl:hidden">
+                <button
+                  id="dropdownDefaultButton"
+                  data-dropdown-toggle="dropdown"
+                  class="text-[#E10A0A] bg-white !text-[12px] focus:outline-none font-medium rounded-lg text-sm px-2 py-2 text-center lg:inline-flex items-center hidden xl:hidden border"
+                  type="button"
+                >
+                  بیشترین قیمت
+                </button>
+
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdown"
+                  class="z-10 hidden absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-fit mt-1 border"
+                >
+                  <ul
+                    class="py-2 text-[12px]"
+                    aria-labelledby="dropdownDefaultButton"
+                  >
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 text-gray-800"
+                        id="selected"
+                        >بیشترین قیمت</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 text-gray-800"
+                        id="selected"
+                        >کمترین قیمت</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="block px-4 py-2 text-gray-800"
+                        id="selected"
+                        >جدیدترین ها</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="tedadd font-iranSansBold cursor-default text-[14px] text-[#727272]"
+            >
+              648 کالا
+            </div>
           </div>
         </div>
+        <div
+          class="sort-mobile lg:hidden !touch-none w-full h-[100vh] bg-[#00000072] z-[1001] absolute bottom-0 hidden"
+        ></div>
+        <div
+          class="sortha w-full h-[70vh] bg-white absolute bottom-0 flex justify-start font-yekan items-center flex-col scale-0 z-[1002] transition-all duration-700 ease-linear"
+        >
+          <h1 class="mt-5 mb-8">مرتب سازی بر اساس</h1>
+          <p
+            id="selected"
+            class="cursor-pointer border-b w-full text-center pb-3"
+          >
+            بیشترین قیمت
+          </p>
+          <p
+            id="selected"
+            class="cursor-pointer border-b w-full text-center pb-3 pt-3"
+          >
+            کمترین قیمت
+          </p>
+          <p
+            id="selected"
+            class="cursor-pointer border-b w-full text-center pb-3 pt-3"
+          >
+            جدیدترین ها
+          </p>
+        </div>
+        <div
+          class="lg:hidden font-yekBold py-3 text-[14px] pr-4 text-[#5D5D5D]"
+        >
+          <p>گوشی موبایل</p>
+        </div>
         <section
-          class="phones p-2 flex flex-wrap justify-between w-full bg-[#F6F5F5] h-[1919px] mt-6 rounded-lg"
+          class="phones lg:container w-[100%] lg:w-[475px] xl:w-full px-[12px] py-[7px] flex flex-wrap lg:justify-center items-center justify-between gap-1 lg:gap-2 xl:gap-0 xl:justify-between bg-[#F6F5F5] h-fit lg:mt-6 lg:rounded-lg relative pt-10 lg:pt-[12px]"
         >
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="filter-sort w-[97%] justify-between lg:hidden absolute top-0 flex items-center pr-4 pl-4 h-[40px]"
           >
-            <img src="./media/page2/items/1.webp" alt="" class="!w-[171px]" />
+            <div class="fil flex gap-3 cursor-pointer" id="filt">
+              <img src="./media/page2/items/fil.svg" alt="" />
+              <p class="font-yekan text-[12px]">فیلترکردن</p>
+            </div>
+            <div class="sor flex gap-3 cursor-pointer">
+              <p class="font-yekan text-[12px]">بیشترین قیمت</p>
+              <img src="./media/page2/items/sort.svg" alt="" />
+            </div>
+          </div>
+
+          <div
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
+          >
+            <img src="./media/page2/items/1.webp" alt="" class="w-[171px]" />
             <div
               class="colors bg-[#F6F5F5] gap-1 rounded-lg h-[23px] flex items-center justify-center py-2 px-[10px] mt-3"
             >
@@ -2104,7 +2208,7 @@
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2112,18 +2216,20 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  50.999.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
-            <img src="./media/page2/items/2.webp" alt="" class="!w-[171px]" />
+            <img src="./media/page2/items/2.webp" alt="" class="w-[171px]" />
             <div
               class="colors bg-[#F6F5F5] gap-1 rounded-lg h-[23px] flex items-center justify-center py-2 px-[10px] mt-3"
             >
@@ -2133,15 +2239,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل اپل مدل iPhone 13 Not Active ظرفیت 128 گیگابایت و رم 4
+              گیگابایت CH/A
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2149,16 +2255,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  36.759.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/3.webp" alt="" class="!w-[171px]" />
             <div
@@ -2170,15 +2278,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل شیائومی مدل 13T Pro 5G دو سیمکارت با ظرفیت 512
+              گیگابایت و رم 12 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2186,16 +2294,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  24.769.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/4.webp" alt="" class="!w-[171px]" />
             <div
@@ -2206,8 +2316,8 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل شیائومی مدل Poco F5 Pro 5G دو سیمکارت با ظرفیت 512
+              گیگابایت و رم 12 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
@@ -2224,14 +2334,16 @@
                 >
                   21.464.000 <span class="text-[9px]">تومان</span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
                   21.064.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/5.webp" alt="" class="!w-[171px]" />
             <div
@@ -2242,15 +2354,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل هوآوی مدل Nova 10 دو سیم‌ کارت ظرفیت 256 گیگابایت و رم
+              8 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2258,16 +2370,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  20.999.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/6.webp" alt="" class="!w-[171px]" />
             <div
@@ -2280,15 +2394,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل شیائومی مدل 13T 5G دو سیمکارت با ظرفیت 256 گیگابایت و
+              رم 12 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2296,16 +2410,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  19.299.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/7.webp" alt="" class="!w-[171px]" />
             <div
@@ -2316,15 +2432,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل هوآوی مدل Nova 10 دو سیم‌ کارت ظرفیت 256 گیگابایت و رم
+              8 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2332,16 +2448,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  15.099.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/8.webp" alt="" class="!w-[171px]" />
             <div
@@ -2352,15 +2470,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل ناتینگ فون مدل Nothing Phone 1 ظرفیت 256 و رم 8
+              گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2368,16 +2486,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  14.669.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/9.webp" alt="" class="!w-[171px]" />
             <div
@@ -2388,15 +2508,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل هوآوی مدل Nova 10 SE دو سیم‌ کارت ظرفیت 256 گیگابایت و
+              رم 8 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2404,16 +2524,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  13.899.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/10.webp" alt="" class="!w-[171px]" />
             <div
@@ -2424,15 +2546,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل موتورولا مدل Moto Edge 30 5G دو سیم کارت ظرفیت 256
+              گیگابایت و رم 8 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2440,16 +2562,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  13.085.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/11.webp" alt="" class="!w-[171px]" />
             <div
@@ -2460,15 +2584,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل هوآوی مدل Nova 10 SE دو سیم‌ کارت ظرفیت 256 گیگابایت و
+              رم 8 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2476,16 +2600,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  12.569.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/12.webp" alt="" class="!w-[171px]" />
             <div
@@ -2496,15 +2622,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل موتورولا مدل Moto Edge 30 5G دو سیم کارت ظرفیت 256
+              گیگابایت و رم 8 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2512,16 +2638,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  11.939.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/13.webp" alt="" class="!w-[171px]" />
             <div
@@ -2533,15 +2661,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل سامسونگ مدل Galaxy A54 5G ظرفیت 128 گیگابایت و رم 8
+              گیگابایت- ویتنام
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2549,16 +2677,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  11.543.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/14.webp" alt="" class="!w-[171px]" />
             <div
@@ -2571,15 +2701,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل شیائومی مدل Redmi Note 12 Pro 5G دو سیمکارت با ظرفیت
+              256 گیگابایت و رم 8 گیگابایت (پک گلوبال)
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2587,16 +2717,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]">تومان</span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  10.499.000 <span class="text-[11px]"></span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/15.webp" alt="" class="!w-[171px]" />
             <div
@@ -2609,8 +2741,8 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل سامسونگ مدل Galaxy A34 5G ظرفیت 128 گیگابایت و رم 8
+              گیگابایت- ویتنام
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
@@ -2625,16 +2757,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  9.899.000 <span class="text-[9px]">تومان</span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  9.699.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/16.webp" alt="" class="!w-[171px]" />
             <div
@@ -2646,15 +2780,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل شیائومی مدل Redmi Note 12 Pro دو سیمکارت با ظرفیت 256
+              گیگابایت و رم 8 گیگابایت(پک گلوبال)
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2662,16 +2796,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  9.266.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/17.webp" alt="" class="!w-[171px]" />
             <div
@@ -2682,15 +2818,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل سامسونگ مدل Galaxy A34 5G ظرفیت 128 گیگابایت و رم 6
+              گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2698,16 +2834,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  9.119.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/18.webp" alt="" class="!w-[171px]" />
             <div
@@ -2719,15 +2857,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل هوآوی مدل Nova Y90 دو سیم‌ کارت ظرفیت 128 گیگابایت و
+              رم 8 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2735,16 +2873,18 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  8.799.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/19.webp" alt="" class="!w-[171px]" />
             <div
@@ -2755,8 +2895,8 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل سامسونگ مدل Galaxy A24 ظرفیت 128 گیگابایت و رم 8
+              گیگابایت- ویتنام
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
@@ -2764,23 +2904,25 @@
               <div class="offf w-fit float-right">
                 <span
                   class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
-                  >%2</span
+                  >%4</span
                 >
               </div>
               <div class="prices w-fit text-end float-left pl-2">
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  8.219.000 <span class="text-[9px]">تومان</span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  7.919.000<span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
           <div
-            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[220px] h-[375px]"
+            class="phone-items cursor-pointer rounded-md pb-1 pt-7 px-2 flex flex-col bg-white justify-start items-center w-[49%] h-fit lg:w-[220px] lg:h-[375px]"
           >
             <img src="./media/page2/items/20.webp" alt="" class="!w-[171px]" />
             <div
@@ -2791,15 +2933,15 @@
             <p
               class="line-clamp-2 mt-4 font-yekan font-medium text-[13px] text-[#1F1F1F]"
             >
-              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra 5G ظرفیت 256 گیگابایت و
-              رم 12 گیگابایت- ویتنام
+              گوشی موبایل هوآوی مدل Nova 10 SE دو سیم‌ کارت ظرفیت 256 گیگابایت و
+              رم 8 گیگابایت
             </p>
             <div
               class="price-off w-full mt-7 flex justify-between items-center"
             >
               <div class="offf w-fit float-right">
                 <span
-                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold"
+                  class="bg-[#E10A0A] mr-2 px-[5px] py-[5px] rounded-full text-[11px] text-white font-iranSansBold hidden"
                   >%2</span
                 >
               </div>
@@ -2807,46 +2949,110 @@
                 <h4
                   class="font-iranSansBold text-[12px] line-through text-gray-400"
                 >
-                  21.464.000 <span class="text-[9px]">تومان</span>
+                  <span class="text-[9px]"></span>
                 </h4>
-                <h3 class="font-iranSansBold text-[#E10A0A] text-[20px]">
-                  21.064.000 <span class="text-[11px]">تومان</span>
+                <h3
+                  class="font-iranSansBold text-[#E10A0A] text-[16px] lg:text-[20px]"
+                >
+                  7.899.000 <span class="text-[11px]">تومان</span>
                 </h3>
               </div>
             </div>
           </div>
         </section>
-        <nav aria-label="Page navigation example" id="counter">
-          <ul class="flex gap-1 items-center -space-x-px h-10 text-base justify-center my-10">
+        <nav
+          aria-label="Page navigation example"
+          class="bg-[#F6F5F5] lg:bg-white"
+          id="counter"
+        >
+          <ul
+            class="flex gap-1 items-center -space-x-px text-base justify-center py-5 lg:my-10"
+          >
             <li>
-              <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] bg-white  rounded-lg hover:bg-gray-300 hover:text-white ">
+              <a
+                href="#"
+                class="flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] lg:bg-white rounded-lg hover:bg-gray-300 hover:text-white"
+              >
                 <span class="sr-only">Next</span>
-                <svg class="w-3 h-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                <svg
+                  class="w-3 h-3 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
                 </svg>
               </a>
             </li>
-            
+
             <li>
-              <a href="#" class="w-[32px] selected flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] bg-white font-iranSansBold rounded-lg hover:bg-gray-300 hover:text-white ">1</a>
+              <a
+                href="#"
+                class="w-[32px] text-[#E10A0A] flex items-center justify-center px-3 h-8 leading-tight nav-color bg-white font-iranSansBold rounded-lg hover:bg-gray-300 hover:text-white"
+                id="nav-num"
+                >1</a
+              >
             </li>
             <li>
-              <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] bg-white font-iranSansBold hover:bg-gray-300 hover:text-white rounded-lg">2</a>
+              <a
+                href="#"
+                id="nav-num"
+                class="flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] lg:bg-white font-iranSansBold hover:bg-gray-300 hover:text-white rounded-lg"
+                >2</a
+              >
             </li>
             <li>
-              <a href="#" class="z-10 flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] font-iranSansBold rounded-lg bg-white hover:bg-gray-300 hover:text-white ">3</a>
+              <a
+                href="#"
+                id="nav-num"
+                class="z-10 flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] font-iranSansBold rounded-lg lg:bg-white hover:bg-gray-300 hover:text-white"
+                >3</a
+              >
             </li>
             <li>
-              <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] bg-white font-iranSansBold rounded-lg hover:bg-gray-300 hover:text-white ">4</a>
+              <a
+                href="#"
+                id="nav-num"
+                class="flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] lg:bg-white font-iranSansBold rounded-lg hover:bg-gray-300 hover:text-white"
+                >4</a
+              >
             </li>
             <li>
-              <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] bg-white font-iranSansBold rounded-lg hover:bg-gray-300 hover:text-white ">5</a>
+              <a
+                href="#"
+                id="nav-num"
+                class="flex items-center justify-center px-3 h-8 leading-tight text-[#E10A0A] lg:bg-white font-iranSansBold rounded-lg hover:bg-gray-300 hover:text-white"
+                >5</a
+              >
             </li>
             <li>
-              <a href="#" id="next" class="w-[32px] flex items-center justify-center px-3 h-8 ms-0 leading-tight text-[#E10A0A] bg-white  rounded-s-lg hover:bg-gray-300 hover:text-white rounded-lg">
+              <a
+                href="#"
+                id="next"
+                class="w-[32px] flex items-center justify-center px-3 h-8 ms-0 leading-tight text-[#E10A0A] lg:bg-white rounded-s-lg hover:bg-gray-300 hover:text-white rounded-lg"
+              >
                 <span class="sr-only">Previous</span>
-                <svg class="w-3 h-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                <svg
+                  class="w-3 h-3 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 1 1 5l4 4"
+                  />
                 </svg>
               </a>
             </li>
@@ -2859,7 +3065,7 @@
 
     <!--prev footer-->
 
-    <div class="prev-footer font-yekan container mt-10 mb-12">
+    <div class="prev-footer font-yekan container mt-10 mb-12 w-[90%]">
       <div class="peyda mb-7">
         <h1 class="text-[18px]">قیمت روز گوشی موبایل</h1>
         <p class="text-[14px] mt-4">
@@ -2886,128 +3092,299 @@
         </p>
         <h2 class="text-[16px] mt-7">قیمت گوشی آیفون اپل</h2>
         <p class="text-[14px] mt-4 mb-5">
-          کمتر کسی است که علاقه‌مند به گوشی‌های هوشمند باشد و محصولات اپل را نشناسد؛ گوشی‌های هوشمندی که تحت سری آیفون به بازار عرضه می‌شوند و دارای امکانات متنوع و قابلیت‌های جذابی هستند. تقریبا تمامی محصولات اپل ازجمله گوشی‌های هوشمند این شرکت در فروشگاه موجود هستند که می‌توانید با مشاهده به صفحه مخصوص آن از قیمت گوشی آیفون اپل مطلع شده و اگر علاقه داشتید نسبت به خرید گوشی آیفون اپل اقدام کنید. در حال حاضر انواع مدل آیفون اپل در فروشگاه موجود است که می‌توان به سری محبوب آیفون 13 اشاره کرد.
+          کمتر کسی است که علاقه‌مند به گوشی‌های هوشمند باشد و محصولات اپل را
+          نشناسد؛ گوشی‌های هوشمندی که تحت سری آیفون به بازار عرضه می‌شوند و
+          دارای امکانات متنوع و قابلیت‌های جذابی هستند. تقریبا تمامی محصولات اپل
+          ازجمله گوشی‌های هوشمند این شرکت در فروشگاه موجود هستند که می‌توانید با
+          مشاهده به صفحه مخصوص آن از قیمت گوشی آیفون اپل مطلع شده و اگر علاقه
+          داشتید نسبت به خرید گوشی آیفون اپل اقدام کنید. در حال حاضر انواع مدل
+          آیفون اپل در فروشگاه موجود است که می‌توان به سری محبوب آیفون 13 اشاره
+          کرد.
         </p>
         <h2 class="text-[16px] mt-7">قیمت گوشی سامسونگ</h2>
         <p class="text-[14px] mt-4 mb-5">
-          سامسونگ از قدیمی‌ترین سازندگان گوشی موبایل محسوب می‌شود؛ شرکتی که توانسته سهم قابل توجهی از بازار محصولات اندرویدی را به دست آورد. شرکت کره‌ای در بازار ایران نیز محبوبیت فراوانی دارد و از شناخته شده‌ترین برندها محسوب می‌شود. از طرفی مناسب بودن قیمت گوشی سامسونگ باعث شده تا کاربران، تمایل بیشتری نسبت به خرید گوشی سامسونگ داشته باشند. سامسونگ در رده‌های قیمتی مختلف محصولاتی را به بازار عرضه کرده تا تمامی سلیقه‌ها و بودجه‌ها را پوشش دهد. از کاربرانی که به دنبال خرید گوشی با امکانات معمولی هستند تا کاربرانی که قیمت گوشی های پرچم‌دار را هر روزه نگاه می‌کنند تا همیشه بهترین گوشی بازار را داشته باشند، سامسونگ محصولی با ویژگی‌های جذاب دارد. این شرکت در حال حاضر چهار سری گوشی محبوب دارد که شامل گلکسی A، گلکسی M، گلکسی S و گلکسی Z می‌شوند. اصولا محصولات سری گلکسی A و M را گوشی‌های میان‌رده تشکیل می‌دهند؛ اما دو سری گلکسی S و گلکسی Z شامل محصولات بالارده و پرچم‌دار سامسونگ می‌شوند.
+          سامسونگ از قدیمی‌ترین سازندگان گوشی موبایل محسوب می‌شود؛ شرکتی که
+          توانسته سهم قابل توجهی از بازار محصولات اندرویدی را به دست آورد. شرکت
+          کره‌ای در بازار ایران نیز محبوبیت فراوانی دارد و از شناخته شده‌ترین
+          برندها محسوب می‌شود. از طرفی مناسب بودن قیمت گوشی سامسونگ باعث شده تا
+          کاربران، تمایل بیشتری نسبت به خرید گوشی سامسونگ داشته باشند. سامسونگ
+          در رده‌های قیمتی مختلف محصولاتی را به بازار عرضه کرده تا تمامی
+          سلیقه‌ها و بودجه‌ها را پوشش دهد. از کاربرانی که به دنبال خرید گوشی با
+          امکانات معمولی هستند تا کاربرانی که قیمت گوشی های پرچم‌دار را هر روزه
+          نگاه می‌کنند تا همیشه بهترین گوشی بازار را داشته باشند، سامسونگ محصولی
+          با ویژگی‌های جذاب دارد. این شرکت در حال حاضر چهار سری گوشی محبوب دارد
+          که شامل گلکسی A، گلکسی M، گلکسی S و گلکسی Z می‌شوند. اصولا محصولات سری
+          گلکسی A و M را گوشی‌های میان‌رده تشکیل می‌دهند؛ اما دو سری گلکسی S و
+          گلکسی Z شامل محصولات بالارده و پرچم‌دار سامسونگ می‌شوند.
         </p>
         <h2 class="text-[16px] mt-7">قیمت گوشی شیائومی</h2>
         <p class="text-[14px] mt-4 mb-5">
-          شیائومی را می‌توان محبوب‌ترین برند چینی نامید که توانسته رشد قابل توجهی در بازار جهان داشته باشد. شیائومی محصولات خود را تحت برندهای مختلفی به بازار عرضه می‌کند که علاوه بر برند اصلی شامل پوکو و ردمی می‌شوند. شما می‌توانید در فروشگاه به محصولات تمامی برندهای شیائومی دسترسی داشته باشید. درواقع فرقی نمی‌کند به دنبال خرید گوشی پوکو هستید یا می‌خواهید قیمت گوشی جدید از برند ردمی را بدانید، همیشه محصولی در فروشگاه وجود دارد که بتوانید نسبت به خرید آن اقدام کنید.
+          شیائومی را می‌توان محبوب‌ترین برند چینی نامید که توانسته رشد قابل
+          توجهی در بازار جهان داشته باشد. شیائومی محصولات خود را تحت برندهای
+          مختلفی به بازار عرضه می‌کند که علاوه بر برند اصلی شامل پوکو و ردمی
+          می‌شوند. شما می‌توانید در فروشگاه به محصولات تمامی برندهای شیائومی
+          دسترسی داشته باشید. درواقع فرقی نمی‌کند به دنبال خرید گوشی پوکو هستید
+          یا می‌خواهید قیمت گوشی جدید از برند ردمی را بدانید، همیشه محصولی در
+          فروشگاه وجود دارد که بتوانید نسبت به خرید آن اقدام کنید.
         </p>
         <h2 class="text-[16px] mt-7">قیمت گوشی هواوی</h2>
         <p class="text-[14px] mt-4 mb-5">
-          هواوی از برندهای محبوب چینی است که البته این روزها کمی شرایط دشوار و سختی را پشت سر می‌گذارد. با این حال، محصولات برند چینی همچنان محبوبیت فراوانی را در میان کاربران ایرانی دارند. در صورتی که علاقه‌مند به خرید گوشی شده‌اید که از برند هواوی باشد حتما باید به فروشگاه سری بزنید؛ زیرا بهترین قیمت گوشی هواوی را تنها می‌توان از دی‌جی لند دنبال کرد. هواوی سری گوشی‌های مختلفی دارند که می‌توان به دو سری پرچم‌دار هواوی P و هواوی میت اشاره کرد. در این بین، محصولات میان‌رده و اقتصادی برند چینی نیز تحت برندهای مختلف مانند اسند و نوا روانه بازار می‌شوند که از ارزش خرید بالایی برخوردارند.
+          هواوی از برندهای محبوب چینی است که البته این روزها کمی شرایط دشوار و
+          سختی را پشت سر می‌گذارد. با این حال، محصولات برند چینی همچنان محبوبیت
+          فراوانی را در میان کاربران ایرانی دارند. در صورتی که علاقه‌مند به خرید
+          گوشی شده‌اید که از برند هواوی باشد حتما باید به فروشگاه سری بزنید؛
+          زیرا بهترین قیمت گوشی هواوی را تنها می‌توان از دی‌جی لند دنبال کرد.
+          هواوی سری گوشی‌های مختلفی دارند که می‌توان به دو سری پرچم‌دار هواوی P
+          و هواوی میت اشاره کرد. در این بین، محصولات میان‌رده و اقتصادی برند
+          چینی نیز تحت برندهای مختلف مانند اسند و نوا روانه بازار می‌شوند که از
+          ارزش خرید بالایی برخوردارند.
         </p>
         <h1 class="text-[18px]">عوامل موثر بر قیمت گوشی در بازار</h1>
         <p class="text-[14px] mt-4 mb-5">
-          عوامل مختلفی می‌توانند بر قیمت گوشی تاثیر مستقیم یا غیرمستقیم داشته باشند. درواقع برخی از محصولات به‌صورت مستقیم وارد بازار ایران نمی‌شوند و همین امر می‌تواند عاملی باشد که محصولی در بازار ایران از برچسب قیمت متفاوتی نسبت به بازار مناطق دیگر دنیا داشته باشد.
+          عوامل مختلفی می‌توانند بر قیمت گوشی تاثیر مستقیم یا غیرمستقیم داشته
+          باشند. درواقع برخی از محصولات به‌صورت مستقیم وارد بازار ایران نمی‌شوند
+          و همین امر می‌تواند عاملی باشد که محصولی در بازار ایران از برچسب قیمت
+          متفاوتی نسبت به بازار مناطق دیگر دنیا داشته باشد.
         </p>
         <h2 class="text-[16px] mt-7">موجودی در بازار</h2>
         <p class="text-[14px] mt-4 mb-5">
-          گاهی اوقات امکان دارد قصد خرید گوشی موبایلی را داشته باشید، اما با قیمت گوشی برخورد کنید که به مراتب بیشتر از تصورتان باشد. در چنین مواقعی چندین عامل وجود دارند که می‌توانند سبب افزایش قیمت شوند. یکی از آن‌ها موجودی کالا در بازار است. درواقع امکان دارد به خاطر مشکلات در ورود کالا به کشور یا استقبال گسترده از محصول، موجودی کالای مدنظر در بازار کاهش یابد و همین امر به افزایش قیمت گوشی موبایل ختم شود.
+          گاهی اوقات امکان دارد قصد خرید گوشی موبایلی را داشته باشید، اما با
+          قیمت گوشی برخورد کنید که به مراتب بیشتر از تصورتان باشد. در چنین
+          مواقعی چندین عامل وجود دارند که می‌توانند سبب افزایش قیمت شوند. یکی از
+          آن‌ها موجودی کالا در بازار است. درواقع امکان دارد به خاطر مشکلات در
+          ورود کالا به کشور یا استقبال گسترده از محصول، موجودی کالای مدنظر در
+          بازار کاهش یابد و همین امر به افزایش قیمت گوشی موبایل ختم شود.
         </p>
         <h1 class="text-[18px]">انواع گوشی های موبایل بر اساس برند</h1>
         <p class="text-[14px] mt-4 mb-5">
-          در حال حاضر برندهای مختلفی در بازار ایران وجود دارد که هر یک، محصولات متنوعی را در محدوده‌های قیمتی مختلف در اختیار علاقه‌مندان قرار می‌دهند. طبیعتا برند برای بسیاری از کاربران اهمیت دارد. درواقع عملکرد مطلوب برخی از برندهای مطرح گوشی‌های هوشمند سبب شده تا اعتماد کاربران را جلب کنند. در ادامه به برخی از برندهای مطرح اشاره خواهیم کرد تا اگر به دنبال خرید گوشی هستید با دید بازتری انتخاب کنید..
+          در حال حاضر برندهای مختلفی در بازار ایران وجود دارد که هر یک، محصولات
+          متنوعی را در محدوده‌های قیمتی مختلف در اختیار علاقه‌مندان قرار
+          می‌دهند. طبیعتا برند برای بسیاری از کاربران اهمیت دارد. درواقع عملکرد
+          مطلوب برخی از برندهای مطرح گوشی‌های هوشمند سبب شده تا اعتماد کاربران
+          را جلب کنند. در ادامه به برخی از برندهای مطرح اشاره خواهیم کرد تا اگر
+          به دنبال خرید گوشی هستید با دید بازتری انتخاب کنید..
         </p>
         <h2 class="text-[16px] mt-7">گوشی سامسونگ</h2>
         <p class="text-[14px] mt-4 mb-5">
-          سامسونگ از مطرح‌ترین برندهای سازنده گوشی مبتنی بر سیستم عامل اندروید است. شرکت کره‌ای محصولاتی را در سری‌های مختلف به بازار عرضه می‌کند که تمامی رده‌های سخت افزاری از پایین‌رده تا پرچم‌دار را شامل می‌شوند. اگر قیمت گوشی برایتان اهمیت فراوانی دارد و در کنار آن می‌خواهید محصول مدنظرتان امکانات سخت افزاری مناسبی را نیز ارائه دهد، خرید گوشی سامسونگ می‌تواند انتخاب مناسبی برایتان باشد.
+          سامسونگ از مطرح‌ترین برندهای سازنده گوشی مبتنی بر سیستم عامل اندروید
+          است. شرکت کره‌ای محصولاتی را در سری‌های مختلف به بازار عرضه می‌کند که
+          تمامی رده‌های سخت افزاری از پایین‌رده تا پرچم‌دار را شامل می‌شوند. اگر
+          قیمت گوشی برایتان اهمیت فراوانی دارد و در کنار آن می‌خواهید محصول
+          مدنظرتان امکانات سخت افزاری مناسبی را نیز ارائه دهد، خرید گوشی سامسونگ
+          می‌تواند انتخاب مناسبی برایتان باشد.
         </p>
         <h2 class="text-[16px] mt-7">گوشی آیفون اپل</h2>
         <p class="text-[14px] mt-4 mb-5">
-          اپل یکی از خاص‌ترین برندهای موجود در بازار گوشی‌های هوشمند محسوب می‌شود. اصولا محصولات این برند آمریکایی تحت سری گوشی‌های آیفون به بازار عرضه می‌شوند و امکانات اختصاصی بسیاری نیز دارند. درواقع کوپرتینویی‌ها محصولات خود را با تراشه و سیستم عامل اختصاصی به بازار عرضه می‌کنند تا مطمئن شوند آیفون‌ها می‌توانند بهترین عملکرد را در میان گوشی‌های هوشمند ارائه دهند.
+          اپل یکی از خاص‌ترین برندهای موجود در بازار گوشی‌های هوشمند محسوب
+          می‌شود. اصولا محصولات این برند آمریکایی تحت سری گوشی‌های آیفون به
+          بازار عرضه می‌شوند و امکانات اختصاصی بسیاری نیز دارند. درواقع
+          کوپرتینویی‌ها محصولات خود را با تراشه و سیستم عامل اختصاصی به بازار
+          عرضه می‌کنند تا مطمئن شوند آیفون‌ها می‌توانند بهترین عملکرد را در میان
+          گوشی‌های هوشمند ارائه دهند.
         </p>
         <h2 class="text-[16px] mt-7">گوشی شیائومی</h2>
         <p class="text-[14px] mt-4 mb-5">
-          شیائومی را می‌توان یکی از خوشنام‌ترین و شناخته شده‌ترین برندهای چینی در زمینه ساخت گوشی هوشمند نامید. در حال حاضر شیائومی محصولات متعددی را تحت سری‌های مختلف به بازار عرضه می‌کند که شامل ردمی و پوکو در کنار برند اصلی می‌شود. شیائومی علاوه بر گوشی‌های هوشمند معمولی برای گیمرها نیز محصولات متعددی را سالانه معرفی و عرضه می‌کند که از نظر طراحی ظاهری و همچنین عملکرد سخت افزاری ویژگی‌های متعددی دارند.
+          شیائومی را می‌توان یکی از خوشنام‌ترین و شناخته شده‌ترین برندهای چینی
+          در زمینه ساخت گوشی هوشمند نامید. در حال حاضر شیائومی محصولات متعددی را
+          تحت سری‌های مختلف به بازار عرضه می‌کند که شامل ردمی و پوکو در کنار
+          برند اصلی می‌شود. شیائومی علاوه بر گوشی‌های هوشمند معمولی برای گیمرها
+          نیز محصولات متعددی را سالانه معرفی و عرضه می‌کند که از نظر طراحی ظاهری
+          و همچنین عملکرد سخت افزاری ویژگی‌های متعددی دارند.
         </p>
         <h2 class="text-[16px] mt-7">گوشی آنر</h2>
         <p class="text-[14px] mt-4 mb-5">
-          مدتی می‌شود که آنر از زیرمجموعه هواوی خارج شده و به‌صورت کاملا مستقل در بازار فعالیت می‌کند. درواقع اگر به دنبال خرید گوشی آنر باشید به این موضوع باید دقت کنید که محصولات این برند چینی می‌توانند از سیستم عامل اندروید و تمامی اپلیکیشن‌های گوگل استفاده کنند و مشکلی نیز در اتصال به سرویس گوگل پلی نداشته باشند. در مورد محصولات آنر باید گفت با تلفن‌های هوشمندی طرف هستیم که کیفیت ساخت بالایی دارند و سخت افزاری توانمند را در کنار ویژگی‌های جذاب ارائه می‌دهند. با این حساب اگر قیمت گوشی آنر برایتان مناسب است حتما به سراغ خریدشان بروید.
+          مدتی می‌شود که آنر از زیرمجموعه هواوی خارج شده و به‌صورت کاملا مستقل
+          در بازار فعالیت می‌کند. درواقع اگر به دنبال خرید گوشی آنر باشید به این
+          موضوع باید دقت کنید که محصولات این برند چینی می‌توانند از سیستم عامل
+          اندروید و تمامی اپلیکیشن‌های گوگل استفاده کنند و مشکلی نیز در اتصال به
+          سرویس گوگل پلی نداشته باشند. در مورد محصولات آنر باید گفت با تلفن‌های
+          هوشمندی طرف هستیم که کیفیت ساخت بالایی دارند و سخت افزاری توانمند را
+          در کنار ویژگی‌های جذاب ارائه می‌دهند. با این حساب اگر قیمت گوشی آنر
+          برایتان مناسب است حتما به سراغ خریدشان بروید.
         </p>
         <h2 class="text-[16px] mt-7">گوشی هواوی</h2>
         <p class="text-[14px] mt-4 mb-5">
-          گوشی های هواوی از نظر امکانات می‌توانند با هر برندی مقابله کنند و حتی از نظر کیفیت و عملکرد نسبت به محصولات برندهای مطرح از برتری محسوسی نیز برخوردار باشند. در حال حاضر می‌توان به سری هواوی P اشاره داشت که درواقع گوشی‌های هوشمند بالارده برند چینی محسوب می‌شوند و می‌توانند امکانات بسیار جذابی ازجمله دوربین‌هایی توانمند در عکاسی و فیلمبرداری را ارائه دهند. اصولا برند چینی اهمیت فراوانی به کیفیت ساخت و قطعات به کار رفته در محصولات خود می‌دهد؛ به همین علت نیز قیمت گوشی هواوی همیشه کمی نسبت به برندهای دیگر بیشتر است.
+          گوشی های هواوی از نظر امکانات می‌توانند با هر برندی مقابله کنند و حتی
+          از نظر کیفیت و عملکرد نسبت به محصولات برندهای مطرح از برتری محسوسی نیز
+          برخوردار باشند. در حال حاضر می‌توان به سری هواوی P اشاره داشت که
+          درواقع گوشی‌های هوشمند بالارده برند چینی محسوب می‌شوند و می‌توانند
+          امکانات بسیار جذابی ازجمله دوربین‌هایی توانمند در عکاسی و فیلمبرداری
+          را ارائه دهند. اصولا برند چینی اهمیت فراوانی به کیفیت ساخت و قطعات به
+          کار رفته در محصولات خود می‌دهد؛ به همین علت نیز قیمت گوشی هواوی همیشه
+          کمی نسبت به برندهای دیگر بیشتر است.
         </p>
         <h2 class="text-[16px] mt-7">گوشی موتورولا</h2>
         <p class="text-[14px] mt-4 mb-5">
-         موتورولا از قدیمی‌ترین برندهای سازنده گوشی هوشمند در بازار محسوب می‌شود. پس از اینکه این شرکت توسط لنوو خریداری شد، تغییرات بسیاری در سیاست‌های تولید و عرضه محصولات موتورولا شکل گرفت. در حال حاضر موتورولا تمرکز ویژه‌ای روی بازار تلفن‌های هوشمند میان‌رده و بالارده دارد. همین امر نیز باعث شده تا موتورولا بتواند جایگاه ویژه‌ای میان علاقه‌مندان به محصولات اندرویدی کسب کند. در صورتی که علاقه‌مند به خرید گوشی موتورولا شده‌اید باید اشاره کنیم که محصولی با کیفیت ساخت بالا و امکانات درخور توجه را خریداری خواهید کرد.
+          موتورولا از قدیمی‌ترین برندهای سازنده گوشی هوشمند در بازار محسوب
+          می‌شود. پس از اینکه این شرکت توسط لنوو خریداری شد، تغییرات بسیاری در
+          سیاست‌های تولید و عرضه محصولات موتورولا شکل گرفت. در حال حاضر موتورولا
+          تمرکز ویژه‌ای روی بازار تلفن‌های هوشمند میان‌رده و بالارده دارد. همین
+          امر نیز باعث شده تا موتورولا بتواند جایگاه ویژه‌ای میان علاقه‌مندان به
+          محصولات اندرویدی کسب کند. در صورتی که علاقه‌مند به خرید گوشی موتورولا
+          شده‌اید باید اشاره کنیم که محصولی با کیفیت ساخت بالا و امکانات درخور
+          توجه را خریداری خواهید کرد.
         </p>
         <h2 class="text-[16px] mt-7">گوشی نوکیا</h2>
         <p class="text-[14px] mt-4 mb-5">
-          نوکیا طی سال‌های گذشته اتفاقات مختلفی را تجربه کرده که برخی از آن‌ها برای طرفداران این برند قدیمی چندان هم خوشایند نبوده‌اند. در حال حاضر نوکیا تحت نظر شرکتی به نام HMD فعالیت می‌کند و بازار هدف آن نیز محصولات پایین‌رده و میان‌رده هستند. درواقع نوکیا به دنبال کسب جایگاه در بازار محصولات اقتصادی است که باید گفت تا حد بسیاری نیز موفق شده است. نوکیا برای محصولات خود از رابط کاربری اختصاصی استفاده نمی‌کند و همان نسخه خام اندروید را به مشتریان ارائه می‌دهد.
+          نوکیا طی سال‌های گذشته اتفاقات مختلفی را تجربه کرده که برخی از آن‌ها
+          برای طرفداران این برند قدیمی چندان هم خوشایند نبوده‌اند. در حال حاضر
+          نوکیا تحت نظر شرکتی به نام HMD فعالیت می‌کند و بازار هدف آن نیز
+          محصولات پایین‌رده و میان‌رده هستند. درواقع نوکیا به دنبال کسب جایگاه
+          در بازار محصولات اقتصادی است که باید گفت تا حد بسیاری نیز موفق شده
+          است. نوکیا برای محصولات خود از رابط کاربری اختصاصی استفاده نمی‌کند و
+          همان نسخه خام اندروید را به مشتریان ارائه می‌دهد.
         </p>
         <h1 class="text-[18px]">انواع گوشی های موبایل بر اساس حافظه داخلی</h1>
         <p class="text-[14px] mt-4 mb-5">
-          هر گوشی هوشمند دارای دو حافظه داخلی است که البته می‌تواند یک حافظه خارجی نیز داشته باشد. این دو حافظه داخلی عبارت هستند از حافظه رم (RAM) و حافظه رام (ROM) که حافظه رام همان محلی است که اطلاعات کاربر ذخیره‌سازی می‌شوند. در این بین امکان دارد گوشی هوشمند از حافظه خارجی نیز برخوردار باشد که یعنی گوشی از درگاه کارت حافظه MicroSD بهره می‌برد و کاربر می‌تواند با افزودن کارت حافظه، میزان فضای در دسترس برای ذخیره‌سازی اطلاعات را افزایش دهد. در حال حاضر شرکت‌های سازنده از دو مدل حافظه رام در گوشی‌های هوشمند خود استفاده می‌کنند که شامل حافظه UFS و eMMC می‌شوند.
-
+          هر گوشی هوشمند دارای دو حافظه داخلی است که البته می‌تواند یک حافظه
+          خارجی نیز داشته باشد. این دو حافظه داخلی عبارت هستند از حافظه رم (RAM)
+          و حافظه رام (ROM) که حافظه رام همان محلی است که اطلاعات کاربر
+          ذخیره‌سازی می‌شوند. در این بین امکان دارد گوشی هوشمند از حافظه خارجی
+          نیز برخوردار باشد که یعنی گوشی از درگاه کارت حافظه MicroSD بهره می‌برد
+          و کاربر می‌تواند با افزودن کارت حافظه، میزان فضای در دسترس برای
+          ذخیره‌سازی اطلاعات را افزایش دهد. در حال حاضر شرکت‌های سازنده از دو
+          مدل حافظه رام در گوشی‌های هوشمند خود استفاده می‌کنند که شامل حافظه UFS
+          و eMMC می‌شوند.
         </p>
         <h2 class="text-[16px] mt-7">حافظه eMMC</h2>
         <p class="text-[14px] mt-4 mb-5">
-          حافظه eMMC یکی از تکنولوژی‌های به کار رفته در اکثر گوشی‌های هوشمند عرضه شده در سال‌های اخیر است. این فناوری درواقع مخفف کارت حافظه مالتی‌مدیای ادغام شده یا Embedded Multi-Media Card است که نوعی حافظه فلش Nand محسوب می‌شود. این تراشه از چند بخش تشکیل شده که شامل کنترلر حافظه فلش، کارت مالتی مدیا و حافظه فلش می‌شود. در حال حاضر اکثر گوشی‌های هوشمند جدید دیگر از این نوع حافظه استفاده نمی‌کنند و به سراغ حافظه UFS رفته‌اند.
+          حافظه eMMC یکی از تکنولوژی‌های به کار رفته در اکثر گوشی‌های هوشمند
+          عرضه شده در سال‌های اخیر است. این فناوری درواقع مخفف کارت حافظه
+          مالتی‌مدیای ادغام شده یا Embedded Multi-Media Card است که نوعی حافظه
+          فلش Nand محسوب می‌شود. این تراشه از چند بخش تشکیل شده که شامل کنترلر
+          حافظه فلش، کارت مالتی مدیا و حافظه فلش می‌شود. در حال حاضر اکثر
+          گوشی‌های هوشمند جدید دیگر از این نوع حافظه استفاده نمی‌کنند و به سراغ
+          حافظه UFS رفته‌اند.
         </p>
         <h2 class="text-[16px] mt-7">حافظه UFS</h2>
         <p class="text-[14px] mt-4 mb-5">
-          UFS (مخفف Universal Flash Storage) از سرعت به مراتب بالاتری نسبت به eMMC برخوردار است و همین امر نیز باعث شده تا اکثر شرکت‌های سازنده به سراغ این نوع حافظه بروند. با وجود اینکه شباهت‌هایی میان این دو نوع حافظه وجود دارد؛ اما تفاوت اصلی در معماری طراحی است که باعث شده تا UFS نسبت به eMMC از سرعت بالاتری بهره ببرد. فرض کنید راه ارتباطی بین حافظه و پردازنده برای پردازش اطلاعات وجود داشته باشد؛ در حالی که eMMC برای خواندن و نوشتن اطلاعات تنها از یک مسیر استفاده می‌کند حافظه UFS برای هر یک از امور خواندن و نوشتن اطلاعات، مسیرهای جداگانه دارد که همین امر نیز به افزایش سرعت حافظه ختم می‌شود.
+          UFS (مخفف Universal Flash Storage) از سرعت به مراتب بالاتری نسبت به
+          eMMC برخوردار است و همین امر نیز باعث شده تا اکثر شرکت‌های سازنده به
+          سراغ این نوع حافظه بروند. با وجود اینکه شباهت‌هایی میان این دو نوع
+          حافظه وجود دارد؛ اما تفاوت اصلی در معماری طراحی است که باعث شده تا UFS
+          نسبت به eMMC از سرعت بالاتری بهره ببرد. فرض کنید راه ارتباطی بین حافظه
+          و پردازنده برای پردازش اطلاعات وجود داشته باشد؛ در حالی که eMMC برای
+          خواندن و نوشتن اطلاعات تنها از یک مسیر استفاده می‌کند حافظه UFS برای
+          هر یک از امور خواندن و نوشتن اطلاعات، مسیرهای جداگانه دارد که همین امر
+          نیز به افزایش سرعت حافظه ختم می‌شود.
         </p>
         <h1 class="text-[18px]">انواع گوشی های موبایل بر اساس دوربین اصلی</h1>
         <p class="text-[14px] mt-4 mb-5">
-          شرکت‌های سازنده طی سال‌های اخیر توجه ویژه‌ای به دوربین گوشی‌های هوشمند داشته‌اند. درواقع حالات مختلف عکاسی با گوشی هوشمند تعریف شده که اجازه دهد کاربران بتوانند علاوه بر عکاسی در حالت عادی یا ثبت تصاویر سلفی، عکسی‌های پرتره و ماکرو ثبت کنند یا با استفاده از دوربین تله‌فوتو تصاویری با جزئيات فراوان در حالت زوم ثبت کنند.
-
-در صورتی که به دنبال خرید گوشی هوشمندی هستید که دوربین فوق العاده‌ای نیز داشته باشد باید به عوامل مختلفی توجه کنید. در درجه اول بررسی کنید که دوربین از چه حسگری استفاده می‌کند و آیا از قابلیت‌هایی مانند OIS و PDAF بهره می‌برد یا خیر. عواملی مانند سایز حسگر و سایز پیکسل نیز اهمیت فراوانی دارند. درواقع مهم است که میزان نور ورودی به درون حسگر چقدر است؛ زیرا هرچه نور موجود در محیط بیشتر باشد و سنسور نیز بتواند حجم قابل توجهی از نور را جذب کند کیفیت تصاویر نیز بالاتر رفته و نویز کمتری در تصویر به چشم بخورد.
+          شرکت‌های سازنده طی سال‌های اخیر توجه ویژه‌ای به دوربین گوشی‌های هوشمند
+          داشته‌اند. درواقع حالات مختلف عکاسی با گوشی هوشمند تعریف شده که اجازه
+          دهد کاربران بتوانند علاوه بر عکاسی در حالت عادی یا ثبت تصاویر سلفی،
+          عکسی‌های پرتره و ماکرو ثبت کنند یا با استفاده از دوربین تله‌فوتو
+          تصاویری با جزئيات فراوان در حالت زوم ثبت کنند. در صورتی که به دنبال
+          خرید گوشی هوشمندی هستید که دوربین فوق العاده‌ای نیز داشته باشد باید به
+          عوامل مختلفی توجه کنید. در درجه اول بررسی کنید که دوربین از چه حسگری
+          استفاده می‌کند و آیا از قابلیت‌هایی مانند OIS و PDAF بهره می‌برد یا
+          خیر. عواملی مانند سایز حسگر و سایز پیکسل نیز اهمیت فراوانی دارند.
+          درواقع مهم است که میزان نور ورودی به درون حسگر چقدر است؛ زیرا هرچه نور
+          موجود در محیط بیشتر باشد و سنسور نیز بتواند حجم قابل توجهی از نور را
+          جذب کند کیفیت تصاویر نیز بالاتر رفته و نویز کمتری در تصویر به چشم
+          بخورد.
         </p>
         <h1 class="text-[18px]">انواع گوشی های موبایل بر اساس قیمت</h1>
         <p class="text-[14px] mt-4 mb-5">
-          قیمت گوشی های موبایل طی سال‌های اخیر از نوسانات بسیاری برخوردار بوده است. درواقع افزایش بیش از حد قیمت دلار باعث شده تا کالاهای مرتبط با ارز خارجی نیز با افزایش قیمت فراوانی همراه باشند. قیمت گوشی موبایل نیز شامل این اتفاق می‌شود. در حال حاضر می‌توان چهار محدوده قیمتی برای گوشی‌های هوشمند تعریف کرد که شامل موارد زیر می‌شوند:
+          قیمت گوشی های موبایل طی سال‌های اخیر از نوسانات بسیاری برخوردار بوده
+          است. درواقع افزایش بیش از حد قیمت دلار باعث شده تا کالاهای مرتبط با
+          ارز خارجی نیز با افزایش قیمت فراوانی همراه باشند. قیمت گوشی موبایل نیز
+          شامل این اتفاق می‌شود. در حال حاضر می‌توان چهار محدوده قیمتی برای
+          گوشی‌های هوشمند تعریف کرد که شامل موارد زیر می‌شوند:
         </p>
         <h2 class="text-[16px] mt-7">قیمت گوشی تا 10 میلیون تومان</h2>
         <p class="text-[14px] mt-4 mb-5">
-          اصولا محصولاتی که در این محدوده از قیمت قرار می‌گیرند گوشی‌های هوشمند اقتصادی هستند. مشخصات سخت افزاری این محصولات شامل تراشه‌هایی پایین‌رده با امکانات ساده و در حد استفاده روزمره است. در صورتی که به دنبال خرید گوشی تا 10 میلیون تومان هستید باید سطح انتظارات خود را تا حد قابل توجهی پایین بیاورید.
+          اصولا محصولاتی که در این محدوده از قیمت قرار می‌گیرند گوشی‌های هوشمند
+          اقتصادی هستند. مشخصات سخت افزاری این محصولات شامل تراشه‌هایی پایین‌رده
+          با امکانات ساده و در حد استفاده روزمره است. در صورتی که به دنبال خرید
+          گوشی تا 10 میلیون تومان هستید باید سطح انتظارات خود را تا حد قابل
+          توجهی پایین بیاورید.
         </p>
         <h2 class="text-[16px] mt-7">قیمت گوشی تا 20 میلیون تومان</h2>
         <p class="text-[14px] mt-4 mb-5">
-          محصولات موجود در بازه قیمت گوشی بین 10 تا 20 میلیون از سخت افزاری میان رده برخوردارند. اکثر این محصولات از پنل پلاستیکی بهره می‌برند؛ اما می‌توان به مدل‌هایی نیز برخورد کرد که پنل شیشه‌ای داشته باشند. اصولا گوشی‌های میان‌رده برای تجربه بازی مناسب هستند و می‌توانند صفحه نمایشی داشته باشند که از نرخ نوسازی ۹۰ هرتزی یا حتی ۱۲۰ هرتزی بهره می‌برد.
+          محصولات موجود در بازه قیمت گوشی بین 10 تا 20 میلیون از سخت افزاری میان
+          رده برخوردارند. اکثر این محصولات از پنل پلاستیکی بهره می‌برند؛ اما
+          می‌توان به مدل‌هایی نیز برخورد کرد که پنل شیشه‌ای داشته باشند. اصولا
+          گوشی‌های میان‌رده برای تجربه بازی مناسب هستند و می‌توانند صفحه نمایشی
+          داشته باشند که از نرخ نوسازی ۹۰ هرتزی یا حتی ۱۲۰ هرتزی بهره می‌برد.
         </p>
         <h2 class="text-[16px] mt-7">قیمت گوشی تا 30 میلیون تومان</h2>
         <p class="text-[14px] mt-4 mb-5">
-          وارد رده قیمتی شده‌ایم که محصولات بالارده قرار دارند. البته می‌توان در این رده قیمتی به محصولات پرچم‌دار نیز برخورد کرد. محصولات موجود در رده قیمت گوشی تا 30 میلیون دارای تراشه‌ای توانمند هستند و می‌توان حتی با گوشی‌های هوشمند گیمینگ نیز برخورد کرد که برترین تراشه بازار را داشته باشند. در صورتی که به دنبال گوشی هوشمندی هستید که صفحه نمایشی با کیفیت عالی، دوربین‌های توانمند و تراشه‌ای با توان پردازشی بالا داشته باشد باید در بازه قیمت گوشی تا 30 میلیون تومان به دنبال محصولی ایده آل بگردید.
+          وارد رده قیمتی شده‌ایم که محصولات بالارده قرار دارند. البته می‌توان در
+          این رده قیمتی به محصولات پرچم‌دار نیز برخورد کرد. محصولات موجود در رده
+          قیمت گوشی تا 30 میلیون دارای تراشه‌ای توانمند هستند و می‌توان حتی با
+          گوشی‌های هوشمند گیمینگ نیز برخورد کرد که برترین تراشه بازار را داشته
+          باشند. در صورتی که به دنبال گوشی هوشمندی هستید که صفحه نمایشی با کیفیت
+          عالی، دوربین‌های توانمند و تراشه‌ای با توان پردازشی بالا داشته باشد
+          باید در بازه قیمت گوشی تا 30 میلیون تومان به دنبال محصولی ایده آل
+          بگردید.
         </p>
         <h2 class="text-[16px] mt-7">قیمت گوشی تا 40 میلیون تومان و بیشتر</h2>
         <p class="text-[14px] mt-4 mb-5">
-          گوشی‌های هوشمند پرچمدار اصولا از بازه قیمت ۳۰ میلیون تومان به بالا شروع می‌شوند. همانطور نیز که از نام این محصولات مشخص است، گوشی‌های پرچم‌دار دارای بهترین سخت افزار، کیفیت ساخت و امکانات در میان محصولات شرکت سازنده هستند. پس اگر به دنبال گوشی هوشمندی تمام عیار با امکانات متنوع هستید که کیفیت ساخت فوق العاده‌ای نیز داشته باشند باید به سراغ خرید گوشی پرچم‌دار برندهای مطرح بروید.
+          گوشی‌های هوشمند پرچمدار اصولا از بازه قیمت ۳۰ میلیون تومان به بالا
+          شروع می‌شوند. همانطور نیز که از نام این محصولات مشخص است، گوشی‌های
+          پرچم‌دار دارای بهترین سخت افزار، کیفیت ساخت و امکانات در میان محصولات
+          شرکت سازنده هستند. پس اگر به دنبال گوشی هوشمندی تمام عیار با امکانات
+          متنوع هستید که کیفیت ساخت فوق العاده‌ای نیز داشته باشند باید به سراغ
+          خرید گوشی پرچم‌دار برندهای مطرح بروید.
         </p>
         <h1 class="text-[18px]">انواع گوشی های موبایل بر اساس کاربری</h1>
         <p class="text-[14px] mt-4 mb-5">
-          شاید تا چندی پیش گوشی‌های هوشمند را به دو یا سه دسته تقسیم می‌کردند؛ اما به لطف گسترش امکانات گوشی‌های هوشمند تعداد دسته‌بندی بر اساس نوع کاربری نیز افزایش یافته است. در ادامه به انواع کاربری تلفن هوشمند خواهیم پرداخت.
+          شاید تا چندی پیش گوشی‌های هوشمند را به دو یا سه دسته تقسیم می‌کردند؛
+          اما به لطف گسترش امکانات گوشی‌های هوشمند تعداد دسته‌بندی بر اساس نوع
+          کاربری نیز افزایش یافته است. در ادامه به انواع کاربری تلفن هوشمند
+          خواهیم پرداخت.
         </p>
         <h2 class="text-[16px] mt-7">عکاسی</h2>
         <p class="text-[14px] mt-4 mb-5">
-          بسیاری از کاربران دیگر به سراغ خرید دوربین عکاسی نمی‌روند؛ بلکه گوشی هوشمندی می‌خرند که دوربین‌های توانمندی داشته باشد. دلیل این امر نیز ساده‌تر بودن عکاسی با گوشی است. هوش مصنوعی گوشی می‌تواند کیفیت تصاویر را ارتقا دهد؛ از طرفی فیلترهای مختلفی نیز روی تصاویر قرار می‌گیرند تا خروجی نهایی از کیفیت بالاتر و زیباتری بهره ببرد. همین امر نیز کار با دوربین گوشی را برای عکاسان مبتدی و حتی حرفه‌ای ساده‌تر می‌سازد.
+          بسیاری از کاربران دیگر به سراغ خرید دوربین عکاسی نمی‌روند؛ بلکه گوشی
+          هوشمندی می‌خرند که دوربین‌های توانمندی داشته باشد. دلیل این امر نیز
+          ساده‌تر بودن عکاسی با گوشی است. هوش مصنوعی گوشی می‌تواند کیفیت تصاویر
+          را ارتقا دهد؛ از طرفی فیلترهای مختلفی نیز روی تصاویر قرار می‌گیرند تا
+          خروجی نهایی از کیفیت بالاتر و زیباتری بهره ببرد. همین امر نیز کار با
+          دوربین گوشی را برای عکاسان مبتدی و حتی حرفه‌ای ساده‌تر می‌سازد.
         </p>
         <h2 class="text-[16px] mt-7">گیمینگ</h2>
         <p class="text-[14px] mt-4 mb-5">
-          
-آمارها نشان می‌دهد تعداد گیمرهای موبایل از گیمرهای کنسولی یا کسانی که روی رایانه شخصی بازی می‌کنند به مراتب بیشتر است. همین امر نیز سبب شده تا شرکت‌های سازنده به سراغ ساخت گوشی گیمینگ بروند؛ محصولاتی که سخت افزاری توانمند دارند و حتی طراحی ظاهری آن‌ها به شکلی توسعه داده شده تا توجه گیمرها را به خود جلب کنند.
+          آمارها نشان می‌دهد تعداد گیمرهای موبایل از گیمرهای کنسولی یا کسانی که
+          روی رایانه شخصی بازی می‌کنند به مراتب بیشتر است. همین امر نیز سبب شده
+          تا شرکت‌های سازنده به سراغ ساخت گوشی گیمینگ بروند؛ محصولاتی که سخت
+          افزاری توانمند دارند و حتی طراحی ظاهری آن‌ها به شکلی توسعه داده شده تا
+          توجه گیمرها را به خود جلب کنند.
         </p>
         <h2 class="text-[16px] mt-7">وبگردی</h2>
         <p class="text-[14px] mt-4 mb-5">
-          
-در مورد محصولاتی صحبت می‌کنیم که نیازی به سخت افزار توانمند ندارند. اصولا کاربرانی که به دنبال گوشی‌های هوشمند مناسب وبگردی می‌گردند بیشتر به صفحه نمایشی باکیفیت و باتری با ظرفیت بالا نیاز دارند. بیشترین استفاده این دسته از کاربران از شبکه‌های اجتماعی است یا به تماشای ویدئو می‌پردازند. به همین علت داشتن صفحه نمایش بزرگ و باتری با ظرفیت بالا بیشتر در مرکز توجهشان قرار دارد.
+          در مورد محصولاتی صحبت می‌کنیم که نیازی به سخت افزار توانمند ندارند.
+          اصولا کاربرانی که به دنبال گوشی‌های هوشمند مناسب وبگردی می‌گردند بیشتر
+          به صفحه نمایشی باکیفیت و باتری با ظرفیت بالا نیاز دارند. بیشترین
+          استفاده این دسته از کاربران از شبکه‌های اجتماعی است یا به تماشای ویدئو
+          می‌پردازند. به همین علت داشتن صفحه نمایش بزرگ و باتری با ظرفیت بالا
+          بیشتر در مرکز توجهشان قرار دارد.
         </p>
         <h1 class="text-[18px]">انواع گوشی های موبایل بر اساس سیستم عامل</h1>
         <p class="text-[14px] mt-4 mb-5">
-          اگر نگاهی به بازار گوشی‌های هوشمند داشته باشیم، اکثر گوشی‌ها از سیستم عامل اندروید برخوردار شده‌اند. البته در این بین به اپل نیز می‌توان اشاره کرد که سیستم‌عامل مختص به محصولات خود یعنی iOS را دارد. البته سیستم‌عامل‌های دیگری نیز به چشم می‌خورند که بیشتر برای محصولات ساده یا گوشی‌های دکمه‌ای هستند و امکانات چندانی نیز ندارند.
+          اگر نگاهی به بازار گوشی‌های هوشمند داشته باشیم، اکثر گوشی‌ها از سیستم
+          عامل اندروید برخوردار شده‌اند. البته در این بین به اپل نیز می‌توان
+          اشاره کرد که سیستم‌عامل مختص به محصولات خود یعنی iOS را دارد. البته
+          سیستم‌عامل‌های دیگری نیز به چشم می‌خورند که بیشتر برای محصولات ساده یا
+          گوشی‌های دکمه‌ای هستند و امکانات چندانی نیز ندارند.
         </p>
         <h2 class="text-[16px] mt-7">اندروید</h2>
         <p class="text-[14px] mt-4 mb-5">
-          اندروید محبوب‌ترین سیستم عامل گوشی های هوشمند امروزی است. این سیستم عامل از طراحی منبع باز استفاده می‌کند که اجازه می‌دهد شرکت‌های سازنده بتوانند رابط کاربری خود را بر اساس سیستم عامل اندروید توسعه دهند. به همین علت شاهدیم که گوشی‌های هوشمند برندهای مطرح از رابط کاربری متفاوت با ویژگی‌های اختصاصی هستند. البته برخی از شرکت‌ها نیز رابط کاربری اختصاصی ندارند و از پوسته اصلی اندروید استفاده می‌کنند.
+          اندروید محبوب‌ترین سیستم عامل گوشی های هوشمند امروزی است. این سیستم
+          عامل از طراحی منبع باز استفاده می‌کند که اجازه می‌دهد شرکت‌های سازنده
+          بتوانند رابط کاربری خود را بر اساس سیستم عامل اندروید توسعه دهند. به
+          همین علت شاهدیم که گوشی‌های هوشمند برندهای مطرح از رابط کاربری متفاوت
+          با ویژگی‌های اختصاصی هستند. البته برخی از شرکت‌ها نیز رابط کاربری
+          اختصاصی ندارند و از پوسته اصلی اندروید استفاده می‌کنند.
         </p>
         <h2 class="text-[16px] mt-7">iOS</h2>
         <p class="text-[14px] mt-4 mb-5">
-          اپل تمام تلاش خود را کرده تا آیفون‌ها از محصولات دیگر بازار متمایز باشند. یکی از راهکارهای کوپرتینویی‌ها نیز استفاده از سیستم عامل اختصاصی بوده است. iOS برخلاف اندروید که منبع باز است دسترسی به کدهای خود را محدود کرده و در حال حاضر هیچ شرکتی نمی‌تواند از این سیستم عامل برای محصولات خود استفاده کند.
+          اپل تمام تلاش خود را کرده تا آیفون‌ها از محصولات دیگر بازار متمایز
+          باشند. یکی از راهکارهای کوپرتینویی‌ها نیز استفاده از سیستم عامل
+          اختصاصی بوده است. iOS برخلاف اندروید که منبع باز است دسترسی به کدهای
+          خود را محدود کرده و در حال حاضر هیچ شرکتی نمی‌تواند از این سیستم عامل
+          برای محصولات خود استفاده کند.
         </p>
         <h1 class="text-[18px]">در زمان خرید گوشی به چه عواملی اهمیت دهیم؟</h1>
         <p class="text-[14px] mt-4 mb-5">
@@ -3027,19 +3404,46 @@
         </p>
         <h2 class="text-[16px] mt-7">برخورداری از ضمانت خدمات پس از فروش</h2>
         <p class="text-[14px] mt-4 mb-5">
-          خرید کالا با گارانتی خدمات پس از فروش باید یکی از اولویت‌های شما باشد. شاید کمتر پیش آید که گوشی هوشمندتان به مشکل خورده و خراب شود؛ اما داشتن گارانتی می‌تواند به شما اطمینان را دهد که پس از خرید گوشی اگر هر مشکلی پیش آید، می‌توانید نسبت به تعمیر آن با صرف هزینه کمتر یا حتی بدون صرف هزینه اقدام کنید.
+          خرید کالا با گارانتی خدمات پس از فروش باید یکی از اولویت‌های شما باشد.
+          شاید کمتر پیش آید که گوشی هوشمندتان به مشکل خورده و خراب شود؛ اما
+          داشتن گارانتی می‌تواند به شما اطمینان را دهد که پس از خرید گوشی اگر هر
+          مشکلی پیش آید، می‌توانید نسبت به تعمیر آن با صرف هزینه کمتر یا حتی
+          بدون صرف هزینه اقدام کنید.
         </p>
         <h2 class="text-[16px] mt-7">لوازم جانبی</h2>
         <p class="text-[14px] mt-4 mb-5">
-          طبیعتا انتخاب گوشی دلخواهتان تنها چالشی نیست که خواهید داشت. بهتر است در زمان انتخاب به سراغ خرید گوشی موبایلی بروید که لوازم جانبی آن نیز در بازار موجود باشد. البته اگر انتخابتان خرید موبایل از فروشگاه دی‌جی لند است، چنین چالشی نخواهید داشت؛ زیرا دی‌جی لند برای تمامی محصولات موجود در فروشگاه، لوازم جانبی باکیفیت نیز تهیه کرده تا خریداران و کاربران، کمترین چالش را در زمان خرید و انتخاب کالا داشته باشند.
+          طبیعتا انتخاب گوشی دلخواهتان تنها چالشی نیست که خواهید داشت. بهتر است
+          در زمان انتخاب به سراغ خرید گوشی موبایلی بروید که لوازم جانبی آن نیز
+          در بازار موجود باشد. البته اگر انتخابتان خرید موبایل از فروشگاه دی‌جی
+          لند است، چنین چالشی نخواهید داشت؛ زیرا دی‌جی لند برای تمامی محصولات
+          موجود در فروشگاه، لوازم جانبی باکیفیت نیز تهیه کرده تا خریداران و
+          کاربران، کمترین چالش را در زمان خرید و انتخاب کالا داشته باشند.
         </p>
         <h2 class="text-[16px] mt-7">نوع کاربری و امکانات گوشی موبایل</h2>
         <p class="text-[14px] mt-4 mb-5">
-          هر گوشی هوشمندی از امکانات، مشخصات فنی و ویژگی‌هایی برخوردار است که متناسب با بودجه و نوع کاربری قشر خاصی از کاربران در نظر گرفته شده‌اند. از طرفی تنوع محصولات در بازار به قدری است که تقریبا تمامی سلایق و بودجه‌ها را پوشش می‌دهد. با این حساب تنها باید در زمان خرید گوشی به دنبال گزینه مناسب بروید که قادر به پاسخگویی به نیازهایتان باشد. اگر به تجربه بازی موبایل علاقه فراوانی دارد، گوشی مناسب شما خواهد بود که سخت افزار توانمندی دارد یا اگر علاقه‌مند به عکاسی هستید دوربین تلفن هوشمند مدنظر باید برایتان در اولویت باشد.
+          هر گوشی هوشمندی از امکانات، مشخصات فنی و ویژگی‌هایی برخوردار است که
+          متناسب با بودجه و نوع کاربری قشر خاصی از کاربران در نظر گرفته شده‌اند.
+          از طرفی تنوع محصولات در بازار به قدری است که تقریبا تمامی سلایق و
+          بودجه‌ها را پوشش می‌دهد. با این حساب تنها باید در زمان خرید گوشی به
+          دنبال گزینه مناسب بروید که قادر به پاسخگویی به نیازهایتان باشد. اگر به
+          تجربه بازی موبایل علاقه فراوانی دارد، گوشی مناسب شما خواهد بود که سخت
+          افزار توانمندی دارد یا اگر علاقه‌مند به عکاسی هستید دوربین تلفن هوشمند
+          مدنظر باید برایتان در اولویت باشد.
         </p>
         <h2 class="text-[16px] mt-7">حافظه داخلی</h2>
         <p class="text-[14px] mt-4 mb-5">
-          در نظر داشته باشید که گوشی هوشمند نیز مانند هر دستگاه دیگری محدودیت‌های مختلفی دارد که یکی از این محدودیت‌ها نیز حافظه داخلی است؛ محلی برای ذخیره‌سازی اطلاعات که البته در برخی از دستگاه‌ها اجازه داده می‌شود از طریق اتصال کارت حافظه میزان ذخیره‌سازی دستگاه را افزایش دهید. البته این موضوع در مورد تمامی گوشی‌های هوشمند صدق نمی‌کند. پس ابتدا باید در نظر بگیرید که به چه میزان حافظه ذخیره‌سازی نیاز دارید و سپس از میان مدل‌های موجود، نسبت به خرید گوشی با ظرفیت مناسب اقدام کنید. در صورتی که ظرفیت‌های موجود گوشی هوشمند مدنظرتان کافی نیستند باید در نظر بگیرید که آیا امکان افزایش میزان حافظه با استفاده از کارت حافظه میکرو اس دی وجود دارد یا خیر. البته می‌توانید از فضای ابری نیز برای ذخیره‌سازی اطلاعات مورد نیازتان استفاده کنید؛ اما باید در نظر بگیرید که این امر می‌تواند هزینه‌ها را در زمان استفاده افزایش دهد.
+          در نظر داشته باشید که گوشی هوشمند نیز مانند هر دستگاه دیگری
+          محدودیت‌های مختلفی دارد که یکی از این محدودیت‌ها نیز حافظه داخلی است؛
+          محلی برای ذخیره‌سازی اطلاعات که البته در برخی از دستگاه‌ها اجازه داده
+          می‌شود از طریق اتصال کارت حافظه میزان ذخیره‌سازی دستگاه را افزایش
+          دهید. البته این موضوع در مورد تمامی گوشی‌های هوشمند صدق نمی‌کند. پس
+          ابتدا باید در نظر بگیرید که به چه میزان حافظه ذخیره‌سازی نیاز دارید و
+          سپس از میان مدل‌های موجود، نسبت به خرید گوشی با ظرفیت مناسب اقدام
+          کنید. در صورتی که ظرفیت‌های موجود گوشی هوشمند مدنظرتان کافی نیستند
+          باید در نظر بگیرید که آیا امکان افزایش میزان حافظه با استفاده از کارت
+          حافظه میکرو اس دی وجود دارد یا خیر. البته می‌توانید از فضای ابری نیز
+          برای ذخیره‌سازی اطلاعات مورد نیازتان استفاده کنید؛ اما باید در نظر
+          بگیرید که این امر می‌تواند هزینه‌ها را در زمان استفاده افزایش دهد.
         </p>
         <h2 class="text-[16px] mt-7">خرید گوشی با ضمانت اصالت کالا</h2>
         <p class="text-[14px] mt-4 mb-5">
@@ -3052,11 +3456,24 @@
         </p>
         <h2 class="text-[16px] mt-7">ظرفیت باتری</h2>
         <p class="text-[14px] mt-4 mb-5">
-          شاید ظرفیت باتری موضوع چندان مهمی به نظر نرسد؛ اما خلاف این امر ثابت شده است. درواقع بسیاری از کاربران در زمان خرید گوشی موبایل به ظرفیت باتری آن و میزان ساعاتی را که می‌تواند در شرایط مختلف روشن باقی مانده و فعالیت کند در نظر می‌گیرند. عملکرد باتری به قدری مهم است که شرکت‌های سازنده تراشه برای گوشی‌های هوشمند روی عملکرد و بهبود بازدهی عمر مفید باتری تمرکز ویژه‌ای می‌کنند و با معرفی هر تراشه گفته می‌شود که نسبت به نسل گذشته خود در کنار بهبود عملکرد پردازشی در زمینه بهبود مصرف انرژی نیز چه تغییراتی داشته است. البته شما می‌توانید با خریدن پاور بانک و به همراه داشته آن، مشکل ظرفیت پایین گوشی مدنظرتان را برطرف سازید.
+          شاید ظرفیت باتری موضوع چندان مهمی به نظر نرسد؛ اما خلاف این امر ثابت
+          شده است. درواقع بسیاری از کاربران در زمان خرید گوشی موبایل به ظرفیت
+          باتری آن و میزان ساعاتی را که می‌تواند در شرایط مختلف روشن باقی مانده
+          و فعالیت کند در نظر می‌گیرند. عملکرد باتری به قدری مهم است که شرکت‌های
+          سازنده تراشه برای گوشی‌های هوشمند روی عملکرد و بهبود بازدهی عمر مفید
+          باتری تمرکز ویژه‌ای می‌کنند و با معرفی هر تراشه گفته می‌شود که نسبت به
+          نسل گذشته خود در کنار بهبود عملکرد پردازشی در زمینه بهبود مصرف انرژی
+          نیز چه تغییراتی داشته است. البته شما می‌توانید با خریدن پاور بانک و به
+          همراه داشته آن، مشکل ظرفیت پایین گوشی مدنظرتان را برطرف سازید.
         </p>
         <h2 class="text-[16px] mt-7">ریجستری گوشی</h2>
         <p class="text-[14px] mt-4 mb-5">
-          در سال ۹۸ اعلام شد اپراتورها از این پس به گوشی‌هایی خدمات ارائه می‌دهند که از تاریخ مشخص شده در طرح ریجستری، ثبت شده باشند. در توضیح تفاوت گوشی‌های هوشمندی که ریجستر شده هستند با محصولاتی که از این حالت برخوردار نیستند باید گفت که گوشی موبایلی که ریجستر نشده باشد تنها به مدت مشخص (یک ماه) قادر به دریافت خدمات از اپراتورهاست و پس از آن، دیگر نمی‌تواند به خدمات دسترسی داشته باشد، مگر اینکه ریجستر شود.
+          در سال ۹۸ اعلام شد اپراتورها از این پس به گوشی‌هایی خدمات ارائه
+          می‌دهند که از تاریخ مشخص شده در طرح ریجستری، ثبت شده باشند. در توضیح
+          تفاوت گوشی‌های هوشمندی که ریجستر شده هستند با محصولاتی که از این حالت
+          برخوردار نیستند باید گفت که گوشی موبایلی که ریجستر نشده باشد تنها به
+          مدت مشخص (یک ماه) قادر به دریافت خدمات از اپراتورهاست و پس از آن، دیگر
+          نمی‌تواند به خدمات دسترسی داشته باشد، مگر اینکه ریجستر شود.
         </p>
         <h1 class="text-[18px]">
           بهترین قیمت گوشی در کنار تنوع بی‌نظیر در دی‌جی لند
@@ -3092,8 +3509,12 @@
           ماهانه پرداخت کنید.
         </p>
       </div>
-      <button class="seen-more-page2">مشاهده بیشتر <i class="fa-solid fa-angle-down fa-sm translate-y-1"></i></button>
-      <button class="seen-low-page2">مشاهده کمتر <i class="fa-solid fa-angle-up fa-sm"></i></button>
+      <button class="seen-more-page2">
+        مشاهده بیشتر <i class="fa-solid fa-angle-down fa-sm translate-y-1"></i>
+      </button>
+      <button class="seen-low-page2">
+        مشاهده کمتر <i class="fa-solid fa-angle-up fa-sm"></i>
+      </button>
     </div>
 
     <!--end prev footer-->
@@ -3316,6 +3737,1209 @@
     </section>
 
     <!--end footer-->
+
+    <!--copyRight-->
+    <div class="akhar-desktop my-2 w-[92%] mx-auto hidden lg:block">
+      <div class="yek flex justify-between">
+        <p class="font-yekan text-[12px] text-[#575757]">
+          © کلیه حقوق این وب سایت متعلق به دی‌جی‌لند است.
+        </p>
+        <p class="font-mono text-[12px] text-[#575757]">
+          Copyright 2022 Dgland.com ©
+        </p>
+      </div>
+    </div>
+    <div
+      class="akhar-mobile w-[90%] container lg:hidden mx-auto my-2 flex justify-between mb-[75px]"
+    >
+      <div class="yek flex flex-col">
+        <p class="font-yekan text-[12px] text-[#575757]">
+          © کلیه حقوق این وب سایت متعلق به دی‌جی‌لند است.
+        </p>
+        <p class="font-mono text-[12px] text-[#575757]">
+          Copyright 2022 Dgland.com ©
+        </p>
+      </div>
+      <div class="social flex gap-4">
+        <img src="./media/footer/insta.svg" alt="" class="!w-[15px]" />
+        <img src="./media/footer/linkedin.svg" alt="" class="!w-[15px]" />
+      </div>
+    </div>
+    <!--end copyRight-->
+    <!--btm menu-->
+
+    <section
+      class="btm-menu w-full h-[70px] bg-white lg:hidden fixed bottom-0 z-[999] items-center flex flex-row-reverse justify-around"
+    >
+      <div
+        class="items cursor-pointer flex flex-col items-center text-[10px] gap-2 text-[#888888] font-yekan"
+      >
+        <img src="./media/btm-menu/dasteh.svg" alt="" class="!w-[24px]" />
+        <p>دسته‌بندی</p>
+      </div>
+      <div
+        class="items cursor-pointer flex flex-col items-center text-[10px] gap-2 text-[#888888] font-yekan"
+      >
+        <img src="./media/btm-menu/search.svg" alt="" class="!w-[24px]" />
+        <p>جستجو</p>
+      </div>
+      <div
+        class="items cursor-pointer flex flex-col items-center text-[10px] gap-2 text-[#888888] font-yekan"
+      >
+        <img
+          src="./media/page2/items/svgexport-24.svg"
+          alt=""
+          class="!w-[24px]"
+        />
+        <p>خانه</p>
+      </div>
+      <div
+        class="items cursor-pointer flex flex-col items-center text-[10px] gap-2 text-[#888888] font-yekan"
+      >
+        <img src="./media/btm-menu/sabad.svg" alt="" class="!w-[24px]" />
+        <p>سبد‌خرید</p>
+      </div>
+      <div
+        class="items cursor-pointer flex flex-col items-center text-[10px] gap-2 text-[#888888] font-yekan"
+      >
+        <img src="./media/btm-menu/login.svg" alt="" class="!w-[24px]" />
+        <p>ورود</p>
+      </div>
+    </section>
+
+    <!--end btm menu-->
+
+    <div
+      class="payeh-filters-mobile w-full h-[100vh] absolute bg-[#00000075] lg:hidden bottom-0 z-[1001]"
+    ></div>
+    <div
+      class="filters-mobile overflow-auto w-full h-[85vh] absolute bg-white lg:hidden bottom-0 z-[1002]"
+    >
+      <div
+        class="toppp fixed w-full top-0 h-[56px] shadow-lg bg-white !z-[1005]"
+      >
+        <div
+          class="txt h-full w-[62%] float-left flex justify-between items-center"
+        >
+          <div class="flex items-center gap-3">
+            <img src="./media/page2/items/filRed.svg" class="w-[18px]" alt="" />
+            <p class="font-yekBold text-gray-800">فیلترها</p>
+          </div>
+          <div>
+            <i
+              class="fa-solid fa-angle-left fa-xs text-gray-700 cursor-pointer translate-x-8"
+              id="first"
+            ></i>
+            <i
+              class="fa-solid fa-angle-left fa-xs text-gray-700 cursor-pointer absolute left-8 top-[27px]"
+              id="second"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items overflow-scroll translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">برند</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div
+            class="mx-auto w-[85%] pr-4 border flex items-center bg-gray-100 gap-3 md:mt-16 my-8 rounded-lg"
+          >
+            <i class="fa-solid fa-magnifying-glass fa-sm text-gray-400"></i>
+            <input
+              type="text"
+              placeholder="جستجو"
+              class="!w-full flex font-yekan items-center rounded-lg bg-gray-100 outline-none h-[42px]"
+            />
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">سامسونگ</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Samsung</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">اپل</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Apple</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">شیائومی</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Xiaomi</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">نوکیا</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Nokia</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">مایکروسافت</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">
+              Microsoft
+            </p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">ال جی</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">LG</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">اوپو</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Oppo</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">وان پلاس</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">OnePlus</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">جی پلاس</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">GPlus</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">موتورولا</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">
+              Motorola
+            </p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">ریلمی</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Realme</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">ویرا</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Vira</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">بلک بری</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">
+              Black Berry
+            </p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">متفرقه</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Other</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">آنر</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Honor</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">هوآوی</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Huawei</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">ناتینگ</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Nothing</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">ارد</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Orod</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">دوجی</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Dooge</p>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">اینفینیکس</p>
+            </div>
+            <p class="text-[12px] text-[#969696] translate-y-[-3px]">Infinix</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items-btm translate-y-14 mx-auto w-[85%] border-b flex items-start justify-between flex-col"
+      >
+        <div class="flex justify-between w-full items-center h-[50px]">
+          <p class="font-yekan">رنگ</p>
+          <i
+            class="fil fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+          ></i>
+        </div>
+        <div
+          class="rangss h-[80px] w-[100%] flex flex-wrap items-center justify-center gap-3"
+        >
+          <span class="w-[28px] h-[28px] bg-black rounded-full block"></span>
+          <span class="w-[28px] h-[28px] bg-blue-700 rounded-full block"></span>
+          <span
+            class="w-[28px] h-[28px] bg-yellow-400 rounded-full block"
+          ></span>
+          <span class="w-[28px] h-[28px] bg-blue-400 rounded-full block"></span>
+          <span
+            class="w-[28px] h-[28px] bg-green-400 rounded-full block"
+          ></span>
+          <span class="w-[28px] h-[28px] bg-gray-600 rounded-full block"></span>
+          <span
+            class="w-[28px] h-[28px] bg-white border rounded-full block"
+          ></span>
+          <span class="w-[28px] h-[28px] bg-gray-400 rounded-full block"></span>
+          <span
+            class="w-[28px] h-[28px] bg-orange-800 rounded-full block"
+          ></span>
+        </div>
+      </div>
+      <div
+        class="filter-items-btm translate-y-14 mx-auto w-[85%] border-b flex items-start justify-between flex-col"
+      >
+        <div class="flex justify-between w-full items-center h-[50px]">
+          <p class="font-yekan">قیمت</p>
+          <i
+            class="fil fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+          ></i>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">تعداد سیم‌کارت</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">دو سیم‌کارت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">تک سیم‌کارت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">
+                بیش از دو سیم‌کارت
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">تعداد دوربین</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">سه عدد</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">بیش از سه عدد</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">دو عدد</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">یک عدد</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">فناوری صفحه نمایش</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">IPS</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">OLED</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">TFT</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">نوع پردازنده</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">Helio</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">Dimensity</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">Snapdragon</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">Exynos</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">Bionic</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">Unisoc</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">Kirin</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">
+                Apple M Series
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">نوع سیستم عامل</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">Android</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">IOS</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">
+                سایر سیستم عامل‌ها
+              </p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">iPad-OS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">ظرفیت حافظه RAM</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">4 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">6 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">8 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">12 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">3 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">2 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">4 مگابایت</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">ظرفیت حافظه داخلی</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">64 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">128 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">256 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">32 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">16 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">512 گیگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">1 ترابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">4 مگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">1 مگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">32 مگابایت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">8 مگابایت</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">پشتیبانی از کارت حافظه خارجی</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">دارد</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">ندارد</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">پشتیبانی از جک صدا 3.5 میلیمتری</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">دارد</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">ندارد</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+      >
+        <p class="font-yekan">حسگرها</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">شتاب سنج</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">نزدیکی</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">اثر انگشت</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">ژیروسکوپ</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">قطب نما</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">فشار سنج</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">ضربان قلب</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">تشخیص چهره</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+        id="remove"
+      >
+        <p class="font-yekan">شبکه های ارتباطی</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">4G</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">5G</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">3G</p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">2G</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+        id="remove"
+      >
+        <p class="font-yekan">بازه ظرفیت باتری</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">
+                بیش از 4 هزار میلی آمپر ساعت
+              </p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">
+                بین 2 الی 4 هزار میلی آمپر ساعت
+              </p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">
+                کمتر از 2 هزار میلی آمپر ساعت
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="filter-items translate-y-14 mx-auto w-[85%] h-[50px] border-b flex items-center justify-between"
+        id="remove"
+      >
+        <p class="font-yekan">تگ ها</p>
+        <i
+          class="bandi fa-solid fa-angle-down fa-sm text-[#4392dd] transition-all duration-500 ease-linear"
+        ></i>
+      </div>
+      <div
+        class="in-left absolute bottom-0 w-full h-[78vh] md:h-[80vh] bg-white !z-[999] hidden overflow-auto"
+      >
+        <div class="in-left-items">
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto pt-8">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">
+                گوشی سامسونگ سری M
+              </p>
+            </div>
+          </div>
+          <div class="in-left-brands w-[85%] flex justify-between mx-auto">
+            <div class="rasti flex items-center gap-1">
+              <div
+                class="tick w-[16px] bg-transparent h-[16px] border-[1px] rounded-md border-[#B8B8B8] flex justify-center items-center"
+              >
+                <i class="fa-solid fa-check fa-xs text-white"></i>
+              </div>
+              <p class="font-yekan text-[#969696] text-[12px]">
+                گوشی سامسونگ سری Z
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./jquery/dist/jquery.min.js"></script>

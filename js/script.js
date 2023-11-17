@@ -89,7 +89,95 @@ $(document).ready(function () {
     $("div.na-peyda").removeClass("block");
     $(".seen-more-page2").show();
   });
-  
+  $("#dropdownDefaultButton").click(function () {
+    $("#dropdown").slideToggle();
+  });
+
+  $("div.sor").click(function () {
+    $("div.sortha").removeClass("animate__animated animate__slideOutDown");
+    $("div.sort-mobile").fadeIn();
+    $("div.sortha").addClass("animate__animated animate__slideInUp");
+    $("html,body").css({
+      overflow: "hidden",
+    });
+  });
+  $("div.sort-mobile").click(function () {
+    $("div.sortha").removeClass("animate__animated animate__slideInUp");
+    $("div.sortha").addClass("animate__animated animate__slideOutDown");
+    $(this).fadeOut();
+
+    $("html,body").css({
+      overflow: "auto",
+    });
+  });
+  $("div.payeh-filters-mobile,div.filters-mobile").hide();
+  $("div#filt").click(function () {
+    $("div.payeh-filters-mobile").fadeIn();
+    $("div.filters-mobile").removeClass(
+      "block animate__animated animate__slideOutDown"
+    );
+    $("div.filters-mobile").addClass(
+      "block animate__animated animate__slideInUp"
+    );
+    $("html,body").css({
+      overflow: "hidden",
+    });
+  });
+  $("i#second").hide();
+  $("div.filter-items").click(function () {
+    $("div.in-left").removeClass("none");
+    $(this)
+      .next("div.in-left")
+      .addClass("block animate__animated animate__slideInRight");
+    $("i#first").hide();
+    $("i#second").show();
+    $("div#remove").hide();
+  });
+  $("i#second").click(function () {
+    $(this).hide();
+    $("i#first").show();
+    $("div.in-left").removeClass("block");
+    $("div#remove").show();
+  });
+  $("div.rangss").hide();
+  $("div.filter-items-btm").click(function () {
+    $(this).children("div.rangss").slideToggle();
+    $(this).children("div").children("i").toggleClass("rotate");
+  });
+  $("i#first").click(function () {
+    $("div.payeh-filters-mobile").fadeOut();
+    $("div.filters-mobile").addClass("animate__animated animate__slideOutDown");
+    $("html,body").css({
+      overflow: "auto",
+    });
+  });
+  $("div.payeh-filters-mobile").click(function () {
+    $(this).fadeOut();
+    $("div.filters-mobile").removeClass("block");
+    $("div.filters-mobile").addClass(
+      "block animate__animated animate__slideOutDown"
+    );
+    $("html,body").css({
+      overflow: "auto",
+    });
+  });
+  $("div.in-left-brands").click(function () {
+    $(this).children("div.rasti").children("div.tick").toggleClass("back-redd");
+  });
+  $("p#selected").click(function () {
+    $("p#selected").removeClass("selected2");
+    $(this).addClass("selected2");
+  });
+  $("a#selected").click(function () {
+    $("a#selected").removeClass("selected2");
+    $(this).addClass("selected2");
+    var anchorText = $(this).text();
+    $("#dropdownDefaultButton").html(anchorText);
+  });
+  $("a#nav-num").click(function () {
+    $("a#nav-num").removeClass("nav-color");
+    $(this).addClass("nav-color");
+  });
 });
 
 //slider
