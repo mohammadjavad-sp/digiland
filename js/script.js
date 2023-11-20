@@ -178,6 +178,126 @@ $(document).ready(function () {
     $("a#nav-num").removeClass("nav-color");
     $(this).addClass("nav-color");
   });
+  $("#x-mark").click(function () {
+    $("section.gallery-hide").hide();
+    $("html,body").css({
+      overflow: "auto",
+    });
+  });
+  $(".gallery-hide")
+    .click(function () {
+      $(this).hide();
+
+      $("html,body").css({
+        overflow: "auto",
+      });
+    })
+    .children()
+    .click(function () {
+      return false;
+    });
+  let axGallery = document.getElementById("ax-gallery");
+  var galleryHide = document.querySelectorAll(".gallery-hide-pics img");
+  galleryHide.forEach(function (elem) {
+    elem.addEventListener("click", function () {
+      axGallery.src = elem.src;
+    });
+  });
+  $(".click-gallery").click(function () {
+    $(".gallery-hide").show();
+    $("html,body").css({
+      overflow: "hidden",
+    });
+  });
+  $("div.clr-item").click(function () {
+    $("div.bord").removeClass("borderr");
+    $(this).parent("div.bord").addClass("borderr");
+    let dddd = $(this).next("p").text();
+    console.log(dddd);
+    $("p#rng-name").text(dddd);
+  });
+  let cnt = 1;
+  let recycle = document.getElementById("recycle");
+  let minese = document.getElementById("minese");
+
+  $("img#plus").click(function () {
+    cnt += 1;
+    $("p#counter").text(cnt);
+    if (cnt > 1) {
+      $(minese).show();
+      $(recycle).hide();
+    }
+    if (cnt >= 7) {
+      cnt = 7;
+    }
+  });
+  $("img#minese").click(function () {
+    cnt--;
+    $("p#counter").text(cnt);
+    if (cnt == 1) {
+      $(minese).hide();
+      $(recycle).show();
+    }
+  });
+  $("div.plus-minese").hide();
+  $("div.sabad-kharid").click(function () {
+    $("div.plus-minese").show();
+    $("#changeText").text("مشاهده سبد خرید");
+  });
+  $("img#recycle").click(function () {
+    $("div.plus-minese").hide();
+    $("#changeText").text("افزودن سبد خرید");
+  });
+
+  setTimeout(() => {
+    $(".afz,div.dayere-part2").show();
+    $(".afz-part2").removeClass("end");
+  }, 5000);
+
+  $(".afz-part2").hide();
+  $(".afz").click(function () {
+    $(this).children("p").text("مشاهده سبد خرید");
+    $(".afz-part2").show();
+  });
+
+  $("div.dayere-part2").click(function () {
+    $("div.afz").hide();
+    $(this).hide();
+    $(".afz-part2").addClass("end");
+    setTimeout(() => {
+      $(".afz,div.dayere-part2").show();
+      $(".afz-part2").removeClass("end");
+    }, 5000);
+  });
+
+  $("i#plus2").click(function () {
+    cnt++;
+    $("p#counter2").text(cnt);
+    if (cnt > 1) {
+      $("#minese2").show();
+      $("#recycle2").hide();
+    }
+    if (cnt >= 7) {
+      cnt = 7;
+    }
+    $("div.dayere-part2").text(cnt);
+  });
+  $("img#minese2").click(function () {
+    cnt--;
+    $("p#counter2").text(cnt);
+    if (cnt == 1) {
+      $("#minese2").hide();
+      $("#recycle2").show();
+    }
+    $("div.dayere-part2").text(cnt);
+  });
+  $("#recycle2").click(function () {
+    $(".afz-part2").hide();
+    $("div.afz").show();
+    $("div.dayere-part2").show();
+    $(".afz-part2").removeClass("end");
+    $(".afz").children("p").text("افزودن به سبد خرید");
+  });
 });
 
 //slider
@@ -381,3 +501,29 @@ var scrollc = new Swiper(".mySwiper10", {
 });
 
 //end best-brands
+
+//page3 swiper gallery
+
+var swiper30 = new Swiper(".mySwiper30", {
+  spaceBetween: 10,
+  slidesPerView: 5,
+  freeMode: true,
+  watchSlidesProgress: true,
+  loop: true,
+});
+var swiper40 = new Swiper(".mySwiper40", {
+  spaceBetween: 10,
+  mousewheel: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  thumbs: {
+    swiper: swiper30,
+  },
+});
