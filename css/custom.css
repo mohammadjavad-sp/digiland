@@ -3,40 +3,18 @@
   padding: 0;
   box-sizing: border-box;
   direction: rtl;
+  scroll-behavior: smooth;
 }
+
 /*scroll*/
-/* html {
-  --scrollbarBG: #cfd8dc;
-  --thumbBG: #90a4ae;
-}
+
 body::-webkit-scrollbar {
-  width: 7px;
-}
-body {
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-}
-body::-webkit-scrollbar-track {
-  background: #f5f4f4;
+  width: 5px;
+  background-color: rgb(234, 234, 234) !important;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #b8b8b8;
-  border-radius: 6px;
+  background-color: rgb(161, 161, 161) !important;
 }
-
-html {
-
-  overflow: hidden;
-}
-body {
-  height: 100vh;
- 
-  overflow-y: auto;
-  direction: ltr !important;
-
-
-
-} */
 
 .submenu::-webkit-scrollbar {
   width: 6px;
@@ -96,6 +74,7 @@ body {
     opacity: 1;
   }
 }
+
 .rotateIn {
   transform: rotate(360deg);
   transition: all 400ms linear;
@@ -118,9 +97,19 @@ body {
 
 .swiper {
   width: 100%;
-  height: 400px;
 }
-
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .slider-desktop > .swiper {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (min-width: 1280px) {
+  .slider-desktop > .swiper {
+    width: 100%;
+    height: 400px;
+  }
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -729,12 +718,31 @@ div.in-left-brands div.tick i {
 .borderr {
   border: 3px solid gray;
 }
-.afz-part2 > div:first-child {
+.dayere-tedad {
   box-shadow: 0px 0px 0.6px rgba(0, 0, 0, 0.017),
     0px 0px 1.3px rgba(0, 0, 0, 0.024), 0px 0px 2.5px rgba(0, 0, 0, 0.03),
     0px 0px 4.5px rgba(0, 0, 0, 0.036), 0px 0px 8.4px rgba(0, 0, 0, 0.043),
     0px 0px 20px rgba(0, 0, 0, 0.06);
 }
-.end {
-  justify-content: end;
+.moarefi-color {
+  color: #e10a0a !important;
+}
+.bord-l::before {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 2px;
+  background-color: #ada4ad;
+  position: absolute;
+  left: 0;
+  top: 30%;
+}
+
+@media (max-width: 1024px) {
+  th {
+    font-size: 12px;
+  }
+}
+.swiper-slide {
+  cursor: pointer;
 }

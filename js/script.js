@@ -23,15 +23,10 @@ $(document).ready(function () {
     $("i.bandi").toggleClass("transform");
     $("p.bandi").toggleClass("redd");
   });
-  $("div.one").click(function () {
-    $("div.one>span").removeClass("transform");
-    $("div.one>p").removeClass("redd");
-    $(this).children("div.one>span").toggleClass("transform");
-    $(this).children("p").toggleClass("redd");
-  });
-  $("div.one").on("click", function () {
-    $("div.two").removeClass("block");
-    $(this).next("div.two").slideToggle("block");
+  $("div.one>span").click(function () {
+    $(this).toggleClass("transform");
+    $(this).prev("a").toggleClass("redd");
+    $(this).parent("div.one").next("div.two").slideToggle();
   });
 
   $("input").focus(function () {
@@ -43,10 +38,10 @@ $(document).ready(function () {
     $(this).removeClass("tool");
   });
   $("li#li").mouseenter(function () {
-    $("div#bg").addClass("jvti");
+    $("div#bg").addClass("block");
   });
   $("li#li").mouseleave(function () {
-    $("div#bg").removeClass("jvti");
+    $("div#bg").removeClass("block");
   });
   $(".seen-more").click(function () {
     $(".awesome").toggleClass("transform");
@@ -249,54 +244,130 @@ $(document).ready(function () {
     $("#changeText").text("افزودن سبد خرید");
   });
 
-  setTimeout(() => {
-    $(".afz,div.dayere-part2").show();
-    $(".afz-part2").removeClass("end");
-  }, 5000);
+  /* 
 
-  $(".afz-part2").hide();
-  $(".afz").click(function () {
-    $(this).children("p").text("مشاهده سبد خرید");
-    $(".afz-part2").show();
-  });
-
-  $("div.dayere-part2").click(function () {
-    $("div.afz").hide();
-    $(this).hide();
-    $(".afz-part2").addClass("end");
-    setTimeout(() => {
-      $(".afz,div.dayere-part2").show();
-      $(".afz-part2").removeClass("end");
-    }, 5000);
-  });
-
-  $("i#plus2").click(function () {
-    cnt++;
-    $("p#counter2").text(cnt);
-    if (cnt > 1) {
-      $("#minese2").show();
-      $("#recycle2").hide();
-    }
-    if (cnt >= 7) {
-      cnt = 7;
-    }
-    $("div.dayere-part2").text(cnt);
-  });
-  $("img#minese2").click(function () {
-    cnt--;
-    $("p#counter2").text(cnt);
-    if (cnt == 1) {
-      $("#minese2").hide();
-      $("#recycle2").show();
-    }
-    $("div.dayere-part2").text(cnt);
-  });
   $("#recycle2").click(function () {
     $(".afz-part2").hide();
     $("div.afz").show();
     $("div.dayere-part2").show();
     $(".afz-part2").removeClass("end");
     $(".afz").children("p").text("افزودن به سبد خرید");
+  });
+  */
+  var price = 50.999;
+  let cnt2 = 1;
+  function newPrice() {
+    return (price * cnt2).toFixed(3);
+  }
+
+  function timeOut() {
+    myTime = setTimeout(() => {
+      $("div.plus-mineseee").hide();
+    }, 5000);
+    myTime2 = setTimeout(() => {
+      $("div.seen-sabad").show();
+    }, 5000);
+  }
+  function StopTimeOut() {
+    clearTimeout(myTime);
+    clearTimeout(myTime2);
+  }
+
+  $(".seen-tedad-price").hide();
+  $("div.delAfterClick").click(function () {
+    $(this).hide();
+    $(".seen-tedad-price").show();
+  });
+  $("div.plus-mineseee").hide();
+  $("div.dayere-tedad").click(function () {
+    $("p#counter2").text(cnt2);
+    $("div.seen-sabad").hide();
+    $("div.plus-mineseee").show();
+    timeOut();
+  });
+  $("i#plus2").click(function () {
+    StopTimeOut();
+    setTimeout(timeOut);
+    if (cnt2 > 8) {
+      cnt2 = 8;
+    }
+    cnt2++;
+    $("p#counter2").text(cnt2);
+    if (cnt2 > 1) {
+      $("#recycle2").hide();
+      $("#minese2").show();
+    }
+    $("div.dayere-tedad").text(cnt2);
+    $("p.finalPrice").text(newPrice() + ".000" + " تومان");
+  });
+  $("img#minese2").click(function () {
+    StopTimeOut();
+    setTimeout(timeOut);
+    cnt2--;
+    $("p#counter2").text(cnt2);
+    if (cnt2 == 1) {
+      $("#minese2").hide();
+      $("#recycle2").show();
+    }
+    $("div.dayere-tedad").text(cnt2);
+    $("p.finalPrice").text(newPrice() + ".000" + " تومان");
+  });
+  $("#recycle2").click(function () {
+    $(".seen-tedad-price").hide();
+    $("div.delAfterClick").show();
+  });
+  $(".s23-txt-hide").hide();
+  $(".seen-more-s23").click(function () {
+    $(this).hide();
+    $("p.first-txt").css({
+      lineClamp: "unset",
+    });
+    $(".s23-txt-hide").show();
+  });
+  $(".s23-seen-low").click(function () {
+    $(".s23-txt-hide").hide();
+    $("p.first-txt").css({
+      lineClamp: "3",
+    });
+    $(".seen-more-s23").show();
+  });
+  $(".moshakhasat-hide").hide();
+  $(".moshakhasat-seen-more").click(function () {
+    $(this).hide();
+    $(".moshakhasat-hide").show();
+  });
+  $(".moshakhasat-seen-low").click(function () {
+    $(".moshakhasat-hide").hide();
+    $(".moshakhasat-seen-more").show();
+  });
+  $(document).scroll(function () {
+    let st = $(this).scrollTop();
+    if (
+      st >= $(".moshakhasat-fani").offset().top - 100 &&
+      st <= $(".comments-users").offset().top
+    ) {
+      $(".menu-moarefi>div:nth-of-type(1)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(3)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(2)>p").addClass("moarefi-color");
+    } else if (
+      st >= $(".comments-users").offset().top - 100 &&
+      st <= $(".question-answer").offset().top
+    ) {
+      $(".menu-moarefi>div:nth-of-type(2)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(1)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(4)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(3)>p").addClass("moarefi-color");
+    } else if (st >= $(".question-answer").offset().top - 100) {
+      $(".menu-moarefi>div:nth-of-type(2)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(1)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(3)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(4)>p").addClass("moarefi-color");
+    } else {
+      $(".menu-moarefi>div:nth-of-type(2)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(4)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(3)>p").removeClass("moarefi-color");
+      $(".menu-moarefi>div:nth-of-type(1)>p").addClass("moarefi-color");
+    }
   });
 });
 

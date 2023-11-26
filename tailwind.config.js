@@ -13,6 +13,7 @@ module.exports = {
       yekBold: "bold",
       yekExtra: "extra",
       iranSansBold: "iranSansBold",
+      iranYekanMedium: "iranYekanMedium",
     },
     container: {
       center: true,

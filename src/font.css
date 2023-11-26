@@ -18,4 +18,7 @@
     font-family: iranSansBold;
     src: url(../media/font/number/iranyekanwebextraboldfanum.woff);
 }
-
+@font-face {
+    font-family: iranYekanMedium;
+    src: url(../media/font/number/iranyekanwebmediumfanum.woff);
+}
