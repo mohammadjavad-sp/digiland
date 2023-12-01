@@ -3,9 +3,9 @@ module.exports = {
   content: ["./**/*.html"],
   theme: {
     extend: {
-      backgroundImage: {
-        komod: "url('./media/komod/619387 (1).jpg')",
-      },
+      backgroundImage: (theme) => ({
+        komod: "url('/media/komod/619387 (1).jpg')",
+      }),
     },
     fontFamily: {
       yekan: "yekan",
