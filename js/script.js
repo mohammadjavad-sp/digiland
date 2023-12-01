@@ -7,16 +7,12 @@ $(document).ready(function () {
 
     $("div.payeh").addClass("block2 animate__animated animate__fadeIn");
     $("div.side-bar").addClass("block2 animate__animated animate__fadeInRight");
-    $("html,body").css({
-      overflow: "hidden",
-    });
+    
   });
   $("div#payeh").click(function () {
     $(this).removeClass("block2");
     $("div.side-bar").addClass("animate__animated animate__fadeOutRight none");
-    $("html,body").css({
-      overflow: "auto",
-    });
+    
   });
   $("div.asli").click(function () {
     $("div.zir").slideToggle(500);
@@ -173,6 +169,28 @@ $(document).ready(function () {
     $("a#nav-num").removeClass("nav-color");
     $(this).addClass("nav-color");
   });
+  $("#prev").click(function () {
+    let navNum = $(".nav-color");
+    $(navNum)
+      .removeClass("nav-color")
+      .parent("li")
+      .prev("li")
+      .children("a")
+      .addClass("nav-color");
+  });
+
+  $("#next").click(function () {
+    let navColor = $(".nav-color");
+    $(navColor)
+      .removeClass("nav-color")
+      .parent("li")
+      .next("li")
+      .children("a")
+      .addClass("nav-color");
+  });
+
+  //page3
+
   $("#x-mark").click(function () {
     $("section.gallery-hide").hide();
     $("html,body").css({
@@ -243,17 +261,6 @@ $(document).ready(function () {
     $("div.plus-minese").hide();
     $("#changeText").text("افزودن سبد خرید");
   });
-
-  /* 
-
-  $("#recycle2").click(function () {
-    $(".afz-part2").hide();
-    $("div.afz").show();
-    $("div.dayere-part2").show();
-    $(".afz-part2").removeClass("end");
-    $(".afz").children("p").text("افزودن به سبد خرید");
-  });
-  */
   var price = 50.999;
   let cnt2 = 1;
   function newPrice() {
@@ -340,8 +347,9 @@ $(document).ready(function () {
     $(".moshakhasat-hide").hide();
     $(".moshakhasat-seen-more").show();
   });
+
   $(document).scroll(function () {
-    let st = $(this).scrollTop();
+    var st = $(this).scrollTop();
     if (
       st >= $(".moshakhasat-fani").offset().top - 100 &&
       st <= $(".comments-users").offset().top

@@ -44,10 +44,11 @@
         class="menu-desktop lg:flex items-center justify-between w-full h-full hidden"
       >
         <div class="menu-desktop-right h-full flex">
-          <a href="./index.html" class="flex items-center"><img
-            src="./media/menu/logo.svg"
-            class="w-[145px] lg:w-[143px] hidden lg:block mr-16 lg:mr-14 cursor-pointer"
-            alt=""
+          <a href="./index.html" class="flex items-center"
+            ><img
+              src="./media/menu/logo.svg"
+              class="w-[145px] lg:w-[143px] hidden lg:block mr-16 lg:mr-14 cursor-pointer"
+              alt=""
           /></a>
           <ul
             class="flex items-center h-full mr-6 gap-5 text-[#767676] cursor-pointer font-yekan"
@@ -66,9 +67,13 @@
                   <div class="item w-[45%]">
                     <div class="sort flex items-center gap-3 cursor-pointer">
                       <img src="./media/submenu/1.webp" alt="" />
-                      <a href="./Products.html"><p class="font-yekBold text-black hover:text-[#E41F1F]">
-                        گوشی موبایل
-                      </p></a>
+                      <a href="./Products.html"
+                        ><p
+                          class="font-yekBold text-black hover:text-[#E41F1F]"
+                        >
+                          گوشی موبایل
+                        </p></a
+                      >
                       <img src="./media/submenu/svgexport-2 (1).svg" alt="" />
                     </div>
                     <div class="brands w-full flex flex-wrap gap-2 my-3">
@@ -457,11 +462,11 @@
     </div>
 
     <div
-      class="payeh w-[100%] transition-all duration-300 ease-linear !touch-none !hidden lg:hidden absolute !bottom-[70px] top-0 z-[999] bg-[#000000ba]"
+      class="payeh w-[100%] h-screen transition-all duration-300 ease-linear !hidden lg:hidden fixed !bottom-[70px] top-0 z-[999] bg-[#000000ba]"
       id="payeh"
     ></div>
     <div
-      class="side-bar overflow-auto !touch-auto !flex flex-col items-start !hidden transition-all duration-300 ease-linear !w-[300px] bg-white top-0 absolute bottom-[70px] z-[999] !pr-5 !pl-5"
+      class="side-bar overflow-auto h-screen !flex flex-col items-start !hidden transition-all duration-300 ease-linear !w-[300px] bg-white top-0 fixed bottom-[70px] z-[999] !pr-5 !pl-5"
     >
       <img src="./media/menu/logo.svg" class="!w-[148px] mt-8 mb-2" alt="" />
       <div
@@ -710,7 +715,7 @@
           <div class="swiper-slide">
             <img src="./media/slider/6.png" alt="" class="" />
           </div>
-        </div>
+        </div>       
       </div>
     </section>
     <section class="slider-mobile lg:hidden">
