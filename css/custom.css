@@ -134,7 +134,7 @@ body::-webkit-scrollbar-thumb {
   height: 3.5px;
   background-color: #e10a0a;
   position: absolute;
-  top: 40px;
+  top: 45px;
 }
 
 /*swiper1*/
@@ -162,9 +162,7 @@ body::-webkit-scrollbar-thumb {
 li.sub:hover > div.submenu {
   display: block;
 }
-.jvti {
-  display: block;
-}
+
 /*end swiper1*/
 
 /*swiper2 offer*/

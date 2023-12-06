@@ -626,6 +626,10 @@ video {
   position: absolute;
 }
 
+.\!absolute {
+  position: absolute !important;
+}
+
 .\!relative {
   position: relative !important;
 }
@@ -1247,6 +1251,14 @@ video {
   height: 100vh;
 }
 
+.h-\[10px\] {
+  height: 10px;
+}
+
+.h-\[150px\] {
+  height: 150px;
+}
+
 .\!w-\[100\%\] {
   width: 100% !important;
 }
@@ -1443,10 +1455,6 @@ video {
   width: 40%;
 }
 
-.w-\[45\%\] {
-  width: 45%;
-}
-
 .w-\[46px\] {
   width: 46px;
 }
@@ -1493,10 +1501,6 @@ video {
 
 .w-\[85\%\] {
   width: 85%;
-}
-
-.w-\[870px\] {
-  width: 870px;
 }
 
 .w-\[8px\] {
@@ -3056,6 +3060,10 @@ video {
   }
 }
 
+.hover\:overflow-visible:hover {
+  overflow: visible;
+}
+
 .hover\:border-red-700:hover {
   --tw-border-opacity: 1;
   border-color: rgb(185 28 28 / var(--tw-border-opacity));
@@ -3274,6 +3282,10 @@ video {
     display: none;
   }
 
+  .lg\:\!h-\[250px\] {
+    height: 250px !important;
+  }
+
   .lg\:\!h-\[260px\] {
     height: 260px !important;
   }
@@ -3316,6 +3328,10 @@ video {
 
   .lg\:h-auto {
     height: auto;
+  }
+
+  .lg\:h-\[400px\] {
+    height: 400px;
   }
 
   .lg\:\!w-\[180px\] {
@@ -3370,6 +3386,10 @@ video {
     width: 39.6%;
   }
 
+  .lg\:w-\[450px\] {
+    width: 450px;
+  }
+
   .lg\:w-\[46\.3\%\] {
     width: 46.3%;
   }
@@ -3382,12 +3402,12 @@ video {
     width: 49.3%;
   }
 
-  .lg\:w-\[500px\] {
-    width: 500px;
-  }
-
   .lg\:w-\[59\.6\%\] {
     width: 59.6%;
+  }
+
+  .lg\:w-\[90\%\] {
+    width: 90%;
   }
 
   .lg\:w-\[97\%\] {
@@ -3405,22 +3425,6 @@ video {
 
   .lg\:w-full {
     width: 100%;
-  }
-
-  .lg\:\!w-\[500px\] {
-    width: 500px !important;
-  }
-
-  .lg\:w-\[\%\] {
-    width: %;
-  }
-
-  .lg\:w-\[90\%\] {
-    width: 90%;
-  }
-
-  .lg\:w-\[450px\] {
-    width: 450px;
   }
 
   .lg\:flex-row {
@@ -3595,8 +3599,8 @@ video {
     height: 275px;
   }
 
-  .xl\:w-\[24\.5\%\] {
-    width: 24.5%;
+  .xl\:w-\[45\%\] {
+    width: 45%;
   }
 
   .xl\:w-\[870px\] {
@@ -3609,10 +3613,6 @@ video {
 
   .xl\:w-full {
     width: 100%;
-  }
-
-  .xl\:w-\[45\%\] {
-    width: 45%;
   }
 
   .xl\:\!translate-y-\[-30px\] {

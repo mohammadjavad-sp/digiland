@@ -7,12 +7,16 @@ $(document).ready(function () {
 
     $("div.payeh").addClass("block2 animate__animated animate__fadeIn");
     $("div.side-bar").addClass("block2 animate__animated animate__fadeInRight");
-    
+    $("html,body").css({
+      overflow:"hidden"
+    })
   });
   $("div#payeh").click(function () {
     $(this).removeClass("block2");
     $("div.side-bar").addClass("animate__animated animate__fadeOutRight none");
-    
+    $("html,body").css({
+      overflow:"unset"
+    })
   });
   $("div.asli").click(function () {
     $("div.zir").slideToggle(500);
@@ -188,13 +192,13 @@ $(document).ready(function () {
       .children("a")
       .addClass("nav-color");
   });
-
+  
   //page3
 
   $("#x-mark").click(function () {
     $("section.gallery-hide").hide();
     $("html,body").css({
-      overflow: "auto",
+      overflow: "unset",
     });
   });
   $(".gallery-hide")
@@ -202,7 +206,7 @@ $(document).ready(function () {
       $(this).hide();
 
       $("html,body").css({
-        overflow: "auto",
+        overflow: "unset",
       });
     })
     .children()
