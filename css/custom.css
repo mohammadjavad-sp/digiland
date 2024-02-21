@@ -744,3 +744,8 @@ div.in-left-brands div.tick i {
 .swiper-slide {
   cursor: pointer;
 }
+
+
+.komod{
+  background-image: url(../media/komod/komod.jpg);
+}
