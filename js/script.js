@@ -1,5 +1,8 @@
 $(document).ready(function () {
   //page1
+
+  alert("برای دیدن صفحه دوم : دسته بندی کالاها > گوشی موبایل > سامسونگ و سپس برای دیدن صفحه سوم روی گوشی s23 ultra کلیک کنید");
+
   $("img#hamber").click(function () {
     $("div.side-bar").removeClass(
       "animate__animated animate__fadeOutRight none"
@@ -8,15 +11,15 @@ $(document).ready(function () {
     $("div.payeh").addClass("block2 animate__animated animate__fadeIn");
     $("div.side-bar").addClass("block2 animate__animated animate__fadeInRight");
     $("html,body").css({
-      overflow:"hidden"
-    })
+      overflow: "hidden",
+    });
   });
   $("div#payeh").click(function () {
     $(this).removeClass("block2");
     $("div.side-bar").addClass("animate__animated animate__fadeOutRight none");
     $("html,body").css({
-      overflow:"unset"
-    })
+      overflow: "unset",
+    });
   });
   $("div.asli").click(function () {
     $("div.zir").slideToggle(500);
@@ -192,7 +195,7 @@ $(document).ready(function () {
       .children("a")
       .addClass("nav-color");
   });
-  
+
   //page3
 
   $("#x-mark").click(function () {
