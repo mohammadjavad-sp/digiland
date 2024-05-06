@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //page1
 
-  alert("برای دیدن صفحه دوم : دسته بندی کالاها > گوشی موبایل > سامسونگ و سپس برای دیدن صفحه سوم روی گوشی s23 ultra کلیک کنید");
+  
 
   $("img#hamber").click(function () {
     $("div.side-bar").removeClass(
